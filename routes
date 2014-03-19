@@ -1,0 +1,36 @@
+                    Prefix Verb   URI Pattern                      Controller#Action
+              events_index GET    /events/index(.:format)          events#index
+               events_show GET    /events/show(.:format)           events#show
+             events_update GET    /events/update(.:format)         events#update
+               events_edit GET    /events/edit(.:format)           events#edit
+            events_destroy GET    /events/destroy(.:format)        events#destroy
+             events_create GET    /events/create(.:format)         events#create
+             profile_index GET    /profile/index(.:format)         profile#index
+              profile_show GET    /profile/show(.:format)          profile#show
+            profile_update GET    /profile/update(.:format)        profile#update
+              profile_edit GET    /profile/edit(.:format)          profile#edit
+           profile_destroy GET    /profile/destroy(.:format)       profile#destroy
+            profile_create GET    /profile/create(.:format)        profile#create
+             members_index GET    /members/index(.:format)         members#index
+              members_show GET    /members/show(.:format)          members#show
+            members_update GET    /members/update(.:format)        members#update
+              members_edit GET    /members/edit(.:format)          members#edit
+           members_destroy GET    /members/destroy(.:format)       members#destroy
+            members_create GET    /members/create(.:format)        members#create
+        static_pages_index GET    /static_pages/index(.:format)    static_pages#index
+        new_member_session GET    /members/sign_in(.:format)       devise/sessions#new
+            member_session POST   /members/sign_in(.:format)       devise/sessions#create
+    destroy_member_session DELETE /members/sign_out(.:format)      devise/sessions#destroy
+           member_password POST   /members/password(.:format)      devise/passwords#create
+       new_member_password GET    /members/password/new(.:format)  devise/passwords#new
+      edit_member_password GET    /members/password/edit(.:format) devise/passwords#edit
+                           PATCH  /members/password(.:format)      devise/passwords#update
+                           PUT    /members/password(.:format)      devise/passwords#update
+cancel_member_registration GET    /members/cancel(.:format)        devise/registrations#cancel
+       member_registration POST   /members(.:format)               devise/registrations#create
+   new_member_registration GET    /members/sign_up(.:format)       devise/registrations#new
+  edit_member_registration GET    /members/edit(.:format)          devise/registrations#edit
+                           PATCH  /members(.:format)               devise/registrations#update
+                           PUT    /members(.:format)               devise/registrations#update
+                           DELETE /members(.:format)               devise/registrations#destroy
+                      root GET    /                                static_pages#index
