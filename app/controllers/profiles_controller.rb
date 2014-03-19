@@ -11,8 +11,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-  end
 
+  end
 
   def update
      @profile = Profile.find(params[:id])
