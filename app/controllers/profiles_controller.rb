@@ -1,4 +1,4 @@
-class ProfileController < ApplicationController
+class ProfilesController < ApplicationController
   def index
   end
 
@@ -7,14 +7,20 @@ class ProfileController < ApplicationController
   end
 
   def create 
+
     @profile = Profile.new(profile_params)
   end
+
+  def show
+    
+  end
+
 
   def update
      @profile = Profile.find(params[:id])
        if @profile.update_attributes(profile_params)
         flash[:success] = "changes have been made"
-        redirect_to chef_path(@profile.id)
+        redirect_to profile_path(@profile.id)
        else
         flash[:error] = "you are a failure and no one loves you"
         render :edit
@@ -22,7 +28,11 @@ class ProfileController < ApplicationController
   end
 
   def edit
-    @chef = Chef.find(params[:id])
+    @profile = Profile.find(params[:id])
+  end
+
+  def new
+
   end
 
   private
