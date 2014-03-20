@@ -1,2 +1,86 @@
 <h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Tageline:</strong>
+  <%= @event.tagline %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @event.address %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @event.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @event.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @event.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @event.zip %>
+</p>
+
+<p>
+  <strong>More Info:</strong>
+  <%= @event.more_info %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @event.photo1 %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @event.photo2 %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @event.photo3 %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @event.website %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @event.facebook %>
+</p>
+
+<p>
+  <strong>Application Form:</strong>
+  <%= @event.application_form %>
+</p>
+
+<p>
+  <strong>Contact Name:</strong>
+  <%= @event.contact_name %>
+</p>
+
+<p>
+  <strong>Contact Email:</strong>
+  <%= @event.contact_email %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
