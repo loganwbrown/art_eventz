@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   def index
+    @profiles = Profile.all
   end
 
   def new
@@ -11,11 +12,9 @@ class ProfilesController < ApplicationController
   end
 
   def show
-
+    @profile = Profile.find(params[:id])
   end
 
-
-  end
 
   def update
      @profile = Profile.find(params[:id])
@@ -30,10 +29,6 @@ class ProfilesController < ApplicationController
 
   def edit
     @profile = Profile.find(params[:id])
-  end
-
-  def new
-
   end
 
   private
