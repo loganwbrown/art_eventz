@@ -1,20 +1,21 @@
 class Dashboard::ProfilesController < Dashboard::DashboardController
+
   def index
+
+  end
+
+  def show
+    @profiles = Profile.find(params[:id])
   end
 
   def new
     @profile = Profile.new
   end
 
+
   def create 
     @profile = Profile.new(profile_params)
   end
-
-  def show
-
-  end
-
-
 
   def update
      @profile = Profile.find(params[:id])
@@ -30,8 +31,6 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   def edit
     @profile = Profile.find(params[:id])
   end
-
-
 
   private
 

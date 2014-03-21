@@ -1,5 +1,6 @@
+<%if @events %>
 <h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<p>DASHBOARD/EVENTS</p>
 
   <table>
     <thead>
@@ -46,10 +47,8 @@
             <td><%= event.application_form %></td>
             <td><%= event.contact_name %></td>
             <td><%= event.contact_email %></td>
-
-
-            <td><%= link_to 'Show', event_path(event.id) %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
+            <td><%= link_to 'Show', dashboard_event_path(event.id) %></td>
+            <td><%= link_to 'Edit', new_dashboard_event_path(event) %></td>
             <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
@@ -57,5 +56,5 @@
   </table>
 
   <br>            
-          
-  <%= link_to 'New Event', new_event_path %>    
+          <% end %>
+  <%= link_to 'New Event', new_dashboard_event_path %>    

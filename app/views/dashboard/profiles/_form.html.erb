@@ -1,0 +1,77 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.text_field :avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :tagline %><br>
+    <%= f.text_field :tagline %>
+  </div>
+  <div class="field">
+    <%= f.label :website1 %><br>
+    <%= f.text_field :website1 %>
+  </div>
+  <div class="field">
+    <%= f.label :website2 %><br>
+    <%= f.text_field :website2 %>
+  </div>
+  <div class="field">
+    <%= f.label :website3 %><br>
+    <%= f.text_field :website3 %>
+  </div>
+   <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div> 
+  <div class="field">
+    <%= f.label :pic1 %><br>
+    <%= f.text_field :pic1 %>
+  </div>
+  <div class="field">
+    <%= f.label :pic2 %><br>
+    <%= f.text_field :pic2 %>
+  </div>
+  <div class="field">
+    <%= f.label :pic3 %><br>
+    <%= f.text_field :pic3 %>
+  </div>
+  <div class="field">
+    <%= f.label :pic4 %><br>
+    <%= f.text_field :pic4 %>
+  </div>
+  <div class="field">
+    <%= f.label :pic5 %><br>
+    <%= f.text_field :pic5 %>
+  </div>
+  <div class="field">
+    <%= f.label :pic6 %><br>
+    <%= f.text_field :pic6 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
