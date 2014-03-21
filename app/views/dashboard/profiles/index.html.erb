@@ -1,3 +1,4 @@
+<% if @profiles %>
 <h1>profiles#index</h1>
 <p>Find me in app/views/profiles/index.html.erb</p>
 
@@ -40,8 +41,8 @@
             <td><%= profile.pic4 %></td>
             <td><%= profile.pic5 %></td>
             <td><%= profile.pic6 %></td>
-            <td><%= link_to 'Show', profile_path(profile.id) %></td>
-            <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+            <td><%= link_to 'Show', dashboard_profiles_path(profile.id) %></td>
+            <td><%= link_to 'Edit', edit_dashboard_profile_path(profile) %></td>
             <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
@@ -49,5 +50,5 @@
   </table>
 
   <br>            
-          
-  <%= link_to 'New Profile', new_profile_path %>    
+       <% end %>   
+  <%= link_to 'New Profile', new_dashboard_profile_path %>    
