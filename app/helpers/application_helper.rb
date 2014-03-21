@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
 	def user_logged_in?
  	 member_signed_in?
   end
