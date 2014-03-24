@@ -40,9 +40,9 @@
           </a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Home", "/path1"  %></li>
-              <li><%= link_to "Members", "/path1"  %></li>
-              <li><%= link_to "Events", "/path1"  %></li>
+              <li><%= link_to "Home", root_path  %></li>
+              <li><%= link_to "Members", profiles_path  %></li>
+              <li><%= link_to "Events"  %></li>
               <li><%= link_to "Calender", "/path1"  %></li>
               <li><%= link_to "About us", "/path1"  %></li>
               <li><%= link_to "Contact", "/path1"  %></li>
@@ -65,25 +65,27 @@
     </div>
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
+        <div class="span3 offset1">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Member Options</li>
               <li><%= link_to "Ceate Profile", new_dashboard_profile_path  %></li>
-              <li><%= link_to "Edit Profile", "#"  %></li>
-              <li><%= link_to "Create Event", "#"  %></li>
-              <li><%= link_to "Edit Event", "#"  %></li>
+              <li><%= link_to "Edit Profile", "#" %></li>
+              <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
+              <li><%= link_to "Edit Event", "#" %></li>
             </ul>
-            </div><!--/.well -->
-            </div><!--/span-->
-            <div class="span9">
-              <%= bootstrap_flash %>
-              <%= yield %>
             </div>
-            </div><!--/row-->
+            </div>
+            <div class="span8">
+              <div class="well">
+                <%= bootstrap_flash %>
+                <%= yield %>
+              </div>
+            </div>
+            </div>
             <footer>
               <p>&copy; Company 2014</p>
             </footer>
-            </div> <!-- /container -->
+            </div>
           </body>
         </html>
