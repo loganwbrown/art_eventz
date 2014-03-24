@@ -23,4 +23,5 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'letter_opener'
+  gem 'ffaker'
 end
