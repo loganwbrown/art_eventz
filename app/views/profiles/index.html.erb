@@ -30,7 +30,7 @@
             <td><%= profile.name %></td>
             <td><%= profile.avatar %></td>
             <td><%= profile.tagline %></td>
-            <td><%= profile.website %></td>
+            <td><%= profile.website1 %></td>
             <td><%= profile.facebook %></td>
             <td><%= profile.twitter %></td>
             <td><%= profile.bio %></td>
@@ -41,8 +41,7 @@
             <td><%= profile.pic5 %></td>
             <td><%= profile.pic6 %></td>
             <td><%= link_to 'Show', profile_path(profile.id) %></td>
-            <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-            <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           
           </tr>
         <% end %>
     </tbody>  
