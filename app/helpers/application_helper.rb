@@ -6,7 +6,6 @@ module ApplicationHelper
    def resource_name
     :member
   end
-
   def resource
     @member ||= Member.new
   end
