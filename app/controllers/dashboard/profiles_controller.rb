@@ -1,6 +1,8 @@
 class Dashboard::ProfilesController < Dashboard::DashboardController
 
   def index
+    # @profiles = Profile.find(current_member.id)
+
   end
 
   def show
@@ -34,9 +36,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   end
 
   def edit
-    @member = Member.find(:id)
-    @profile = Profile.find(params[@member.id])
-   
+    @profile = Profile.find(params[:id])
   end
 
 
