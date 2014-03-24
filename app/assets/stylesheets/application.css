@@ -15,7 +15,7 @@
  }
 .topbar{
 	height: 320px;
-	width: 1600px;
+	width: auto;
 	background-image: url("arteventz-header-3-21.jpg");
 	margin: 0 auto;
 	background-repeat:no-repeat;
