@@ -173,10 +173,8 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   devise
-<<<<<<< HEAD
   factory_girl_rails
-=======
->>>>>>> upstream/master
+  upstream/master
   ffaker
   jbuilder (~> 1.2)
   jquery-rails
