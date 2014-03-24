@@ -25,3 +25,10 @@ group :development do
   gem 'letter_opener'
   gem 'ffaker'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+
+end
