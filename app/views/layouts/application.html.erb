@@ -27,22 +27,27 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
     <%= javascript_include_tag "application" %>
+
+    <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
   </head>
   <body>
-    <div class="topbar"></div>
+    <div class="topbar">
+
+    </div>
+
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>  
           </a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Home", "/path1"  %></li>
-              <li><%= link_to "Members", "/path1"  %></li>
-              <li><%= link_to "Events", "/path1"  %></li>
+              <li><%= link_to "Home", root_path  %></li>
+              <li><%= link_to "Members", profiles_path  %></li>
+              <li><%= link_to "Events", events_path %></li>
               <li><%= link_to "Calender", "/path1"  %></li>
               <li><%= link_to "About us", "/path1"  %></li>
               <li><%= link_to "Contact", "/path1"  %></li>
@@ -65,6 +70,7 @@
     </div>
     <div class="container-fluid">
       <div class="row-fluid">
+
         <!-- <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
@@ -76,14 +82,21 @@
             </ul>
           <! </div><!<! --><!-- /.well -->
         <!-- </div><!/span-->
-            <div class="span9">
+
+            <div class="span9 offset1">
               <%= bootstrap_flash %>
               <%= yield %>
+              </div>
             </div>
             </div><!--/row-->
             <footer>
               <p>&copy; Company 2014</p>
             </footer>
             </div> <!-- /container -->
+            <script>
+            $(function() {
+              $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+            });
+            </script>
           </body>
         </html>

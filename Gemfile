@@ -23,11 +23,12 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'letter_opener'
+  gem 'ffaker'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'ffaker'
   gem 'factory_girl_rails'
+
 end
