@@ -7,8 +7,20 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'ffaker'
 
+
+  member = Member.create(
+  {
+    email:                      "email@example.com",
+    password:                   "password",
+    password_confirmation:      "password"
+    })
+
+  
+
 def set_up_database()
+  @member = Member.first()
   20.times do |i| 
+
     events = Event.create(
       {
         title:                      Faker::Lorem.words.join(' '),
@@ -26,10 +38,13 @@ def set_up_database()
         facebook:                   Faker::Internet.uri('http'),
         application_form:           Faker::Internet.uri('http'),
         contact_name:               Faker::Name.name,
-        contact_email:              Faker::Internet.email
+        contact_email:              Faker::Internet.email,
+        member_id:                  @member.id
       }
       )
   end
+
+
 end
 
 set_up_database()
