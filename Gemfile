@@ -24,3 +24,10 @@ group :development do
   gem 'better_errors'
   gem 'letter_opener'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
+end
