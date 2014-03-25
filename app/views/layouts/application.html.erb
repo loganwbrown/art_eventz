@@ -12,6 +12,7 @@
     <![endif]-->
     <%= stylesheet_link_tag "application", :media => "all" %>
     <!-- For third-generation iPad with high-resolution Retina display: -->
+
     <!-- Size should be 144 x 144 pixels -->
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
     <!-- For iPhone with high-resolution Retina display: -->
@@ -29,6 +30,8 @@
     <%= javascript_include_tag "application" %>
 
     <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+    <!-- slide show -->
+    <link rel="stylesheet" type="text/css" href="slick.css"/>
   </head>
   <body>
     <div class="topbar">
@@ -86,7 +89,14 @@
             <div class="span9 offset1">
               <%= bootstrap_flash %>
               <%= yield %>
+
               </div>
+        <!-- slideshow -->
+            <div class="span5 offset4">
+              <div><img src="http://images.fineartamerica.com/images-small-5/shaken-at-sunset-david-hansen.jpg"></div>
+              <div><img src="http://images.fineartamerica.com/images-small-5/shaken-at-sunset-david-hansen.jpg"></div>
+              <div><img src="http://images.fineartamerica.com/images-small-5/shaken-at-sunset-david-hansen.jpg"></div>
+            </div>
             </div>
             </div><!--/row-->
             <footer>
@@ -98,5 +108,7 @@
               $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
             });
             </script>
+<!-- slide show -->
+            <script type="text/javascript" src="slick.min.js"></script>
           </body>
         </html>

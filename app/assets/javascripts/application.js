@@ -19,4 +19,9 @@
 $(function() {
     $("#event_date").datepicker();
     $("#event_time").timepicker();
+
+    $('.your-class').slick({
+        setting - name: setting - value
+    });
+
 });
