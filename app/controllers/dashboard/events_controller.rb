@@ -1,7 +1,7 @@
 class Dashboard::EventsController < Dashboard::DashboardController
 
 	def index
-
+    @events = current_member.events.all
 	end
 
 	def show
