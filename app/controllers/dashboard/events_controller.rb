@@ -2,12 +2,10 @@ class Dashboard::EventsController < Dashboard::DashboardController
 
 	def index
     @events = current_member.events.all
-
 	end
 
 	def show
     @event = Event.find(params[:id])
-
 	end
 
 	def new
@@ -18,7 +16,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
       flash[:notice] = "event has been updated."
-      redirect_to event_path(@event.id)
+      redirect_to dashboard_event_path(@event.id)
     else
       flash[:error] = "There was a problem updating your form."
       render :edit
@@ -32,8 +30,8 @@ class Dashboard::EventsController < Dashboard::DashboardController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    flash[:notice] = "Your event was destroyed"
-    redirect_to events_path
+    flash[:notice] = "Event has been Destroyed"
+    redirect_to dashboard_events_path
   end
 
   
@@ -42,7 +40,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
     @event = current_member.events.build(event_params)
     respond_to do |format|
       if @event.save
-        format.html { redirect_to root_path, notice: 'Event was successfully created.' }
+        format.html { redirect_to dashboard_event_path(@event.id), notice: 'Event was successfully created.' }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
@@ -52,6 +50,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
   end
 
 private
+
   def event
     @event = Event.find(params[:id])
   end
