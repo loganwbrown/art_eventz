@@ -1,8 +1,7 @@
 class Dashboard::ProfilesController < Dashboard::DashboardController
 
   def index
-    # @profiles = Profile.find(current_member.id)
-
+    @profile = current_member.profile
   end
 
   def show
@@ -16,8 +15,8 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   def create 
     @profile = current_member.build_profile(profile_params)
     if @profile.save
-        flash[:success] = "changes have been made"
-        redirect_to dashboard_profile_path(@profile.id)
+        flash[:success] = "Thanks for making a Profile with us!!"
+        redirect_to root_path
     else
         flash[:error] = "you are a failure and no one loves you"
         render root_path
@@ -28,7 +27,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
      @profile = Profile.find(params[:id])
        if @profile.update_attributes(profile_params)
         flash[:success] = "changes have been made"
-        redirect_to profile_path(@profile.id)
+        redirect_to dashboard_profile_path(@profile.id)
        else
         flash[:error] = "you are a failure and no one loves you"
         render :edit

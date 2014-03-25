@@ -1,13 +1,11 @@
 <h1>Events#index</h1>
 <p>DASHBOARD/EVENTS</p>
-
 <table>
     <thead>
         <tr>
             <th>Title </th>
             <th>Tagline </th>
             <th>Address </th>
-            <th>Photo </th>
             <th>Website </th>
             <th>Contact Name </th>
             <th>Contact Email </th>
@@ -20,9 +18,6 @@
         <% @events.each do |event| %>
         <tr>
             <td><%= event.title %></td>
-
-            <td><%= event.date %></td>
-            <td><%= event.time %></td>
             <td><%= event.tagline %></td>
             <td><%= event.address %></td>
             <td><%= event.website %></td>
@@ -30,7 +25,7 @@
             <td><%= event.contact_email %></td>
             <td><%= link_to 'Show', dashboard_event_path(event.id) %></td>
             <td><%= link_to 'Edit', edit_dashboard_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', dashboard_event_path(event.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
     </tbody>
