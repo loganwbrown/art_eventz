@@ -14,7 +14,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   end
 
   def create 
-    @profile = Profile.new(profile_params)
+    @profile = current_member.build_profile(profile_params)
     if @profile.save
         flash[:success] = "changes have been made"
         redirect_to dashboard_profile_path(@profile.id)

@@ -5,7 +5,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
 	end
 
 	def show
-    @events = Event.find(params[:id])
+    @event = Event.find(params[:id])
 	end
 
 	def new
@@ -37,11 +37,10 @@ class Dashboard::EventsController < Dashboard::DashboardController
   
 
   def create
-    @event = Event.new(event_params)
-
+    @event = current_member.events.build(event_params)
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Event was successfully created.' }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
@@ -51,12 +50,10 @@ class Dashboard::EventsController < Dashboard::DashboardController
   end
 
 private
-  # Use callbacks to share common setup or constraints between actions.
   def event
     @event = Event.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def event_params
     params.require(:event).permit(:title, :tagline, :address, :address2, :city, :state, :zip, :more_info, :photo1, :photo2, :photo3, :website, :facebook, :application_form, :contact_name, :contact_email)
   end
