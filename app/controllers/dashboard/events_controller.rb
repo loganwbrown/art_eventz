@@ -40,7 +40,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
     @event = current_member.events.build(event_params)
     respond_to do |format|
       if @event.save
-        format.html { redirect_to root_path, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
