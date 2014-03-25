@@ -31,7 +31,7 @@ describe Dashboard::EventsController do
           post :create, {member_id: @member.id, event: {title: 'thing', address: '337 6th St', address2: 'upstairs', city: 'Las Vegas', state: 'NV', zip: '89120', more_info: 'blah blah blah blah blah' }}
         }.to change(@member.events, :count).by(1)
         assert_response :redirect
-        # expect(response).to render_template :show
+        expect(response).to redirect_to dashboard_event_path(@member.events.first.id)
       end
     end
     context 'when the event is invalid' do
