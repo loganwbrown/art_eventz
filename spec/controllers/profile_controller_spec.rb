@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ProfileController do
+describe ProfilesController do
 
   describe '#index' do
     example do

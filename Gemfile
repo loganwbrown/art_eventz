@@ -19,16 +19,14 @@ gem 'twitter-bootstrap-rails'
 
 gem 'devise'
 
-group :development do
-  gem 'binding_of_caller'
-  gem 'better_errors'
-  gem 'letter_opener'
-  gem 'ffaker'
-end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'letter_opener'
+  gem 'ffaker'
 
 end

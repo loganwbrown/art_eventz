@@ -1,14 +1,9 @@
-require 'test_helper'
+require 'spec_helper'
 
-describe List do
+describe Profile do
 
   describe 'validations' do
     it { should validate_presence_of :name }
-    it { should validate_uniqueness_of :name }
-  end
-
-  describe 'associations' do
-    it { should have_many :events }
   end
 end
 
