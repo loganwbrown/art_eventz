@@ -7,6 +7,7 @@ class Dashboard::EventsController < Dashboard::DashboardController
 
 	def show
     @event = Event.find(params[:id])
+
 	end
 
 	def new
