@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -32,4 +32,4 @@ group :development, :test do
   gem 'ffaker'
 
 end
-ruby "2.1.1"
+ruby "2.0.0"
