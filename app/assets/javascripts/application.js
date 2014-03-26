@@ -19,4 +19,9 @@
 $(function() {
     $("#event_date").datepicker();
     $("#event_time").timepicker();
+
+    $('.carousel').carousel({
+        interval: 3000
+
+    });
 });
