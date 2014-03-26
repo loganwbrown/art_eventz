@@ -5,10 +5,12 @@ describe Dashboard::EventsController do
   describe '#index' do
     example do
       member = create(:member)
+      sign_in(member)
+      events = member.events.all
       event = member.events.create
       get :index, {id: member.id}
       expect(member.email).to eq (event.member.email)
-      # expect(assigns(:events)).to_not be_empty
+      expect(:events).to_not be_empty
     end
   end
 
@@ -20,7 +22,7 @@ describe Dashboard::EventsController do
     end
   end
 
-  describe '#create', :focus do
+  describe '#create' do
     before do
       @member = create(:member)
       sign_in(:member, @member)
@@ -44,11 +46,32 @@ describe Dashboard::EventsController do
   end
 
   describe '#update' do
-    pending
+    context "when success" do
+      before do
+        @event = create(:event, title: "Milk" )
+        @member = @event.member
+        sign_in(:member, @member)
+      end
+      example 'When event is updated' do
+        put :update, {id: @event.id, event: {title: "Water"}}
+        @event.reload
+        expect(@event.title).to eq("Water")
+      end
+    end
   end
 
-  describe '#destroy' do
-    pending
+  describe '#destroy', :focus do
+    context "when destroy works" do
+      before do
+        @event = create(:event, title: "Milk" )
+        @member = @event.member
+        sign_in(:member, @member)
+      end
+      example 'When event is updated' do
+        delete :destroy, {id: @event.id, event: {title: "Milk"}}
+        expect(@member.events.count).should eq 0
+      end
+    end 
   end
 end
 # class EventsControllerTest < ActionController::TestCase
