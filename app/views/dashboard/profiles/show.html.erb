@@ -8,8 +8,9 @@
 </p>
 
 <p>
+
   <strong>Avatar:</strong>
-  <%= @profile.avatar %>
+  <%= image_tag(@profile.avatar.url(:medium)) %>
 </p>
 
 <p>
