@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 20140324180926) do
     t.string   "contact_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "member_id"
     t.string   "date"
     t.string   "time"
+    t.integer  "member_id"
   end
 
   create_table "members", force: true do |t|
