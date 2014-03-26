@@ -7,7 +7,6 @@
         <th>Title </th>
         <th>Tagline </th>
         <th>Address </th>
-        <th>Suite() </th>
         <th>City </th>
         <th>State </th>
         <th>Zip </th>
@@ -33,7 +32,6 @@
             <td><%= event.title %></td>
             <td><%= event.tagline %></td>
             <td><%= event.address %></td>
-            <td><%= event.address2 %></td>
             <td><%= event.city %></td>
             <td><%= event.state %></td>
             <td><%= event.zip %></td>
@@ -46,11 +44,7 @@
             <td><%= event.application_form %></td>
             <td><%= event.contact_name %></td>
             <td><%= event.contact_email %></td>
-
-
             <td><%= link_to 'Show', event_path(event.id) %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
     </tbody>  
@@ -58,4 +52,3 @@
 
   <br>            
           
-  <%= link_to 'New Event', new_event_path %>    
