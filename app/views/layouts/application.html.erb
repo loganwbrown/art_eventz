@@ -26,9 +26,9 @@
               <li><%= link_to "Home", root_path  %></li>
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
-              <li><%= link_to "Calender", "/path1"  %></li>
-              <li><%= link_to "About us", "/path1"  %></li>
-              <li><%= link_to "Contact", "/path1"  %></li>
+              <li><%= link_to "Calender", "#"  %></li>
+              <li><%= link_to "About us", about_path  %></li>
+              <li><%= link_to "Contact", contact_path  %></li>
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -48,18 +48,7 @@
     </div>
     <div class="container-fluid">
       <div class="row-fluid">
-        <!-- <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-              
-            </ul>
-            <! </div><!<! --><!-- /.well -->
-            <!-- </div><!/span-->
-            <div class="span9 offset1">
+        <div class="well span10 offset1">
               <%= bootstrap_flash %>
               <%= yield %>
             </div>
