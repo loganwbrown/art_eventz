@@ -5,6 +5,12 @@ ArtEventz::Application.routes.draw do
   devise_for :members, controllers: { registrations: "registrations"}
   root 'static_pages#index'
 
+  
+
+
+  get '/about' => 'static_pages#about'
+  get '/contact' => 'static_pages#contact'
+
 	namespace :dashboard do
 	  resources :events
 	  resources :profiles
