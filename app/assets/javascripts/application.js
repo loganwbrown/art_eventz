@@ -14,9 +14,14 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
+
 //= require_tree .
 $(function() {
     $("#event_date").datepicker();
     $("#event_time").timepicker();
+
+    $('.carousel').carousel({
+        interval: 3000
+
+    });
 });
