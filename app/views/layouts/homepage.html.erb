@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
-    <%= csrf_meta_tags %> 
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
     <%= javascript_include_tag "application" %>
@@ -26,8 +26,8 @@
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
               <li><%= link_to "Calender", "/path1"  %></li>
-              <li><%= link_to "About us", "/path1"  %></li>
-              <li><%= link_to "Contact", "/path1"  %></li>
+              <li><%= link_to "About us", about_path  %></li>
+              <li><%= link_to "Contact", contact_path  %></li>
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -56,7 +56,6 @@
               <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
               <% else %>
               <li><%= link_to "My Events", dashboard_events_path  %></li>
-
               <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
               <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
               <% end %>
@@ -87,7 +86,9 @@
         </div>
       </div>
       <footer>
+      <div class="well">
         <p>&copy; Company 2014</p>
+        </div>
       </footer>
     </div>
   </body>

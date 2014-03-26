@@ -23,14 +23,15 @@ describe Dashboard::EventsController do
   describe '#create', :focus do
     before do
       @member = create(:member)
+      sign_in(:member, @member)
     end
     context 'when the event is valid' do
       example do
         expect {
-          post :create, {member_id: @member.id, event: {title: 'thing'}}
+          post :create, {member_id: @member.id, event: {title: 'thing', address: '337 6th St', address2: 'upstairs', city: 'Las Vegas', state: 'NV', zip: '89120', more_info: 'blah blah blah blah blah' }}
         }.to change(@member.events, :count).by(1)
         assert_response :redirect
-        expect(response).to redirect_to member_events_path(@member)
+        expect(response).to redirect_to dashboard_event_path(@member.events.first.id)
       end
     end
     context 'when the event is invalid' do

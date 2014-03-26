@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :event do
-    title { Faker::Lorem.words.join(' ') }
-    member { create(:member) }
+    title       { Faker::Lorem.words.join(' ') }
+    member      { create(:member) }
     tagline     { Faker::Lorem.sentence(word_count = 4) } 
     address     { Faker::Address.street_address }
     address2    { rand(5..278) }
