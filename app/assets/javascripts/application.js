@@ -14,21 +14,15 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
-<<<<<<< HEAD
 //= require fullcalendar
-=======
-//= require nivo-lightbox.min
->>>>>>> earthspiritart-master
+//= require nivo-lightbox.js
+
 
 //= require_tree .
 $(function() {
     $("#event_date").datepicker();
-<<<<<<< HEAD
     $('#calendar').fullCalendar();
-    $('.carousel').carousel({
-        interval: 3000
-=======
-    $("#event_time").timepicker();
+
 
     // $('.carousel').carousel({
     //     interval: 3000
@@ -47,7 +41,6 @@ $(function() {
         onPrev: function(element) {}, // Callback when the lightbox gallery goes to previous item
         onNext: function(element) {}, // Callback when the lightbox gallery goes to next item
         errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
->>>>>>> earthspiritart-master
     });
 
 
