@@ -5,7 +5,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   end
 
   def show
-    @profile = current_member
+    @profile = current_member.profile
 
   end
 

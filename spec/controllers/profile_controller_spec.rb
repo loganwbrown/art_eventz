@@ -10,7 +10,7 @@ describe Dashboard::ProfilesController do
     end
   end
 
-  describe '#show', :focus => true do
+  describe '#show' do
     example do
       profile = create(:profile, name: 'Vlad Putin')
       get :show, {id: profile.id}
