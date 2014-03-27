@@ -15,6 +15,7 @@ ArtEventz::Application.routes.draw do
 	namespace :dashboard do
 	  resources :events
 	  resources :profiles
+    get '/index' => 'static_pages#index'
 	end
 
 
