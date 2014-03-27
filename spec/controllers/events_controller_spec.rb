@@ -60,7 +60,7 @@ describe Dashboard::EventsController do
     end
   end
 
-  describe '#destroy', :focus do
+  describe '#destroy' do
     context "when destroy works" do
       before do
         @event = create(:event, title: "Milk" )

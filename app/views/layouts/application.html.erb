@@ -7,10 +7,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-
     <%= javascript_include_tag "application" %>
     <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
-
   </head>
   <body>
     <div class="topbar">
@@ -28,15 +26,9 @@
               <li><%= link_to "Home", root_path  %></li>
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
-<<<<<<< HEAD
-              <li><%= link_to "Calender", "/path1"  %></li>
-              <li><%= link_to "About us", "/path1" %></li>
-              <li><%= link_to "Contact", "/path1"  %></li>
-=======
               <li><%= link_to "Calender", "#"  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
->>>>>>> upstream/master
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -54,59 +46,16 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
-<<<<<<< HEAD
-
-        <!-- <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          <! </div><!<! --><!-- /.well -->
-        <!-- </div><!/span-->
-
-            <div class="span9 offset1">
-              <%= bootstrap_flash %>
-              <%= yield %>
-            </div>
-       
-      </div><!--/row-->
-           
-            <footer>
-              <p>&copy; Company 2014</p>
-            </footer>
-    </div> <!-- /container -->
-            <%= javascript_include_tag "jquery-ui" %>
-            <%= javascript_include_tag "application" %>
-            <script>
-            $(function() {
-              $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
-            });
-            </script>
-
-            
-          </body>
-        </html>
-=======
-        <div class="well span10 offset1">
-              <%= bootstrap_flash %>
-              <%= yield %>
-            </div>
-          </div>
-          </div><!--/row-->
-          <footer>
-            <p>&copy; Company 2014</p>
-          </footer>
-          </div> <!-- /container -->
-          <script>
-          $(function() {
-          $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
-          });
-          </script>
-        </body>
-      </html>
->>>>>>> upstream/master
+    <div class="well span10 offset1">
+      <%= bootstrap_flash %>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+    <script>
+    $(function() {
+    $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+    });
+    </script>
+</body>
+</html>
