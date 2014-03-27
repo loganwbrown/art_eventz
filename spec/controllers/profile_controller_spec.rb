@@ -72,7 +72,7 @@ describe Dashboard::ProfilesController do
     end
   end
 
-  describe '#destroy', :focus do
+  describe '#destroy' do
     before do
       member = create(:member)
       sign_in member
