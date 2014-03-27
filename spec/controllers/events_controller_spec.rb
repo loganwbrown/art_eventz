@@ -67,7 +67,7 @@ describe Dashboard::EventsController do
         @member = @event.member
         sign_in(:member, @member)
       end
-      example 'When event is updated' do
+      example 'When event is deleted' do
         delete :destroy, {id: @event.id, event: {title: "Milk"}}
         expect(@member.events.count).should eq 0
       end
