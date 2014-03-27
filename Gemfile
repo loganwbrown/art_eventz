@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '4.0.2'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
@@ -9,20 +8,15 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'rails_12factor', group: :production
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
-
 gem "carrierwave"
 gem "mini_magick"
 gem "fog", github: "fog/fog"
-
-
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
@@ -31,5 +25,4 @@ group :development, :test do
   gem 'better_errors'
   gem 'letter_opener'
   gem 'ffaker'
-
 end
