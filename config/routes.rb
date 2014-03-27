@@ -10,7 +10,8 @@ ArtEventz::Application.routes.draw do
 
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
-
+  get '/calendar' => 'static_pages#calendar'
+  
 	namespace :dashboard do
 	  resources :events
 	  resources :profiles

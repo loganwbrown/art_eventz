@@ -7,11 +7,12 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
+
     <%= stylesheet_link_tag "nivo-lightbox", :media => "all" %>
     <%= stylesheet_link_tag "themes/default/default.css", :media => "all" %>
 
-    <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
 
+    <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
   </head>
   <body>
     <div class="topbar">
@@ -30,7 +31,7 @@
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
 
-              <li><%= link_to "Calender", "#"  %></li>
+              <li><%= link_to "Calendar", calendar_path  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
 
@@ -51,8 +52,6 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
 
         <div class="well span10 offset1">
               <%= bootstrap_flash %>
@@ -73,5 +72,6 @@
           <%= javascript_include_tag "application" %>
           
         </body>
-      </html>
+</html>
+
 

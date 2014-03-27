@@ -10,16 +10,7 @@
         <th>Facebook </th>
         <th>Twitter </th>
         <th>Bio </th>
-        <th>Photo </th>
-        <th>Photo </th>
-        <th>Photo </th>
-        <th>Photo </th>
-        <th>Photo </th>
-        <th>Photo </th>
         <th></th>
-        <th></th>
-        <th></th>
-
       </tr> 
     </thead>
 
@@ -33,17 +24,10 @@
             <td><%= profile.facebook %></td>
             <td><%= profile.twitter %></td>
             <td><%= profile.bio %></td>
-            <td><%= profile.pic1 %></td>
-            <td><%= profile.pic2 %></td>
-            <td><%= profile.pic3 %></td>
-            <td><%= profile.pic4 %></td>
-            <td><%= profile.pic5 %></td>
-            <td><%= profile.pic6 %></td>
             <td><%= link_to 'Show', profile_path(profile.id) %></td>
           </tr>
         <% end %>
     </tbody>  
   </table>
-
-  <br>            
+      
           

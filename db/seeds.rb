@@ -7,15 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'ffaker'
 
-
   member = Member.create(
   {
     email:                      "email@example.com",
     password:                   "password",
     password_confirmation:      "password"
     })
-
-  
 
 def set_up_database()
   @member = Member.first()

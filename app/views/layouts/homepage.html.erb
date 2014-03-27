@@ -12,7 +12,7 @@
     <%= stylesheet_link_tag "nivo-lightbox", :media => "all" %>
     <%= stylesheet_link_tag "themes/default/default.css", :media => "all" %>
 
-  
+
   </head>
   <body>
     <div class="topbar"></div>
@@ -29,7 +29,7 @@
               <li><%= link_to "Home", root_path  %></li>
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
-              <li><%= link_to "Calender", "/path1"  %></li>
+              <li><%= link_to "Calender", calendar_path  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
               <li class="dropdown nav">
@@ -60,6 +60,7 @@
               <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
               <% else %>
               <li><%= link_to "My Events", dashboard_events_path  %></li>
+              <li><%= link_to "My Profile", dashboard_profile_path(current_member.id)  %></li>
               <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
               <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
               <% end %>
@@ -70,14 +71,13 @@
           <div class="well">
             <%= bootstrap_flash %>
             <%= yield %>
-            
-            
+
           </div>
         </div>
       </div>
       <footer>
-      <div class="well">
-        <p>&copy; Company 2014</p>
+        <div class="well">
+          <p>&copy; Company 2014</p>
         </div>
       </footer>
     </div>

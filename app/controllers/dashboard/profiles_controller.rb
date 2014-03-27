@@ -5,7 +5,8 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   end
 
   def show
-    @profile = Profile.find(params[:id])
+    @profile = current_member.profile
+
   end
 
   def new
@@ -23,6 +24,13 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
     end
   end
  
+  def destroy
+    @profile = current_member.profile
+    @profile.destroy
+    flash[:notice] = "Profile has been Destroyed"
+    redirect_to dashboard_path
+  end
+
   def update
      @profile = Profile.find(params[:id])
        if @profile.update_attributes(profile_params)
@@ -35,14 +43,14 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
   end
 
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = current_member.profile
   end
 
 
   private
 
   def profile_params
-      params.require(:profile).permit(:name, :avatar, :tagline, :website1, :website2, :website3, :facebook, :twitter, :bio, :pic1, :pic2, :pic3, :pic4, :pic5, :pic6)
+      params.require(:profile).permit(:name, :avatar, :tagline, :website1, :website2, :website3, :facebook, :twitter, :bio)
   end
 
 end
