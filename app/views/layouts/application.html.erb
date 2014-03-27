@@ -7,8 +7,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+ 
+    
   </head>
   <body>
     <div class="topbar">
@@ -52,10 +52,6 @@
     </div>
   </div>
 </div>
-    <script>
-    $(function() {
-    $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
-    });
-    </script>
+<%= javascript_include_tag "application" %>
 </body>
 </html>

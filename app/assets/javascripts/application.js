@@ -14,14 +14,13 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require fullcalendar
 
 //= require_tree .
 $(function() {
     $("#event_date").datepicker();
-    $("#event_time").timepicker();
-
+    $('#calendar').fullCalendar();
     $('.carousel').carousel({
         interval: 3000
-
     });
 });
