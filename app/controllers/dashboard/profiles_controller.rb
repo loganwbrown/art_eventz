@@ -13,14 +13,14 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
     @profile = Profile.new
   end
 
-  def create 
+  def create
     @profile = current_member.build_profile(profile_params)
     if @profile.save
         flash[:success] = "Thanks for making a Profile with us!!"
         redirect_to root_path
     else
         flash[:error] = "you are a failure and no one loves you"
-        render root_path
+        render new_dashboard_profile_path
     end
   end
  

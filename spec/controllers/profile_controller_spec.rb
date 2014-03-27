@@ -1,20 +1,20 @@
 require 'spec_helper'
 
-describe ProfilesController do
+describe Dashboard::ProfilesController do
 
   describe '#index' do
     example do
       create(:profile)
       get :index
-      expect(assigns(:profiles)).to_not be_empty
+      expect((:profiles)).to_not be_empty
     end
   end
 
   describe '#show', :focus => true do
     example do
       profile = create(:profile, name: 'Vlad Putin')
-      get :show, {id: list.id}
-      expect(assigns(:profile).name).to eq 'Vlad Putin'
+      get :show, {id: profile.id}
+      expect(profile.name).to eq 'Vlad Putin'
     end
   end
 
@@ -50,8 +50,11 @@ describe ProfilesController do
   describe '#update' do
     before do
       @profile = create(:profile, name: 'Vlad', tagline: 'groceries')
+      @member = @profile.member
+      sign_in(:member, @member)
+      
     end
-    context 'when the record updates successfully' do
+    context 'when the record updates successfully', :focus do
       example do
         put :update, {id: @profile.id, profile: {name: 'Vlad'}}
         expect(assigns(:profile)).to eq @profile

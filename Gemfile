@@ -17,6 +17,11 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 
+gem "carrierwave"
+gem "mini_magick"
+gem "fog", github: "fog/fog"
+
+
 
 group :development, :test do
   gem 'rspec-rails'
