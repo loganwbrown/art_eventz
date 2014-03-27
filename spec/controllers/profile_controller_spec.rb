@@ -49,12 +49,13 @@ describe Dashboard::ProfilesController do
 
   describe '#update' do
     before do
+      member = create(:member)
+      sign_in member
       @profile = create(:profile, name: 'Vlad', tagline: 'groceries')
-      @member = @profile.member
-      sign_in(:member, @member)
+      sign_in(:profile, @profile)
       
     end
-    context 'when the record updates successfully', :focus do
+    context 'when the record updates successfully' do
       example do
         put :update, {id: @profile.id, profile: {name: 'Vlad'}}
         expect(assigns(:profile)).to eq @profile
@@ -71,15 +72,16 @@ describe Dashboard::ProfilesController do
     end
   end
 
-  describe '#destroy' do
+  describe '#destroy', :focus do
     before do
-      @profile = create(:profile)
+      member = create(:member)
+      sign_in member
+      @profile = create(:profile, name: 'Vlad', tagline: 'groceries')
+      sign_in(:profile, @profile)
     end
     example do
-      expect {
-        delete :destroy, {id: @profile.id}
-      }.to change(Profile, :count).from(1).to(0)
-      assert_response :redirect
+      @profile.destroy
+      expect(@profile) == nil
     end
   end
 
