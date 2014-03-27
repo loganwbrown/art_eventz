@@ -8,6 +8,11 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *= require bootstrap_and_overrides
+<<<<<<< HEAD
+ *= require fullcalendar.css
+=======
+ *= require nivo-lightbox.css
+>>>>>>> earthspiritart-master
  *= require_self.
  */
  body{
@@ -101,4 +106,5 @@
   font-size: 11px;
   text-align: center;
 }
+
 

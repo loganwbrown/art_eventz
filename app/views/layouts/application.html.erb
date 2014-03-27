@@ -7,8 +7,14 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+<<<<<<< HEAD
+ 
+    
+=======
+
+    <%= stylesheet_link_tag "nivo-lightbox", :media => "all" %>
+    <%= stylesheet_link_tag "themes/default/default.css", :media => "all" %>
+>>>>>>> earthspiritart-master
   </head>
   <body>
     <div class="topbar">
@@ -26,9 +32,11 @@
               <li><%= link_to "Home", root_path  %></li>
               <li><%= link_to "Members", profiles_path  %></li>
               <li><%= link_to "Events", events_path %></li>
+
               <li><%= link_to "Calendar", calendar_path  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
+
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -46,16 +54,38 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="well span10 offset1">
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
   </div>
 </div>
-    <script>
-    $(function() {
-    $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
-    });
-    </script>
+<%= javascript_include_tag "application" %>
 </body>
 </html>
+=======
+
+        <div class="well span10 offset1">
+              <%= bootstrap_flash %>
+              <%= yield %>
+            </div>
+          </div>
+          </div><!--/row-->
+          <footer>
+            <p>&copy; artventz 2014</p>
+          </footer>
+          </div> <!-- /container -->
+          <script>
+          $(function() {
+          $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+          });
+          </script>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+          <%= javascript_include_tag "application" %>
+          
+        </body>
+</html>
+
+
+>>>>>>> earthspiritart-master
