@@ -7,11 +7,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-
-    <%= stylesheet_link_tag "nivo-lightbox", :media => "all" %>
-    <%= stylesheet_link_tag "themes/default/default.css", :media => "all" %>
-
+    <%= favicon_link_tag 'favicon.icon', :rel => 'shortcut icon' %>
+    
 
   </head>
   <body>
@@ -67,7 +64,7 @@
             </ul>
           </div>
         </div>
-        <div class="span8">
+        <div class="span12 offset1">
           <div class="well">
             <%= bootstrap_flash %>
             <%= yield %>
@@ -81,7 +78,8 @@
         </div>
       </footer>
     </div>
-          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-          <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    
+    
   </body>
 </html>
