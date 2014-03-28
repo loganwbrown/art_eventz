@@ -20,9 +20,12 @@
 
 
 
+
+
+
+
 $(function() {
     $("#event_date").datepicker();
-
     $('#calendar').fullCalendar();
 
     //$("#event_time").timepicker();
