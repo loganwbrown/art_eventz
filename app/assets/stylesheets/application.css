@@ -1,19 +1,50 @@
 /*
  *= require bootstrap_and_overrides
-
-
  *= require fullcalendar.css
  *= require nivo-slider.css
  *= require_self.
  */
-
  body{
  	background-image: url("png.png");
  	font-size: 16px;
  }
- .edit_right{
-  
-   }
+ .small_font{
+  font-size: 80%; 
+ }
+.green_box {
+  background-color: #B2D4C8;
+  width: 300px;
+  height: 180px;
+  margin: 20px;
+}
+
+.bigger_box {
+  background-color: #5A8A7A;
+  width: 350px;
+  height: 200px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.address p {
+  margin-bottom: -2px;
+}
+
+
+.field {
+  padding-right: 15%;
+  margin-bottom: 30px;
+}
+
+.event_show {
+  max-width: 40%;
+  margin-right: 15%;
+}
+
+.event_show {
+  color: #454A48;
+}
+
 .topbar{
 	height: 320px;
 	width: auto;

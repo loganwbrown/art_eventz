@@ -11,55 +11,59 @@
 <% end %>
 <div class="col-md-5 pull-left">
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name, :placeholder => "Use full name" %>
   </div>
+  
   <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="field">
-    <%= f.label :tagline %><br>
+    <%= f.label :tagline %>
     <%= f.text_field :tagline, :placeholder => "Headline for yourself" %>
   </div>
   <div class="field">
-    <%= f.label :website1 %><br>
+    <%= f.label :website1 %>
     <%= f.text_field :website1 %>
   </div>
   <div class="field">
-    <%= f.label :website2 %><br>
+    <%= f.label :website2 %>
     <%= f.text_field :website2 %>
   </div>
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio, :placeholder => "Brief description" %>
+  </div>
 </div>
-<div class="edit_right">
 
-    <%= f.fields_for :art_photo do |ff| %>
+<!--     <%= f.fields_for :art_photo do |ff| %>
       <%= ff.label :art_photo %> 
       <%= ff.file_field :art_photo %>
        <%= ff.label :art_photo %> 
       <%= ff.file_field :art_photo %>
        <%= ff.label :art_photo %> 
       <%= ff.file_field :art_photo %>
-    <% end %>
-  <div class="field">
-    <%= f.label :website3 %><br>
-    <%= f.text_field :website3 %>
-  </div>
+    <% end %> -->
+
+<div class="edit_right">
 
   <div class="field">
-    <%= f.label :facebook %><br>
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :website3 %>
+    <%= f.text_field :website3 %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %>
     <%= f.text_field :facebook, :placeholder => "Add facebook url" %>
   </div>
   <div class="field">
-    <%= f.label :twitter %><br>
+    <%= f.label :twitter %>
     <%= f.text_field :twitter, :placeholder => "Twitter handle" %>
   </div>
-  <div class="field">
-    <%= f.label :bio %><br>
-    <%= f.text_area :bio, :placeholder => "Brief description" %>
-  </div>
+  
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>
   </div>
 </div>
+
 <% end %>
