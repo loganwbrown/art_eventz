@@ -19,9 +19,26 @@
  	background-image: url("png.png");
  	font-size: 16px;
  }
- .edit_right{
-  
-   }
+ .small_font{
+  font-size: 80%;
+ 
+ }
+
+.address p {
+  margin-bottom: -2px;
+}
+
+
+.field {
+  padding-right: 15%;
+  margin-bottom: 30px;
+}
+
+.event_show {
+  max-width: 40%;
+  margin-right: 15%;
+}
+
 .topbar{
 	height: 320px;
 	width: auto;

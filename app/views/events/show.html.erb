@@ -1,86 +1,82 @@
-<h1>Events#show</h1>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<!-- <p id="notice"><%= notice %></p> -->
 
-<p>
-  <strong>Tageline:</strong>
-  <%= @event.tagline %>
-</p>
+<div class="col-md-5 pull-left event_show">
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
+  <h3><%= @event.title %></h3>
 
-<p>
-  <strong>Address2:</strong>
-  <%= @event.address2 %>
-</p>
+  <p>
+   <em><%= @event.tagline %></em>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
+  <p>
+    <strong>Date:</strong>
+    <%= @event.date %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @event.state %>
-</p>
+  <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+  </p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @event.zip %>
-</p>
+  <div class="small_font address">
+    <p>
+      <%= @event.address %>
+    </p>
 
-<p>
-  <strong>More Info:</strong>
-  <%= @event.more_info %>
-</p>
+    <p>
+      <%= @event.address2 %>
+    </p>
 
-<p>
+    <p>
+      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+    </p>
+  </div>
+<br>
+  <p>
+    Contact Name:
+    <strong><%= @event.contact_name %></strong>
+  </p>
+
+  <p>
+    Contact Email:
+   <strong><%= @event.contact_email %></strong>
+  </p>
+<br>
+<div class="small_font">
+  <p>
+    <%= @event.more_info %>
+  </p>
+</div>
+</div>
+  <p>
   <strong>Photo:</strong>
   <%= @event.photo1 %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @event.photo2 %>
-</p>
+<br>
+<br>
+<br>
+<br>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @event.photo3 %>
-</p>
+<div class="pull-left">
+  <p>
+    Website:
+    <%= @event.website %>
+  </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @event.website %>
-</p>
+  <p>
+    Facebook:
+    <%= @event.facebook %>
+  </p>
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @event.facebook %>
-</p>
+  <p>
+    Application:
+    <%= @event.application_form %>
+  </p>
 
-<p>
-  <strong>Application Form:</strong>
-  <%= @event.application_form %>
-</p>
+  
 
-<p>
-  <strong>Contact Name:</strong>
-  <%= @event.contact_name %>
-</p>
-
-<p>
-  <strong>Contact Email:</strong>
-  <%= @event.contact_email %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+</div>
