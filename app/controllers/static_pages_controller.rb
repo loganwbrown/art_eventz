@@ -13,6 +13,6 @@ class StaticPagesController < ApplicationController
   end
   
   def calendar
-
+    # @events = Events.all
   end 
 end

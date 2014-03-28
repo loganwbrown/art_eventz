@@ -7,4 +7,6 @@
 $(function() {
     $("#event_date").datepicker();
     $('#calendar').fullCalendar();
-});
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });

@@ -1,9 +1,15 @@
 /*
  *= require bootstrap_and_overrides
+
+
  *= require fullcalendar.css
- *= require nivo-lightbox.css
+ *= require nivo-slider.css
  *= require_self.
  */
+
+ #calendar {
+  width: 50%;
+ }
  body{
  	background-image: url("png.png");
  	font-size: 16px;
