@@ -24,6 +24,7 @@ $(function() {
     $('#calendar').fullCalendar();
 
 
+
     // $('.carousel').carousel({
     //     interval: 3000
 
