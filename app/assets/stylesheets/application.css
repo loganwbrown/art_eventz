@@ -107,4 +107,15 @@
   text-align: center;
 }
 
+.slider-wrapper {
+  margin-left: 40px;
 
+}
+
+.call-box {
+  background-color: #b8c47f;
+            padding: 10px 20px 300px 20px;
+            color: #FFF;
+            margin: 10px;
+            float:left; 
+}

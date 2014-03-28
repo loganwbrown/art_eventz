@@ -10,9 +10,11 @@
 /* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
-	width:100%;
+	max-width: 600px;
 	height:auto;
 	overflow: hidden;
+	margin: 10px 0px 0px;
+
 }
 .nivoSlider img {
 	position:absolute;
@@ -111,3 +113,8 @@
 .nivo-controlNav a.active {
 	font-weight:bold;
 }
+
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
