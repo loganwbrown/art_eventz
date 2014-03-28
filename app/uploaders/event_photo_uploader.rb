@@ -7,9 +7,9 @@ include CarrierWave::MiniMagick
   #   process resize_to_fit: [500, 500]
   # end
 
-  # version :medium, from_version: :large do
-  #   process resize_to_fit: [200, 200]
-  # end
+  version :medium, from_version: :large do
+    process resize_to_fit: [200, 200]
+  end
 
 
   # version :small, from_version: :medium do
@@ -20,7 +20,7 @@ include CarrierWave::MiniMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

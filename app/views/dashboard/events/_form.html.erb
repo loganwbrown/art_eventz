@@ -54,18 +54,11 @@
     <%= f.label :more_info %><br>
     <%= f.text_area :more_info %>
   </div>
-  <div class="field">
-    <%= f.label :photo1 %><br>
-    <%= f.text_field :photo1 %>
-  </div>
-  <div class="field">
-    <%= f.label :photo2 %><br>
-    <%= f.text_field :photo2 %>
-  </div>
-  <div class="field">
-    <%= f.label :photo3 %><br>
-    <%= f.text_field :photo3 %>
-  </div>
+<!--     <%= f.fields_for :event_photo do |ff| %>
+      <%= ff.label :event_photo %> 
+      <%= ff.file_field :event_photo %>
+          <% end %>
+ -->
   <div class="field">
     <%= f.label :website %><br>
     <%= f.text_field :website %>

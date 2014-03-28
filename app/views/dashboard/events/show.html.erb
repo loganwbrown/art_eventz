@@ -13,6 +13,8 @@
   <%= @event.tagline %>
 </p>
 
+  <%= image_tag(@event.photos.first) %>
+
 <p>
   <strong>Address:</strong>
   <%= @event.address %>
@@ -41,21 +43,6 @@
 <p>
   <strong>More Info:</strong>
   <%= @event.more_info %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @event.photo1 %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @event.photo2 %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @event.photo3 %>
 </p>
 
 <p>
