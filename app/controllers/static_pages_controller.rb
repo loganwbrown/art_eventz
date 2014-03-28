@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
 
   def index
  		 if signed_in?
-      redirect_to dashboard_profiles_path
+      redirect_to dashboard_index_path
     end
   end
 
