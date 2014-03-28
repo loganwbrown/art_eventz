@@ -1,82 +1,82 @@
 
 
 <!-- <p id="notice"><%= notice %></p> -->
+<div class="event_show_page">
+  <div class="col-md-5 pull-left event_show">
 
-<div class="col-md-5 pull-left event_show">
+    <h3><%= @event.title %></h3>
 
-  <h3><%= @event.title %></h3>
-
-  <p>
-   <em><%= @event.tagline %></em>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= @event.date %>
-  </p>
-
-  <p>
-    <strong>Time:</strong>
-    <%= @event.time %>
-  </p>
-
-  <div class="small_font address">
     <p>
-      <%= @event.address %>
+     <em><%= @event.tagline %></em>
     </p>
 
     <p>
-      <%= @event.address2 %>
+      <strong>Date:</strong>
+      <%= @event.date %>
     </p>
 
     <p>
-      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      <strong>Time:</strong>
+      <%= @event.time %>
+    </p>
+
+    <div class="small_font address">
+      <p>
+        <%= @event.address %>
+      </p>
+
+      <p>
+        <%= @event.address2 %>
+      </p>
+
+      <p>
+        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      </p>
+    </div>
+  <br>
+    <p>
+      Contact Name:
+      <strong><%= @event.contact_name %></strong>
+    </p>
+
+    <p>
+      Contact Email:
+     <strong><%= @event.contact_email %></strong>
+    </p>
+  <br>
+  <div class="small_font">
+    <p>
+      <%= @event.more_info %>
     </p>
   </div>
-<br>
-  <p>
-    Contact Name:
-    <strong><%= @event.contact_name %></strong>
-  </p>
+  </div>
 
-  <p>
-    Contact Email:
-   <strong><%= @event.contact_email %></strong>
-  </p>
-<br>
-<div class="small_font">
-  <p>
-    <%= @event.more_info %>
-  </p>
-</div>
-</div>
-  <p>
-  <strong>Photo:</strong>
-  <%= @event.photo1 %>
-</p>
+    <br>
+    <br>
 
-<br>
-<br>
-<br>
-<br>
+  <div class="pull-left">
+    <div class="bigger_box">
+      <div class="green_box">
 
-<div class="pull-left">
-  <p>
-    Website:
-    <%= @event.website %>
-  </p>
+      </div>
+    </div> 
+    <p>
+      Website:
+      <%= @event.website %>
+    </p>
 
-  <p>
-    Facebook:
-    <%= @event.facebook %>
-  </p>
+    <p>
+      Facebook:
+      <%= @event.facebook %>
+    </p>
 
-  <p>
-    Application:
-    <%= @event.application_form %>
-  </p>
+    <p>
+      Application:
+      <%= @event.application_form %>
+    </p>
 
-  
+    
 
-<%= link_to 'Back', events_path %>
+  <%= link_to 'Back', events_path %>
+  </div>
 </div>

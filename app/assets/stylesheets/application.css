@@ -20,10 +20,23 @@
  	font-size: 16px;
  }
  .small_font{
-  font-size: 80%;
-  font-weight: lighter;
- 
+  font-size: 80%; 
  }
+
+.green_box {
+  background-color: #B2D4C8;
+  width: 300px;
+  height: 180px;
+  margin: 20px;
+}
+
+.bigger_box {
+  background-color: #5A8A7A;
+  width: 350px;
+  height: 200px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
 
 .address p {
   margin-bottom: -2px;
@@ -38,6 +51,10 @@
 .event_show {
   max-width: 40%;
   margin-right: 15%;
+}
+
+.event_show {
+  color: #454A48;
 }
 
 .topbar{
