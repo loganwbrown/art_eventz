@@ -4,13 +4,11 @@
 //= require twitter/bootstrap
 //= require fullcalendar
 //= require nivo-lightbox.min
+//= require nivo-lightbox.js
 //= require_tree .
 $(function() {
     $("#event_date").datepicker();
     $('#calendar').fullCalendar();
-
-
-
     $('.slider a').nivoLightbox({
         effect: 'fade', // The effect to use when showing the lightbox
         theme: 'default', // The lightbox theme to use
