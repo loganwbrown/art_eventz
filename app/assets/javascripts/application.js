@@ -8,9 +8,7 @@
 $(function() {
     $("#event_date").datepicker();
     $('#calendar').fullCalendar();
-    $('.carousel').carousel({
-        interval: 3000
-    $("#event_time").timepicker();
+
 
 
     $('.slider a').nivoLightbox({
