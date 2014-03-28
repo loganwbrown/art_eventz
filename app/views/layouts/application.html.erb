@@ -8,7 +8,6 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     
-
   </head>
   <body>
     <div class="topbar">
@@ -29,7 +28,6 @@
               <li><%= link_to "Calendar", calendar_path  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
-
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -47,25 +45,12 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-    <div class="well offset1 span12">
-=======
     <div class="well span10 offset1">
->>>>>>> upstream/master
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
   </div>
 </div>
 <%= javascript_include_tag "application" %>
-<<<<<<< HEAD
-
 </body>
 </html>
-
-=======
-</body>
-</html>
-
->>>>>>> upstream/master
