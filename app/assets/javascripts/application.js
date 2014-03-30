@@ -17,8 +17,7 @@
 //= require fullcalendar
 //= require jquery-nivo-slider
 //= require_tree .
-// $('.carousel').carousel({
-//     interval: 3000
+
 
 
 
@@ -30,6 +29,17 @@ $(function() {
     $('#calendar').fullCalendar();
 
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({
+            effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+            slices: 15, // For slice animations
+            boxCols: 8, // For box animations
+            boxRows: 4, // For box animations
+            animSpeed: 500, // Slide transition speed
+            pauseTime: 4000 // How long each slide will show
+
+
+        });
+
+
     });
 });

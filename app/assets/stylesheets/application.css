@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *= require bootstrap_and_overrides
 
-
+ *= require flat-ui.css
  *= require fullcalendar.css
  *= require nivo-slider.css
  *= require_self.
@@ -58,11 +58,13 @@
 }
 
 .topbar{
-	height: 320px;
+	/*height: 320px;
 	width: auto;
 	background-image: url("arteventz-header-3-21.jpg");
 	margin: 0 auto;
-	background-repeat:no-repeat;
+	background-repeat:no-repeat;*/
+  width: 100%;
+  height: auto;
 
 }
 .navbar .nav {
@@ -148,9 +150,24 @@
 }
 
 .call-box {
-  background-color: #b8c47f;
-            padding: 10px 20px 300px 20px;
-            color: #FFF;
-            margin: 10px;
-            float:left; 
+  background-color: #93b0a1;
+  padding: 40px 0px 60px 45px;
+  color: #FFF;
+  margin: 10px;
+  float:left;
+  width: 100%;
+  height: auto;
+  max-width: 270px;
+
 }
+
+.call-box p {
+  padding-top: 30px;
+  padding-right: 25px;
+}
+
+.call-box p span {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
