@@ -5,10 +5,24 @@
 //= require fullcalendar
 //= require jquery_nested_form
 //= require_tree .
+// jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();
+
+
 $(function() {
     $("#event_date").datepicker();
     $('#calendar').fullCalendar();
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({
+            effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+            slices: 15, // For slice animations
+            boxCols: 8, // For box animations
+            boxRows: 4, // For box animations
+            animSpeed: 500, // Slide transition speed
+            pauseTime: 4000 // How long each slide will show
+
+
+        });
+
+
     });
 });

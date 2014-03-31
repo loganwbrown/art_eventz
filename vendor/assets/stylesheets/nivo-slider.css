@@ -5,14 +5,19 @@
  * Copyright 2012, Dev7studios
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
+
  */
  
 /* The Nivo Slider styles */
+
+
 .nivoSlider {
 	position:relative;
-	width:100%;
+	max-width: 600px;
 	height:auto;
 	overflow: hidden;
+	margin: 10px 0px 0px;
+
 }
 .nivoSlider img {
 	position:absolute;
@@ -78,7 +83,7 @@
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .nivo-caption p {
-	padding:5px;
+	padding:10px;
 	margin:0;
 }
 .nivo-caption a {
@@ -103,7 +108,7 @@
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
 	text-align:center;
-	padding: 15px 0;
+	padding: 15px 15px;
 }
 .nivo-controlNav a {
 	cursor:pointer;
@@ -111,3 +116,8 @@
 .nivo-controlNav a.active {
 	font-weight:bold;
 }
+
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
