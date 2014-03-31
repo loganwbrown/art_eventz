@@ -21,11 +21,12 @@
 
 
 
-
+// jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();
 
 
 $(function() {
     $("#event_date").datepicker();
+
     $('#calendar').fullCalendar();
 
     $(window).load(function() {
