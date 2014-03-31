@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="topbar">
+      <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
     </div>
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
@@ -38,30 +39,31 @@
                   <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
                   <% else %>
                   <li><%= link_to "Login", new_member_session_path %></li>
-                  <li><%= link_to "Signup", new_member_registration_path  %></li>
+                  <li><%= link_to "Sign Up", new_member_registration_path  %></li>
                   <% end %>
                 </ul>
-              </li>
-            </ul>
+            
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="well span10 offset1">
+      <div class="well span11 offset1">
 
-      <%= bootstrap_flash %>
-      <%= yield %>
-    </div>
-  </div>
-</div>
-<%= javascript_include_tag "application" %>
+        <%= bootstrap_flash %>
+        <%= yield %>
+      </div>
+   
+    <footer>
+      <div class="topbar">
+        <%= link_to(image_tag "arteventz-footer.jpg") %>
+      </div>
 
-
-</body>
+    </footer>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
 
-</body>
-</html>
+
 
 
