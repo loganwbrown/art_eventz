@@ -1,4 +1,5 @@
-<%= form_for([:dashboard, @event]) do |f| %>
+ <%= nested_form_for([:dashboard, @event]) do |f| %>
+
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -7,7 +8,7 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
+    </div>  
   <% end %>
 <div class="col-md-5 pull-left">
   <div class="field">
@@ -53,13 +54,12 @@
     <%= f.label :more_info %>
     <%= f.text_area :more_info %>
   </div>
+    <%= fields_for :event_photo do |ff| %>
+      <%= ff.label :photos %> 
+      <%= ff.file_field :photos %>  
+    <% end %>
 
-<!--     <%= f.fields_for :event_photo do |ff| %>
-      <%= ff.label :event_photo %> 
-      <%= ff.file_field :event_photo %>
-          <% end %>
- -->
- 
+
   <div class="field">
     <%= f.label :website %>
     <%= f.text_field :website %>
@@ -84,5 +84,4 @@
     <%= f.submit class: "btn btn-success"%>
   </div>
 </div>
-
 <% end %>

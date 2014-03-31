@@ -55,9 +55,7 @@ private
   end
 
   def event_params
- 
-    params.require(:event).permit(:title, :date, :time, :tagline, :address, :address2, :city, :state, :zip, :more_info, :website, :facebook, :application_form, :contact_name, :contact_email)
+    params.require(:event).permit(:title, :date, :time, :tagline, :address, :address2, :city, :state, :zip, :more_info, :website, :facebook, :application_form, :contact_name, :contact_email, event_photos_attributes: [:photo, :event_id, :id, :created_at, :updated_at])
   end
-
 end
 
