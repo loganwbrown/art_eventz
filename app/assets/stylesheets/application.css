@@ -61,6 +61,10 @@
   color: #454A48;
 }
 
+#avatar {
+  word-wrap: break-word;
+}
+
 .topbar{
 	/*height: 320px;
 	width: auto;
