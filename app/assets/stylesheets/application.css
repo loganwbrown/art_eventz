@@ -11,9 +11,13 @@
 
  *= require flat-ui.css
  *= require fullcalendar.css
+ 
  *= require nivo-slider.css
+ *= require default.css
+
  *= require_self.
  */
+
 
  body{
  	background-image: url("png.png");
@@ -67,12 +71,26 @@
   height: auto;
 
 }
+
+
 .navbar .nav {
 	margin: 0 auto;
 }
+
 .navbar .nav > li > a {
 	margin-left: 50px;
+  font-size: 25px;
+}
+
+.nav-header {
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
+.nav-list li a {
   font-size: 20px;
+  padding: 15px;
+}
 
 }
 #ui-datepicker-div{
@@ -146,12 +164,20 @@
 
 .slider-wrapper {
   margin-left: 400px;
+  padding-left: 30px;
+  width: 100%;
+  height: auto;
 
+}
+.swb {
+  margin-left: 120px;
+  width: 100%;
+  height: auto;
 }
 
 .call-box {
   background-color: #93b0a1;
-  padding: 40px 0px 60px 45px;
+  padding: 40px 0px 50px 45px;
   color: #FFF;
   margin: 10px;
   float:left;
@@ -167,7 +193,11 @@
 }
 
 .call-box p span {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-style: italic;
 }
+
+
+
+
 

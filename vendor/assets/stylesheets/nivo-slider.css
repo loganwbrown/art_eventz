@@ -5,9 +5,12 @@
  * Copyright 2012, Dev7studios
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
+
  */
  
 /* The Nivo Slider styles */
+
+
 .nivoSlider {
 	position:relative;
 	max-width: 600px;
@@ -80,7 +83,7 @@
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .nivo-caption p {
-	padding:5px;
+	padding:10px;
 	margin:0;
 }
 .nivo-caption a {
@@ -105,7 +108,7 @@
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
 	text-align:center;
-	padding: 15px 0;
+	padding: 15px 15px;
 }
 .nivo-controlNav a {
 	cursor:pointer;
