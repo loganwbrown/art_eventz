@@ -12,80 +12,86 @@
 
   </head>
   <body>
-    <div class="topbar">
-       <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
-    </div>
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Home", root_path  %></li>
-              <li><%= link_to "Members", profiles_path  %></li>
-              <li><%= link_to "Events", events_path %></li>
-              <li><%= link_to "Calender", calendar_path  %></li>
-              <li><%= link_to "About us", about_path  %></li>
-              <li><%= link_to "Contact", contact_path  %></li>
-              <li class="dropdown nav">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <% if user_logged_in? %>
-                  <li><%= link_to "Edit Account", edit_member_registration_path %></li>
-                  <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
+      <div class="topbar">
+         <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
+      </div>
+      <div class="navbar navbar-fluid-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <div class="container-fluid nav-collapse">
+              <ul class="nav">
+                <li><%= link_to "Home", root_path  %></li>
+                <li><%= link_to "Members", profiles_path  %></li>
+                <li><%= link_to "Events", events_path %></li>
+                <li><%= link_to "Calender", calendar_path  %></li>
+                <li><%= link_to "About us", about_path  %></li>
+                <li><%= link_to "Contact", contact_path  %></li>
+                <li class="dropdown nav">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <% if user_logged_in? %>
+                    <li><%= link_to "Edit Account", edit_member_registration_path %></li>
+                    <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
+                    <% else %>
+                    <li><%= link_to "Login", new_member_session_path %></li>
+                    <li><%= link_to "Signup", new_member_registration_path  %></li>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3 offset1">
+            <div class="well sidebar-nav">
+              <ul class="nav nav-list">
+                  <li class="nav-header">Member Options<br><br></li>
+                  <% if current_member.profile == nil %>
+                  <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
+                  <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
                   <% else %>
-                  <li><%= link_to "Login", new_member_session_path %></li>
-                  <li><%= link_to "Signup", new_member_registration_path  %></li>
+                  <li><%= link_to "My Events", dashboard_events_path  %></li>
+                  <li><%= link_to "My Profile", dashboard_profile_path(current_member.id)  %></li>
+                  <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
+                  <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
                   <% end %>
-                </ul>
-              </li>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2 offset1">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-                <li class="nav-header">Member Options<br><br></li>
-                <% if current_member.profile == nil %>
-                <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
-                <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
-                <% else %>
-                <li><%= link_to "My Events", dashboard_events_path  %></li>
-                <li><%= link_to "My Profile", dashboard_profile_path(current_member.id)  %></li>
-                <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
-                <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
-                <% end %>
-            </ul>
-          </div>
-        </div>
 
-        <div class="span8">
-          <div class="well">
-            <%= bootstrap_flash %>
-            <%= yield %>
+          <div class="span7">
+            <div>
+              <%= bootstrap_flash %>
+              <%= yield %>
 
+            </div>
           </div>
-        </div>
-      </div>
-      <footer>
-        <div class="topbar">
           
-        <%= link_to(image_tag "arteventz-footer.jpg") %>
+
+
         </div>
-
-
-      </footer>
-    </div>
-    <%= javascript_include_tag "application" %>
+       </div> 
+    <footer>
+      <div class="footer">
+        <%= render 'shared/footer' %>
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+      <script src="js/flatui-checkbox.js"></script>
+      <script src="js/flatui-radio.js"></script>
+      <script src="js/jquery.tagsinput.js"></script>
+      <script src="js/jquery.placeholder.js"></script>
+      <script src="js/jquery.stacktable.js"></script>
     
+      <%= javascript_include_tag "application" %>
     
   </body>
 </html>
