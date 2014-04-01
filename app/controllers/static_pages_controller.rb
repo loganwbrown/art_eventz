@@ -19,4 +19,10 @@ class StaticPagesController < ApplicationController
     @events = Event.all
     respond_with(@events)
   end 
+
+  def newsletter_signup
+    if request.post?
+      MemberMailer.newsletter(params).deliver
+    end
+  end
 end

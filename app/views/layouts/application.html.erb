@@ -48,18 +48,24 @@
         </div>
       </div>
 
-      <div class="well span11 offset1">
-
+    <div class="container-fluid">
+      <div class="span11 offset1">
         <%= bootstrap_flash %>
         <%= yield %>
       </div>
-   
+    </div>
     <footer>
-      <div class="topbar">
-        <%= link_to(image_tag "arteventz-footer.jpg") %>
-      </div>
-
+      <div class="footer">
+          <%= render 'shared/footer' %>
+        </div>
+        <div class="clearfix"></div>
     </footer>
+      <script src="js/flatui-checkbox.js"></script>
+      <script src="js/flatui-radio.js"></script>
+      <script src="js/jquery.tagsinput.js"></script>
+      <script src="js/jquery.placeholder.js"></script>
+      <script src="js/jquery.stacktable.js"></script>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
