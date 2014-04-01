@@ -9,6 +9,7 @@
 
   <strong>Avatar:</strong>
   <%= image_tag(@profile.avatar.url(:medium)) %>
+
 </p>
 
 <p>
@@ -37,3 +38,10 @@
 </p>
 <%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> 
 <%= link_to 'Back', dashboard_profiles_path %>
+
+<%= form_for :art_photo, url: dashboard_art_photos_path do |ff| %>
+      <%= ff.label :photo %> 
+      <%= ff.file_field :photo %>  
+      <%= ff.hidden_field(:profile_id, value: @profile.id) %>
+      <%= ff.submit('Upload Image', class: 'btn btn-primary') %>
+<% end %>

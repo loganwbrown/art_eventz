@@ -42,6 +42,7 @@ cancel_member_registration GET    /members/cancel(.:format)              registr
                            PATCH  /dashboard/events/:id(.:format)        dashboard/events#update
                            PUT    /dashboard/events/:id(.:format)        dashboard/events#update
                            DELETE /dashboard/events/:id(.:format)        dashboard/events#destroy
+    dashboard_event_photos POST   /dashboard/event_photos(.:format)      dashboard/event_photos#create
         dashboard_profiles GET    /dashboard/profiles(.:format)          dashboard/profiles#index
                            POST   /dashboard/profiles(.:format)          dashboard/profiles#create
      new_dashboard_profile GET    /dashboard/profiles/new(.:format)      dashboard/profiles#new

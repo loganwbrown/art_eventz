@@ -7,13 +7,11 @@
     <title><%= content_for?(:title) ? yield(:title) : "ArtEventz" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    
-
   </head>
   <body>
     <div class="topbar">
-      <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
-    </div>
+      <%= link_to(image_tag "arteventz-header-3-21-1.jpg") %>
+  </div>
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -30,7 +28,6 @@
               <li><%= link_to "Calendar", calendar_path  %></li>
               <li><%= link_to "About us", about_path  %></li>
               <li><%= link_to "Contact", contact_path  %></li>
-
               <li class="dropdown nav">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -42,10 +39,12 @@
                   <li><%= link_to "Sign Up", new_member_registration_path  %></li>
                   <% end %>
                 </ul>
-            
+                
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
     <div class="container-fluid">
@@ -69,7 +68,6 @@
     <%= javascript_include_tag "application" %>
   </body>
 </html>
-
 
 
 
