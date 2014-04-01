@@ -28,7 +28,6 @@
 $(function() {
     $("#event_date").datepicker();
 
-
     // make ajax request to a controller
     // get back an array of events in json format (format.json)
     // store in a variable
@@ -36,6 +35,8 @@ $(function() {
 
     if ($('#calendar').length > 0) {
         $.getJSON('/calendar', function(data) {
+
+
             $('#calendar').fullCalendar({
                 events: data,
             });
