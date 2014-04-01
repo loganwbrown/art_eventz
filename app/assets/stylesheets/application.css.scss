@@ -7,13 +7,12 @@
  *= require jquery.share.css
  *= require_self.
  */
- #mydiv{
+#mydiv{
   height: 100px;
  }
 html,body {
     height: 100%;
-  }
- 
+ }
 body {
  	background-image: url("png.png");
  	font-size: 16px;
@@ -77,7 +76,10 @@ body {
 
 .navbar .nav > li > a {
 	margin-left: 50px;
+<<<<<<< HEAD
   font-size: 20px;
+=======
+>>>>>>> upstream/master
   font-size: 22px;
 }
 

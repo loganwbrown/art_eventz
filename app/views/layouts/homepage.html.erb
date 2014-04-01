@@ -10,38 +10,40 @@
     <%= favicon_link_tag 'favicon.icon', :rel => 'shortcut icon' %>
   </head>
   <body>
-    <div class="topbar">
-      <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
-    </div>
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Home", root_path  %></li>
-              <li><%= link_to "Members", profiles_path  %></li>
-              <li><%= link_to "Events", events_path %></li>
-              <li><%= link_to "Calender", calendar_path  %></li>
-              <li><%= link_to "About us", about_path  %></li>
-              <li><%= link_to "Contact", contact_path  %></li>
-              <li class="dropdown nav">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <% if user_logged_in? %>
-                  <li><%= link_to "Edit Account", edit_member_registration_path %></li>
-                  <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
-                  <% else %>
-                  <li><%= link_to "Login", new_member_session_path %></li>
-                  <li><%= link_to "Signup", new_member_registration_path  %></li>
-                  <% end %>
-                </ul>
-              </li>
-            </ul>
+      <div class="topbar">
+         <%= link_to(image_tag "arteventz-header-3-21.jpg") %>
+      </div>
+      <div class="navbar navbar-fluid-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <div class="container-fluid nav-collapse">
+              <ul class="nav">
+                <li><%= link_to "Home", root_path  %></li>
+                <li><%= link_to "Members", profiles_path  %></li>
+                <li><%= link_to "Events", events_path %></li>
+                <li><%= link_to "Calender", calendar_path  %></li>
+                <li><%= link_to "About us", about_path  %></li>
+                <li><%= link_to "Contact", contact_path  %></li>
+                <li class="dropdown nav">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <% if user_logged_in? %>
+                    <li><%= link_to "Edit Account", edit_member_registration_path %></li>
+                    <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
+                    <% else %>
+                    <li><%= link_to "Login", new_member_session_path %></li>
+                    <li><%= link_to "Signup", new_member_registration_path  %></li>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+>>>>>>> upstream/master
           </div>
         </div>
       </div>
@@ -69,6 +71,8 @@
           <div>
             <%= bootstrap_flash %>
             <%= yield %>
+
+
           </div>
         </div>
       </div>
