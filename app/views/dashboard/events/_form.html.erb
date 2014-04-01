@@ -54,11 +54,6 @@
     <%= f.label :more_info %>
     <%= f.text_area :more_info %>
   </div>
-    <%= fields_for :event_photo do |ff| %>
-      <%= ff.label :photos %> 
-      <%= ff.file_field :photos %>  
-    <% end %>
-
 
   <div class="field">
     <%= f.label :website %>
@@ -85,3 +80,5 @@
   </div>
 </div>
 <% end %>
+
+

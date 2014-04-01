@@ -3,18 +3,13 @@
 class EventPhotoUploader < CarrierWave::Uploader::Base
 include CarrierWave::MiniMagick
 
-  # version :large do
-  #   process resize_to_fit: [500, 500]
-  # end
-
   version :medium, from_version: :large do
     process resize_to_fit: [200, 200]
   end
 
 
 
-  storage :file
-  # storage :fog
+  storage :fog
 
   # Override the directory where uploaded files will be stored.
   def store_dir

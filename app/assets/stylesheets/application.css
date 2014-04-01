@@ -69,7 +69,7 @@
 
 .navbar .nav > li > a {
 	margin-left: 50px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .nav-header {
@@ -174,9 +174,7 @@
   width: 100%;
   height: auto;
   max-width: 270px;
-
 }
-
 .call-box p {
   padding-top: 30px;
   padding-right: 25px;
