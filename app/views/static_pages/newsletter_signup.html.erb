@@ -1,0 +1,14 @@
+<h1>Sign-up for Newsletter</h1>
+  <div>
+    <%= form_tag(newsletter_signup_path) do %>
+  <div class="control-group">
+    <%= text_field_tag(:name, " ", placeholder: "Name" ) %>
+  </div>
+  <div class="control-group">
+    <%= email_field_tag(:email, " ", placeholder: "Email" ) %>
+  </div>
+  <div class="control-group">
+    <%= submit_tag("Submit") %>
+
+    <% end %>
+  </div>   
