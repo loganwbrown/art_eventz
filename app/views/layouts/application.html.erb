@@ -11,7 +11,7 @@
   <body>
     <div class="topbar">
       <%= link_to(image_tag "arteventz-header-3-21-1.jpg") %>
-  </div>
+    </div>
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -39,21 +39,28 @@
                   <li><%= link_to "Sign Up", new_member_registration_path  %></li>
                   <% end %>
                 </ul>
-                
               </div>
             </div>
           </div>
         </div>
-        <div class="well span11 offset1">
+      </div>
+      <div class="container-fluid">
+        <div class="span11 offset1">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        
-        <footer>
-          <div class="topbar">
-            <%= link_to(image_tag "arteventz-footer.jpg") %>
-          </div>
-        </footer>
-        <%= javascript_include_tag "application" %>
-      </body>
-    </html>
+      </div>
+      <footer>
+        <div class="footer">
+          <%= render 'shared/footer' %>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <script src="js/flatui-checkbox.js"></script>
+      <script src="js/flatui-radio.js"></script>
+      <script src="js/jquery.tagsinput.js"></script>
+      <script src="js/jquery.placeholder.js"></script>
+      <script src="js/jquery.stacktable.js"></script>
+      <%= javascript_include_tag "application" %>
+    </body>
+  </html>

@@ -5,8 +5,8 @@ ArtEventz::Application.routes.draw do
   devise_for :members, controllers: { registrations: "registrations"}
   root 'static_pages#index'
 
-  
-
+  get "/newsletter_signup" => "static_pages#newsletter_signup"
+  post "/newsletter_signup" => "static_pages#newsletter_signup"
 
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
@@ -21,3 +21,4 @@ ArtEventz::Application.routes.draw do
 
 
 end
+

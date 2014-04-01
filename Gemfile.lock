@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fog/fog.git
-  revision: 0fa834388dc04a021a0e6fb094bcfc58dbbdbc4c
+  revision: 0e2e478511f335f8cd7062defc0785c0b0aa92e4
   specs:
     fog (1.21.0)
       fog-brightbox
