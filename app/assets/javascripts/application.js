@@ -34,7 +34,7 @@ $(function() {
         });
     });
     $('#mydiv').share({
-        networks: ['pinterest', 'tumblr', 'googleplus', 'digg', 'in1', 'facebook', 'twitter', 'linkedin', 'stumbleupon'],
+        networks: ['facebook', 'googleplus', 'twitter'],
         theme: 'square'
     });
 });
