@@ -21,13 +21,27 @@
 
 
 
+
 // jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();
 
 
 $(function() {
     $("#event_date").datepicker();
 
-    $('#calendar').fullCalendar();
+
+    // make ajax request to a controller
+    // get back an array of events in json format (format.json)
+    // store in a variable
+    // use that variable for the value of the events key
+
+    if ($('#calendar').length > 0) {
+        $.getJSON('/calendar', function(data) {
+            $('#calendar').fullCalendar({
+                events: data,
+            });
+        })
+    }
+
 
     $(window).load(function() {
         $('#slider').nivoSlider({

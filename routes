@@ -32,6 +32,8 @@ cancel_member_registration GET    /members/cancel(.:format)              registr
                            DELETE /members(.:format)                     registrations#destroy
                       root GET    /                                      static_pages#index
                      about GET    /about(.:format)                       static_pages#about
+                   contact GET    /contact(.:format)                     static_pages#contact
+                  calendar GET    /calendar(.:format)                    static_pages#calendar
           dashboard_events GET    /dashboard/events(.:format)            dashboard/events#index
                            POST   /dashboard/events(.:format)            dashboard/events#create
        new_dashboard_event GET    /dashboard/events/new(.:format)        dashboard/events#new
@@ -48,3 +50,4 @@ cancel_member_registration GET    /members/cancel(.:format)              registr
                            PATCH  /dashboard/profiles/:id(.:format)      dashboard/profiles#update
                            PUT    /dashboard/profiles/:id(.:format)      dashboard/profiles#update
                            DELETE /dashboard/profiles/:id(.:format)      dashboard/profiles#destroy
+           dashboard_index GET    /dashboard/index(.:format)             dashboard/static_pages#index
