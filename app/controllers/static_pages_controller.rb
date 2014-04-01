@@ -15,4 +15,10 @@ class StaticPagesController < ApplicationController
   def calendar
     # @events = Events.all
   end 
+
+  def newsletter_signup
+    if request.post?
+      MemberMailer.newsletter(params).deliver
+    end
+  end
 end
