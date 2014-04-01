@@ -4,8 +4,12 @@
  *= require fullcalendar.css
  *= require nivo-slider.css
  *= require default.css
+ *= require jquery.share.css
  *= require_self.
  */
+ #mydiv{
+  height: 100px;
+ }
  body{
  	background-image: url("png.png");
  	font-size: 16px;

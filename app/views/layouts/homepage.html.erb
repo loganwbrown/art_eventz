@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="topbar">
-       <%= link_to(image_tag "arteventz-header-3-21-1.png") %>
+      <%= link_to(image_tag "arteventz-header-3-21-1.png") %>
     </div>
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
@@ -51,22 +51,22 @@
         <div class="span2 offset1">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-                <li class="nav-header">Member Options<br><br></li>
-                <% if current_member.profile == nil %>
-                <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
-                <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
-                <% else %>
-                <li><%= link_to "My Events", dashboard_events_path  %></li>
-                <li><%= link_to "My Profile", dashboard_profile_path(current_member.id)  %></li>
-                <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
-                <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
-                <% end %>
+              <li class="nav-header">Member Options<br><br></li>
+              <% if current_member.profile == nil %>
+              <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
+              <li><%= link_to "Create Profile", new_dashboard_profile_path  %></li>
+              <% else %>
+              <li><%= link_to "My Events", dashboard_events_path  %></li>
+              <li><%= link_to "My Profile", dashboard_profile_path(current_member.id)  %></li>
+              <li><%= link_to "Edit Profile", edit_dashboard_profile_path(current_member.id) %></li>
+              <li><%= link_to "Create Event", new_dashboard_event_path  %></li>
+              <% end %>
             </ul>
           </div>
         </div>
-
         <div class="span8">
           <div class="well">
+            <div id="mydiv"></div>
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
@@ -74,10 +74,8 @@
       </div>
       <footer>
         <div class="topbar">
-        <%= link_to(image_tag "arteventz-footer.jpg") %>
+          <%= link_to(image_tag "arteventz-footer.jpg") %>
         </div>
-
-
       </footer>
     </div>
     <%= javascript_include_tag "application" %>
