@@ -15,7 +15,9 @@ ArtEventz::Application.routes.draw do
 	namespace :dashboard do
 	  resources :events
     resources :event_photos, only: ['create']
-	  resources :profiles
+    resources :profiles do
+      resources :art_photos, only: ['create']
+    end
     get '/index' => 'static_pages#index'
 	end
 
