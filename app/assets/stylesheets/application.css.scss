@@ -29,16 +29,24 @@ body {
  .table tr:nth-child(even) {
   font-size: 15px;
   text-align: left;
-  background-color: lightgray;
+  background-color: #E8E8E8;
  }
 
  .table thead {
-  background-color: lightgray;
+  background-color: #E8E8E8;
  }
 
 /* .table thead tr:nth-child(2) {
   background-color: transparent;
  }*/
+
+ .table a:hover {
+  color: darkgreen;
+ }
+
+ .table a:visited {
+  color: grey;
+ }
 
 
  .small_font{
