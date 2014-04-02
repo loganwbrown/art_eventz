@@ -11,14 +11,14 @@ ArtEventz::Application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
   get '/calendar' => 'static_pages#calendar'
-  
-	namespace :dashboard do
-	  resources :events
-    resources :event_photos, only: ['create']
-	  resources :profiles
+
+  namespace :dashboard do
+    resources :events do
+      resources :event_photos, only: ['create']
+    end
+    resources :profiles do
+      resources :art_photos, only: ['create']
+    end
     get '/index' => 'static_pages#index'
-	end
-
-
+  end
 end
-

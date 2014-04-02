@@ -39,9 +39,8 @@
 <%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> 
 <%= link_to 'Back', dashboard_profiles_path %>
 
-<%= form_for :art_photo, url: dashboard_art_photos_path do |ff| %>
-      <%= ff.label :photo %> 
-      <%= ff.file_field :photo %>  
-      <%= ff.hidden_field(:profile_id, value: @profile.id) %>
-      <%= ff.submit('Upload Image', class: 'btn btn-primary') %>
+<%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
+      <%= f.label :photo %> 
+      <%= f.file_field :photo %>
+      <%= f.submit('Upload Image', class: 'btn btn-primary') %>
 <% end %>
