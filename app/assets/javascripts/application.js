@@ -4,6 +4,7 @@
 //= require twitter/bootstrap
 //= require fullcalendar
 //= require jquery_nested_form
+//= require jquery-nivo-slider
 //= require_tree .
 
 // jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();

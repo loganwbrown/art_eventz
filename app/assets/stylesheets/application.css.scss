@@ -57,11 +57,7 @@ body {
 }
 
 .topbar{
-	/*height: 320px;
-	width: auto;
-	background-image: url("arteventz-header-3-21.jpg");
-	margin: 0 auto;
-	background-repeat:no-repeat;*/
+
   width: 100%;
   height: auto;
 
@@ -75,16 +71,21 @@ body {
 .navbar .nav > li > a {
 	margin-left: 50px;
   font-size: 22px;
+  color: #a2a9ab;
 }
 
 .nav-header {
-  font-size: 16px;
+  font-size: 22px;
   padding-bottom: 25px;
 }
 
 .nav-list li a {
-  font-size: 20px;
+  font-size: 22px;
   padding: 15px;
+}
+
+.sidebar-nav {
+  margin-top: 60px;
 }
 
 #ui-datepicker-div{
@@ -159,14 +160,16 @@ body {
 .slider-wrapper {
   margin-left: 400px;
   padding-left: 30px;
-  max-height: 600px;
+ /* max-height: 600px;*/
   width: auto;
+/*  padding-bottom: 30px;*/
 
 }
 .swb {
   margin-left: 120px;
-  max-height: 600px;
+  /*max-height: 600px;*/
   width: auto;
+/*  padding-bottom: 30px;*/
 }
 
 .call-box {
@@ -199,6 +202,7 @@ footer {
 }
 
 
-.bottom-menu {
-  font-size: 1em;
+.bottom-menu li{
+  font-size: 1.1em;
+  line-height: 150%;
 }
