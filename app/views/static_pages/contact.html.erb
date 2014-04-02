@@ -1,16 +1,20 @@
 <div class="col-md-4">
 	<form>
-		<address>
-		<strong>Art Eventz</strong><br>
-		317 S 6th Street<br>
-		Las Vegas, NV 89118<br>
-		<abbr title="Phone">
-		</abbr>
-		(847) 347 6189
-		</address>
-		<address>
-		<strong>Full Name</strong><br>
-		<a href="mailto:ml.alexander87@gmail.com">ml.alexander87@gmail.com</a>
-		</address>
+		<h1 class="page-header">arteventz would LOVE to here from you!</h1>
+
+		  <%= form_for(@contact, url: contact_path) do |f| %>
+		  <div class="control-group">
+		    <%= f.text_field(:name, placeholder: "Name" ) %>
+		  </div>
+		  <div class="control-group">
+		    <%= f.email_field(:email, placeholder: "Email" ) %>
+		  </div>
+		  <div class="control-group">
+		   <%= f.text_area(:question,  placeholder: "Question" ) %>  
+		  </div>
+		  <div class="control-group">
+		    <%= f.submit("Submit") %>
+  		</div>
+    <% end %>
 	</form>
 </div>

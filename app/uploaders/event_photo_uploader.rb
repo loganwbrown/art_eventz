@@ -9,7 +9,7 @@ include CarrierWave::MiniMagick
 
 
 
-  storage :fog
+  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   def store_dir
