@@ -19,6 +19,12 @@ $(function() {
 
             $('#calendar').fullCalendar({
                 events: data,
+                eventClick: function(event) {
+                    var id = event.id;
+                    window.location = "/events/" + id;
+
+                }
+
             });
         })
     }
