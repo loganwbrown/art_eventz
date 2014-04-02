@@ -1,14 +1,15 @@
-<h1>Events#index</h1>
+<h1>My Events</h1>
 <p>DASHBOARD/EVENTS</p>
-<table>
+<table class="table">
     <thead>
         <tr>
+            <th>Date </th>
             <th>Title </th>
-            <th>Tagline </th>
-            <th>Address </th>
+            <!-- <th>Tagline </th>
+            <th>Address </th> -->
             <th>Website </th>
-            <th>Contact Name </th>
-            <th>Contact Email </th>
+           <!--  <th>Contact Name </th>
+            <th>Contact Email </th> -->
             <th></th>
             <th></th>
             <th></th>
@@ -17,12 +18,13 @@
     <tbody>
         <% @events.each do |event| %>
         <tr>
+            <td><%= event.date %></td>
             <td><%= event.title %></td>
-            <td><%= event.tagline %></td>
-            <td><%= event.address %></td>
+            <!-- <td><%= event.tagline %></td>
+            <td><%= event.address %></td> -->
             <td><%= event.website %></td>
-            <td><%= event.contact_name %></td>
-            <td><%= event.contact_email %></td>
+            <!-- <td><%= event.contact_name %></td>
+            <td><%= event.contact_email %></td> -->
             <td><%= link_to 'Show', dashboard_event_path(event.id) %></td>
             <td><%= link_to 'Edit', edit_dashboard_event_path(event) %></td>
             <td><%= link_to 'Destroy', dashboard_event_path(event.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>

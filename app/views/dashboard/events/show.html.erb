@@ -66,15 +66,13 @@
   <strong>Contact Email:</strong>
   <%= @event.contact_email %>
 </p>
- <p>IGNORE DO NOT DELETE</p>
-          <div id="mydiv"></div>
-          <p>IGNORE AND DO NOT DELETE</p>
-<%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
-<%= link_to 'Back', dashboard_events_path %>
 
-<%= form_for :event_photo, url: dashboard_event_photos_path do |ff| %>
+<%= form_for([:dashboard, @event, @event_photo]) do |ff| %>
       <%= ff.label :photo %> 
       <%= ff.file_field :photo %>  
       <%= ff.hidden_field(:event_id, value: @event.id) %>
       <%= ff.submit('Upload Image', class: 'btn btn-primary') %>
 <% end %>
+
+<%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
+<%= link_to 'Back', dashboard_events_path %>
