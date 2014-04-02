@@ -6,7 +6,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
 
   def show
     @profile = current_member.profile
-
+    @art_photo = @profile.art_photos.build
   end
 
   def new

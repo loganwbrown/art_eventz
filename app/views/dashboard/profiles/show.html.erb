@@ -36,7 +36,12 @@
   <strong>Bio:</strong>
   <%= @profile.bio %>
 </p>
+
+<%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
+      <%= f.label :photo %> 
+      <%= f.file_field :photo %>
+      <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+<% end %>
+
 <%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> 
 <%= link_to 'Back', dashboard_profiles_path %>
-
-   
