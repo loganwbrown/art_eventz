@@ -13,7 +13,7 @@ class ArtPhotoUploader < CarrierWave::Uploader::Base
   # end
 
 
-  storage :fog
+  # storage :fog
 
 
   def store_dir

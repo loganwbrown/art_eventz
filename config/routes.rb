@@ -5,6 +5,8 @@ ArtEventz::Application.routes.draw do
   devise_for :members, controllers: { registrations: "registrations"}
   root 'static_pages#index'
 
+  match "/contact" => "static_pages#contact", via: [:get, :post]
+
   get "/newsletter_signup" => "static_pages#newsletter_signup"
   post "/newsletter_signup" => "static_pages#newsletter_signup"
 
