@@ -88,17 +88,13 @@
                         window.open($(this).attr('href'),'t','toolbar=0,resizable=1,status=0,width=640,height=528');
                         return false;
                     });
-                    
-                    
-                });// end plugin instance
-            
+                });
             }
         }
 
         var helpers = {
             networkDefs: {
-                facebook:{url:'http://www.facebook.com/share.php?u=|u|'},
-                //http://twitter.com/home?status=jQuery%20Share%20Social%20Media%20Plugin%20-%20Share%20to%20multiple%20social%20networks%20from%20a%20single%20form%20http://plugins.in1.com/share/demo
+                facebook:{url:'https://www.facebook.com/sharer/sharer.php?u=|u|'},
                 twitter:{url:'https://twitter.com/share?url=|u|&text=|140|'},
                 linkedin:{url:'http://www.linkedin.com/shareArticle?mini=true&url=|u|&title=|t|&summary=|d|&source=in1.com'},
                 in1:{url:'http://www.in1.com/cast?u=|u|',w:'490',h:'529'},
