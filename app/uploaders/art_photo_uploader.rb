@@ -9,7 +9,6 @@ class ArtPhotoUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [200, 200]
   end
 
-
   version :small, from_version: :medium do
     process resize_to_fit: [50, 50]
   end

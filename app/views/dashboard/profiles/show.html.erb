@@ -36,8 +36,7 @@
   <strong>Bio:</strong>
   <%= @profile.bio %>
 </p>
-<%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> 
-<%= link_to 'Back', dashboard_profiles_path %>
+
 <%= if @profile.art_photo.count == 5 %>
   <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
   <%= f.label :photo %> 
@@ -45,5 +44,13 @@
   <%= f.submit('Upload Image', class: 'btn btn-primary') %>
 <%= else %>
   <%= puts "We only allow 5 photos to be shown on the profile page." %>
-
 <% end %>
+
+<%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
+      <%= f.label :photo %> 
+      <%= f.file_field :photo %>
+      <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+<% end %>
+
+<%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> 
+<%= link_to 'Back', dashboard_profiles_path %>
