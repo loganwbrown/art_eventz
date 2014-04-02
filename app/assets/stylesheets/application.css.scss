@@ -1,20 +1,9 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
  *= require bootstrap_and_overrides
-
  *= require flat-ui.css
  *= require fullcalendar.css
- 
  *= require nivo-slider.css
  *= require default.css
-
  *= require_self.
  */
 html,body {
@@ -23,14 +12,12 @@ html,body {
  
 
 body {
-
  	background-image: url("png.png");
  	font-size: 16px;
  }
  .small_font{
   font-size: 80%; 
  }
-
 .green_box {
   background-color: #B2D4C8;
   width: 300px;
@@ -70,11 +57,7 @@ body {
 }
 
 .topbar{
-	/*height: 320px;
-	width: auto;
-	background-image: url("arteventz-header-3-21.jpg");
-	margin: 0 auto;
-	background-repeat:no-repeat;*/
+
   width: 100%;
   height: auto;
 
@@ -88,16 +71,21 @@ body {
 .navbar .nav > li > a {
 	margin-left: 50px;
   font-size: 22px;
+  color: #a2a9ab;
 }
 
 .nav-header {
-  font-size: 16px;
+  font-size: 22px;
   padding-bottom: 25px;
 }
 
 .nav-list li a {
-  font-size: 20px;
+  font-size: 22px;
   padding: 15px;
+}
+
+.sidebar-nav {
+  margin-top: 60px;
 }
 
 #ui-datepicker-div{
@@ -193,9 +181,7 @@ body {
   width: 100%;
   height: auto;
   max-width: 270px;
-
 }
-
 .call-box p {
   padding-top: 30px;
   padding-right: 25px;

@@ -11,16 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327005147) do
+ActiveRecord::Schema.define(version: 20140401173632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "event_photos", force: true do |t|
+  create_table "art_photos", force: true do |t|
+    t.integer  "profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "photo"
+  end
+
+  create_table "event_photos", force: true do |t|
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo"
   end
 
   create_table "events", force: true do |t|
@@ -32,9 +39,6 @@ ActiveRecord::Schema.define(version: 20140327005147) do
     t.string   "state"
     t.string   "zip"
     t.text     "more_info"
-    t.string   "photo1"
-    t.string   "photo2"
-    t.string   "photo3"
     t.string   "website"
     t.string   "facebook"
     t.string   "application_form"
@@ -78,6 +82,9 @@ ActiveRecord::Schema.define(version: 20140327005147) do
     t.integer  "member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "art_photo1"
+    t.string   "art_photo2"
+    t.string   "art_photo3"
   end
 
 end

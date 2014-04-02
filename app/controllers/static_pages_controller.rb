@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+  respond_to :html, :json, :js
+
+
 
   def index
  		 if signed_in?
@@ -13,7 +16,8 @@ class StaticPagesController < ApplicationController
   end
   
   def calendar
-    # @events = Events.all
+    @events = Event.all
+    respond_with(@events)
   end 
 
   def newsletter_signup
