@@ -15,6 +15,32 @@ body {
  	background-image: url("png.png");
  	font-size: 16px;
  }
+ .table {
+  width: 100%;
+  background-color: transparent;
+  margin: auto;
+
+ }
+
+ .table th {
+  height: 50px;
+ }
+
+ .table tr:nth-child(even) {
+  font-size: 15px;
+  text-align: left;
+  background-color: lightgray;
+ }
+
+ .table thead {
+  background-color: lightgray;
+ }
+
+/* .table thead tr:nth-child(2) {
+  background-color: transparent;
+ }*/
+
+
  .small_font{
   font-size: 80%; 
  }
