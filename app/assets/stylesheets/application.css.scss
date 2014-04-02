@@ -172,14 +172,16 @@ body {
 .slider-wrapper {
   margin-left: 400px;
   padding-left: 30px;
-  max-height: 600px;
+ /* max-height: 600px;*/
   width: auto;
+/*  padding-bottom: 30px;*/
 
 }
 .swb {
   margin-left: 120px;
-  max-height: 600px;
+  /*max-height: 600px;*/
   width: auto;
+/*  padding-bottom: 30px;*/
 }
 
 .call-box {
@@ -214,6 +216,7 @@ footer {
 }
 
 
-.bottom-menu {
-  font-size: 1em;
+.bottom-menu li{
+  font-size: 1.1em;
+  line-height: 150%;
 }
