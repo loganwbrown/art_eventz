@@ -1,78 +1,68 @@
-
-
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="event_show_page">
   <div class="col-md-5 pull-left event_show">
-
     <h3><%= @event.title %></h3>
-
     <p>
-     <em><%= @event.tagline %></em>
+    <em><%= @event.tagline %></em>
     </p>
-
     <p>
-      <strong>Date:</strong>
-      <%= @event.date %>
+    <strong>Date:</strong>
+    <%= @event.date %>
     </p>
-
     <p>
-      <strong>Time:</strong>
-      <%= @event.time %>
+    <strong>Time:</strong>
+    <%= @event.time %>
     </p>
-
     <div class="small_font address">
       <p>
-        <%= @event.address %> <%= @event.address2 %>
+      <%= @event.address %> <%= @event.address2 %>
       </p>
-
       <p>
-        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
       </p>
     </div>
-  <br>
+    <br>
     <p>
-      Contact Name:
-      <strong><%= @event.contact_name %></strong>
+    Contact Name:
+    <strong><%= @event.contact_name %></strong>
     </p>
-
     <p>
-      Contact Email:
-     <strong><%= @event.contact_email %></strong>
+    Contact Email:
+    <strong><%= @event.contact_email %></strong>
     </p>
-  <br>
-  <div class="small_font">
-    <p>
+    <br>
+    <div class="small_font">
+      <p>
       <%= @event.more_info %>
-    </p>
+      </p>
+    </div>
   </div>
-  </div>
-
-    <br>
-    <br>
-
+  <br>
+  <br>
   <div class="pull-left">
     <div class="bigger_box">
       <div class="green_box">
-
       </div>
-    </div> 
+    </div>
     <p>
-      Website:
-      <%= @event.website %>
+    Website:
+    <%= @event.website %>
     </p>
-
     <p>
-      Facebook:
-      <%= @event.facebook %>
+    Facebook:
+    <%= @event.facebook %>
     </p>
-
     <p>
-      Application:
-      <%= @event.application_form %>
+    Application:
+    <%= @event.application_form %>
     </p>
-
     
-
-  <%= link_to 'Back', events_path %>
+    <div class="pull-right">
+      <p>Share this event:</p>
+      <div id="socialsharing"></div>
+    </div>
+    <%= link_to 'Back', events_path %>
   </div>
+  <br>
+  <br>
 </div>

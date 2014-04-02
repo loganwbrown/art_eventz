@@ -1,9 +1,9 @@
 class Dashboard::ArtPhotosController < Dashboard::DashboardController
-  before_action :find_event
+  before_action :find_profile
 
   def create
-    @profile = ArtPhoto.new(photo: artphoto_params, profile_id: @profile.id)
-    if @event_photo.save
+    @art_photo = @profile.art_photos.build(artphoto_params)
+    if @art_photo.save
       redirect_to dashboard_profile_path(@art_photo.profile_id)
     else 
     end
@@ -12,11 +12,11 @@ class Dashboard::ArtPhotosController < Dashboard::DashboardController
   private
 
   def artphoto_params
-    params.require(:art_photo).permit(:photo, :event_id)
+    params.require(:art_photo).permit(:photo, :profile_id)
   end
 
-  def find_event
-    @profile = Profile.find(params[:art_photo][:profile_id])
+  def find_profile
+    @profile = Profile.find(params[:profile_id])
   end
 
 end
