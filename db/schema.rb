@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403184316) do
+ActiveRecord::Schema.define(version: 20140403184815) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
@@ -101,14 +102,6 @@ ActiveRecord::Schema.define(version: 20140403184316) do
   add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
 
-  create_table "pg_search_documents", force: true do |t|
-    t.text     "content"
-    t.integer  "searchable_id"
-    t.string   "searchable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "mentions", force: true do |t|
     t.string   "mentioner_type"
     t.integer  "mentioner_id"
@@ -119,6 +112,14 @@ ActiveRecord::Schema.define(version: 20140403184316) do
 
   add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables", using: :btree
   add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions", using: :btree
+
+  create_table "pg_search_documents", force: true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profiles", force: true do |t|
     t.string   "name"
