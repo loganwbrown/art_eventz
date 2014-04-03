@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'rails_12factor', group: :production
 gem 'nested_form'
+gem 'socialization'
 group :doc do
   gem 'sdoc', require: false
 end

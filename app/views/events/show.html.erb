@@ -1,6 +1,10 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="event_show_page">
   <div class="col-md-5 pull-left event_show">
+    
+    <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+    <%= @likes %>
+
     <h3><%= @event.title %></h3>
     <p>
     <em><%= @event.tagline %></em>
@@ -60,6 +64,9 @@
     <div class="pull-right">
       <p>Share this event:</p>
       <div id="socialsharing"></div>
+      <p>
+        
+      </p>  
     </div>
     <%= link_to 'Back', events_path %>
   </div>
