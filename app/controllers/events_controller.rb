@@ -9,6 +9,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @likes = @event.likers(Member).count
+
   end
 
 end

@@ -62,10 +62,10 @@
 </div>
 
 <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
-<%= f.label :photo %>
 <%= f.file_field :photo %>
 <%= f.hidden_field(:event_id, value: @event.id) %>
 <%= f.submit('Upload Image', class: 'btn btn-primary') %>
 <% end %>
+<h5>
 <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
-<%= link_to 'Back', dashboard_events_path %>
+<%= link_to 'Back', dashboard_events_path %></h5>

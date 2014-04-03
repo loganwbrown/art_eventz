@@ -5,6 +5,8 @@ class Member < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :events
   has_one :profile
+  acts_as_follower
+  acts_as_liker
   
   after_create :email_new_member
 
