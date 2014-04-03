@@ -1,4 +1,4 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<p id="notice"><%= notice %></p>
 <div class="event_show_page">
   <div class="col-md-5 pull-left event_show">
     
@@ -42,6 +42,7 @@
       <%= @event.more_info %>
       </p>
     </div>
+    <h5><%= link_to 'Back', events_path %></h5>
   </div>
   <br>
   <br>
@@ -70,7 +71,6 @@
         
       </p>  
     </div>
-    <%= link_to 'Back', events_path %>
   </div>
   <br>
   <br>
