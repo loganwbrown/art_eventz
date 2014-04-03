@@ -1,48 +1,49 @@
-<p id="notice"><%= notice %></p>
-<div class="event_show_page">
-  <div  class="col-md-5 pull-left event_show">
-    <h3><%= @profile.name %></h3>
+  <div class="container-fluid pro-show"  
+    <p id="notice"><%= notice %></p>
+    <div class="event_show_page">
+    <div  class="col-md-5 pull-left event_show">
+      <h3><%= @profile.name %></h3>
 
-    <p>
-      <em><%= @profile.tagline %></em>
-    </p>
-
-    <p id="avatar">
-      <strong>Avatar:</strong>
-      <%= @profile.avatar %>
-    </p>
-    <br>
-    <div class="small_font">
       <p>
-        <%= @profile.bio %>
+        <em><%= @profile.tagline %></em>
       </p>
-    </div>
-    <br>
-     <p>
-      Website:
-      <%= @profile.website1 %>
-    </p>
 
-    <p>
-      Facebook:
-      <%= @profile.facebook %>
-    </p>
-
-    <p>
-      Twitter:
-      <%= @profile.twitter %>
-    </p>
-
-  <%= link_to 'Back', profiles_path %>
-  </div>
-
-  <div class="pull-left">
-    <p></p><br>
-    <div class="bigger_box">
-      <div class="green_box">
-
+      <p id="avatar">
+        <strong>Avatar:</strong>
+        <%= @profile.avatar %>
+      </p>
+      <br>
+      <div class="small_font">
+        <p>
+          <%= @profile.bio %>
+        </p>
       </div>
-    </div> 
-   
-  </div>
-</div>
+      <br>
+       <p>
+        Website:
+        <%= @profile.website1 %>
+      </p>
+
+      <p>
+        Facebook:
+        <%= @profile.facebook %>
+      </p>
+
+      <p>
+        Twitter:
+        <%= @profile.twitter %>
+      </p>
+
+    <%= link_to 'Back', profiles_path %>
+    </div>
+
+    <div class="pull-left">
+      <p></p><br>
+      
+     
+    </div>
+    </div>
+    <div>
+      <%= render 'shared/member_art_photo_slider' %>
+    </div>
+  </div

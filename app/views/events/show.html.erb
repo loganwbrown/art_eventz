@@ -35,15 +35,6 @@
       <p>
       <%= @event.more_info %>
       </p>
-    </div>
-  </div>
-  <br>
-  <br>
-  <div class="pull-left">
-    <div class="bigger_box">
-      <div class="green_box">
-      </div>
-    </div>
     <p>
     Website:
     <%= @event.website %>
@@ -56,6 +47,15 @@
     Application:
     <%= @event.application_form %>
     </p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="pull-left">
+    
+    <div>
+      <%= render 'shared/single_event_photo_slider' %>
+    </div>
     
     <div class="pull-right">
       <p>Share this event:</p>

@@ -1,1 +1,16 @@
-single event photo slider
+<!-- single event photo slider -->
+
+<div class="slider-wrapper theme-default">
+        <div class="ribbon"></div>
+          <div id="slider" class="nivoSlider">
+               
+           
+            <% @event_photos.each do |img| %>
+            <%= image_tag(img.photo.url, :title => img.event.title) %>
+            <% end %> 
+          </div>
+        </div>
+    <div id="htmlcaption" class="nivo-html-caption">
+        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+    </div>
+</div>

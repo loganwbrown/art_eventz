@@ -6,5 +6,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @event_photos = @event.event_photos
   end
 end

@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @art_photos = @profile.art_photos
   end
 
 end
