@@ -1,63 +1,71 @@
-<h1>Events#show</h1>
-<p>DASHBOARD/SHOW</p>
-<p id="notice"><%= notice %></p>
-<p>
-<strong>Title:</strong>
-<%= @event.title %>
-</p>
-<p>
-<strong>Tageline:</strong>
-<%= @event.tagline %>
-</p>
-<p>
-<strong>Address:</strong>
-<%= @event.address %>
-</p>
-<p>
-<strong>Address2:</strong>
-<%= @event.address2 %>
-</p>
-<p>
-<strong>City:</strong>
-<%= @event.city %>
-</p>
-<p>
-<strong>State:</strong>
-<%= @event.state %>
-</p>
-<p>
-<strong>Zip:</strong>
-<%= @event.zip %>
-</p>
-<p>
-<strong>More Info:</strong>
-<%= @event.more_info %>
-</p>
-<p>
-<strong>Website:</strong>
-<%= @event.website %>
-</p>
-<p>
-<strong>Facebook:</strong>
-<%= @event.facebook %>
-</p>
-<p>
-<strong>Application Form:</strong>
-<%= @event.application_form %>
-</p>
-<p>
-<strong>Contact Name:</strong>
-<%= @event.contact_name %>
-</p>
-<p>
-<strong>Contact Email:</strong>
-<%= @event.contact_email %>
-</p>
-<%= form_for([:dashboard, @event, @event_photo]) do |ff| %>
-<%= ff.label :photo %>
-<%= ff.file_field :photo %>
-<%= ff.hidden_field(:event_id, value: @event.id) %>
-<%= ff.submit('Upload Image', class: 'btn btn-primary') %>
+<p id="notice"><%= notice %></p> 
+  <div class="event_show_page">
+  <div class="col-md-5 pull-left event_show">
+    <h3><%= @event.title %></h3>
+    <p>
+    <em><%= @event.tagline %></em>
+    </p>
+    <p>
+    <strong>Date:</strong>
+    <%= @event.date %>
+    </p>
+    <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+    </p>
+    <div class="small_font address">
+      <p>
+      <%= @event.address %> <%= @event.address2 %>
+      </p>
+      <p>
+      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      </p>
+    </div>
+    <br>
+    <p>
+    Contact Name:
+    <strong><%= @event.contact_name %></strong>
+    </p>
+    <p>
+    Contact Email:
+    <strong><%= @event.contact_email %></strong>
+    </p>
+    <br>
+    <div class="small_font">
+      <p>
+      <%= @event.more_info %>
+      </p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="pull-left">
+    <div class="bigger_box">
+      <div class="green_box">
+      </div>
+    </div>
+    <p>
+    Website:
+    <%= @event.website %>	
+    </p>
+    <p>
+    Facebook:
+    <%= @event.facebook %>
+    </p>
+    <p>
+    Application:
+    <%= @event.application_form %>
+    </p>
+  </div>
+  <br>
+  <br>
+</div>
+
+<%= form_for([:dashboard, @event, @event_photo]) do |f| %>
+<%= f.label :photo %>
+<%= f.file_field :photo %>
+<%= f.hidden_field(:event_id, value: @event.id) %>
+<%= f.submit('Upload Image', class: 'btn btn-primary') %>
 <% end %>
 <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
 <%= link_to 'Back', dashboard_events_path %>

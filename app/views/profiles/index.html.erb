@@ -1,10 +1,10 @@
-<h1>My Profiles</h1>
+<h1>Member Profiles</h1>
 
 <table class="table">
   <thead>
     <tr>
+      <td></td>
       <th>Name </th>
-      <th>Avatar </th>
       <th>Tagline </th>
       <th>Website </th>
       <th>Facebook </th>
@@ -17,12 +17,11 @@
     <% @profiles.each do |profile| %>
     <tr>
       <td><%= profile.name %></td>
-      <td><%= profile.avatar %></td>
       <td><%= profile.tagline %></td>
       <td><%= profile.website1 %></td>
       <td><%= profile.facebook %></td>
       <td><%= profile.twitter %></td>
-      <td><%= profile.bio %></td>
+      <td><%= truncate(profile.bio, length: 100) %></td>
       <td><%= link_to 'Show', profile_path(profile.id) %></td>
     </tr>
     <% end %>
