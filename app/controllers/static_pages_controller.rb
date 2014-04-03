@@ -1,8 +1,6 @@
 class StaticPagesController < ApplicationController
   respond_to :html, :json, :js
-
-
-
+  
   def index
  		 if signed_in?
       redirect_to dashboard_index_path

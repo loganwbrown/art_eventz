@@ -1,10 +1,14 @@
 class EventsController < ApplicationController
-
   def index
-    @events = Event.all
+    if params[:query]
+    	@events = PgSearch.multisearch(params[:query]).collect(&:searchable)
+    else
+    	@events = Event.all
+    end
   end
 
   def show
     @event = Event.find(params[:id])
   end
+
 end
