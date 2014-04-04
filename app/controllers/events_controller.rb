@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
-
   def index
-    @events = Event.all
+    if params[:query]
+    	@events = PgSearch.multisearch(params[:query]).collect(&:searchable)
+    else
+    	@events = Event.all
+    end
   end
 
   def show
@@ -9,4 +12,5 @@ class EventsController < ApplicationController
     @likes = @event.likers(Member).count
 
   end
+
 end
