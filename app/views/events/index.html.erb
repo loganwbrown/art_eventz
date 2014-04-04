@@ -1,5 +1,8 @@
 <h1>Public Art Events</h1>
-
+<%= form_tag events_path, method: :get do %>
+    <%= text_field_tag :query, params[:query], :class => "search-box" %>
+    <%= submit_tag "Search This Site", name: nil, :class => "btn btn-search" %>
+<% end %>
 <table class="table">
     <thead>
         <tr>
