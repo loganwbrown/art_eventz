@@ -1,6 +1,6 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="event_show_page">
-  <div class="col-md-5 pull-left event_show">
+  <div class="col-md-5 pull-left event_show span5">
     <h3><%= @event.title %></h3>
     <p>
     <em><%= @event.tagline %></em>
@@ -48,10 +48,10 @@
     <%= @event.application_form %>
     </p>
     </div>
+     <%= link_to 'Back', events_path %>
   </div>
-  <br>
-  <br>
-  <div class="pull-left">
+
+  <div class="container-fluid">
     
     <div>
       <%= render 'shared/single_event_photo_slider' %>
@@ -61,7 +61,7 @@
       <p>Share this event:</p>
       <div id="socialsharing"></div>
     </div>
-    <%= link_to 'Back', events_path %>
+    
   </div>
   <br>
   <br>
