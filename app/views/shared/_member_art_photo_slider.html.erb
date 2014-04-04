@@ -1,1 +1,16 @@
-slider code for personal art sliders
+<!-- slider code for personal art sliders -->
+
+<div class="slider-wrapper theme-default">
+        <div class="ribbon"></div>
+          <div id="slider" class="nivoSlider">
+               
+            <% @art_photos.each do |img| %>
+            <%= image_tag(img.photo.url, :title => img.profile.name) %>
+            <% end %> 
+          </div>
+        </div>
+   <!--  <div id="htmlcaption" class="nivo-html-caption">
+        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+    </div> -->
+</div>
+

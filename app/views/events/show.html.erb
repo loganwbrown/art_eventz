@@ -7,6 +7,7 @@
     <% # else just show the number of likes %>
     <%= @likes %>
 
+  <div class="col-md-5 pull-left event_show span5">
     <h3><%= @event.title %></h3>
     <p>
     <em><%= @event.tagline %></em>
@@ -63,12 +64,20 @@
     Application:
     <%= @event.application_form %>
     </p>
+    </div>
+     <%= link_to 'Back', events_path %>
+  </div>
+
+  <div class="container-fluid">
+    
+    <div>
+      <%= render 'shared/single_event_photo_slider' %>
+    </div>
     
     <div class="pull-right">
       <p>Share this event:</p>
       <div id="socialsharing"></div>
       <p>
-        
       </p>  
     </div>
   </div>

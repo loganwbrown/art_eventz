@@ -47,7 +47,7 @@ body {
  .small_font{
   font-size: 80%; 
  }
-.green_box {
+/*.green_box {
   background-color: #B2D4C8;
   width: 300px;
   height: 180px;
@@ -60,7 +60,7 @@ body {
   height: 200px;
   margin-top: -50px;
   margin-bottom: 20px;
-}
+}*/
 
 .address p {
   margin-bottom: -2px;
@@ -74,7 +74,7 @@ body {
 
 .event_show {
   max-width: 40%;
-  margin-right: 15%;
+ 
 }
 
 .event_show {
@@ -92,31 +92,38 @@ body {
 
 }
 
-
+.navbar-inner {
+  background-color: #b9b5c4;
+}
 .navbar .nav {
 	margin: 0 auto;
+
 }
 
 .navbar .nav > li > a {
 	margin-left: 50px;
-  font-size: 20px;
+
   font-size: 22px;
-  color: #a2a9ab;
+  color: white;
 }
 
-.nav-header {
+/*.nav-header {
   font-size: 22px;
   padding-bottom: 25px;
-}
+}*/
 
 .nav-list li a {
-  font-size: 22px;
+  font-size: 30px;
   padding: 15px;
 }
 
 .sidebar-nav {
   margin-top: 60px;
 }
+
+/*.nav-list {
+  background-color: #b9b5c4;
+}*/
 
 #ui-datepicker-div{
 	background-color: #e4e4e4;
@@ -188,19 +195,15 @@ body {
 }
 
 .slider-wrapper {
-  margin-left: 400px;
-  padding-left: 30px;
- /* max-height: 600px;*/
-  width: auto;
-/*  padding-bottom: 30px;*/
-
-}
-.swb {
   margin-left: 120px;
-  /*max-height: 600px;*/
-  width: auto;
-/*  padding-bottom: 30px;*/
+  padding-left: 30px;
+ }
+
+.public-slider {
+ margin-left: 160px
 }
+
+
 
 .call-box {
   background-color: #93b0a1;
@@ -227,12 +230,29 @@ footer {
   position: relative;
   bottom: 0;
   margin-top: 50px;
-  /*background-image: url("arteventz-footer.jpg");
+  background-color: black;
+  /*/*background-image: url("arteventz-footer.jpg");
   background-size: 100% auto;*/
 }
-
-
+.bottom-menu {
+    background-color: #b9b5c4;
+}
+.title {
+  color: white;
+  font-size: 1.3em;
+  line-height: 150%;
+}
 .bottom-menu li{
   font-size: 1.1em;
   line-height: 150%;
+
+  color: white;
+}
+
+.devise {
+  margin-left: 15%;
+}
+
+.btn-wide{
+  background-color: #b9b5c4;
 }
