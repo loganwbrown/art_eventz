@@ -1,17 +1,22 @@
 <div class="container-fluid">
-
-    <div class="call-box">
-        <div id="main-button">
-            <%= link_to " Free Membership ", new_member_registration_path, class: " btn btn-huge btn btn-wide" %>
-        </div>
-        <p><span>arteventz.com&nbsp;</span>&nbsp;offers Free Membership. Sign Up allows members to post any number of Art related Events and/or an Individual Profile which may optionally include Personal Artwork.<br><br> All Profiles, Art, and Events are available for browsing and sharing by Members and Public alike.</p>
+  <div class="call-box">
+    <div id="main-button">
+      <%= link_to " Free Membership ", new_member_registration_path, class: " btn btn-huge btn btn-wide" %>
     </div>
-
-    <div class="public-slider">
+    <p><span>arteventz.com&nbsp;</span>&nbsp;offers Free Membership. Sign Up allows members to post any number of Art related Events and/or an Individual Profile which may optionally include Personal Artwork.<br><br> All Profiles, Art, and Events are available for browsing and sharing by Members and Public alike.</p>
+  </div>
+  <div class="tabbable tabs-right">
+    <ul class="nav nav-tabs">
+      <li class="<%= 'active' if params[:tab] == 'tab1' %>"><a href="#tab1" data-toggle="tab">Show Art</a></li>
+      <li class="<%= 'active' if params[:tab] == 'tab9' %>"> <a href="#tab9" data-toggle="tab">Show Art Events</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="<%= if (params[:tab] == 'tab1' || !params[:tab])then 'tab-pane active'  else 'tab-pane' end%>" id="tab1">
         <%= render 'shared/all_art_photos_slider' %>
+      </div>
+      <div class="<%= if params[:tab] == 'tab9' then 'tab-pane active'  else 'tab-pane' end%>" id="tab9">
+        <%= render 'shared/all_event_photos_slider' %>
+      </div>
     </div>
     
-</div>
-    
-        
-
+  </div>
