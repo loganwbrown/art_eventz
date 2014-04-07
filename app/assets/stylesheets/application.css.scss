@@ -186,20 +186,25 @@ body {
 }
 
 .slider-wrapper {
-  margin-left: 120px;
   padding-left: 30px;
  }
 
 
 /* sliders */
 .public-slider {
- margin-left: 280px
+ margin-left: 380px
 }
 .pro-show{
   margin-left: 300px;
 }
 
-
+.tab-content {
+  border: none;
+  padding: 0px;
+}
+.nav-stacked {
+  padding: 10px;
+}
 .call-box {
   background-color: #93b0a1;
   padding: 40px 0px 50px 45px;
