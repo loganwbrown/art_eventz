@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="topbar">
-      <%= link_to(image_tag "arteventz-header-4-3.jpg") %>
+      <%= link_to(image_tag "arteventz-header-4-5.jpg") %>
     </div>
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
@@ -45,17 +45,17 @@
         </div>
       </div>
       <div class="container-fluid">
-        <div class="span11 offset1">
+        <div class="span12 offset1">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
       </div>
-      <footer>
-        <div class="footer">
-          <%= render 'shared/footer' %>
-        </div>
-        <div class="clearfix"></div>
-      </footer>
+    <footer>
+      <div class="footer">
+        <%= render 'shared/footer' %>
+      </div>
+      <div class="clearfix"></div>
+    </footer>
       <%= javascript_include_tag "application" %>
   </body>
 </html>
