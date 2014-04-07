@@ -30,7 +30,7 @@ $(function() {
         })
     }
     $(window).load(function() {
-        $('#slider').nivoSlider({
+        $('.slider').nivoSlider({
             effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
             slices: 15, // For slice animations
             boxCols: 8, // For box animations
@@ -42,11 +42,11 @@ $(function() {
 
 
 
-    $('#myTabs a').click(function(e) {
-        e.preventDefault();
-        $("#show_art").tab("show");
-        $("#show_art_events").tab("show");
-    });
+    //$('#myTabs a').click(function(e) {
+    //    e.preventDefault();
+    //    $("#show_art").tab("show");
+    //    $("#show_art_events").tab("show");
+    //});
 
 
 
