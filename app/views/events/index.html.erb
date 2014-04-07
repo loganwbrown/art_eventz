@@ -4,26 +4,28 @@
 <%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
 <% end %>
 <div class="container">
-
     <% @events.each do |event| %>
         <div class="row-fluid">
             <ul class="event-list">
             <li>
                 <div class="event-date">
+                    <h5>Date:</h5>
                     <%= event.date %>
                 </div>
                 <div class="event-title">
+                    <h5> Event Title:</h5>
                     <%= event.title %>
+                    
                 </div>
-                <div class="event-  location">
+                <div class="event-location">
+                    <h5>Location:</h5>
                     <%= event.address %><br />
                     <%= event.city %><br />
                     <%= event.state %><br />
-                    <br>
-                    <br>
+                   <div class="pull-right">
                     <%= link_to 'More Info', event_path(event.id) %><br />
                     <%= event.website %>
-
+</div>
                 </div>
             </li>
             </ul>
