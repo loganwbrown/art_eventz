@@ -1,44 +1,41 @@
-  <div class="container-fluid pro-show"  
-    <p id="notice"><%= notice %></p>
-    <div class="event_show_page">
-    <div  class="col-md-5 pull-left event_show">
+<div class="container-fluid"
+  <p id="notice"><%= notice %></p>
+  <div class="event_show_page">
+    <div  class="col-md-4 pull-left event_show span4">
       <h3><%= @profile.name %></h3>
       <p>
-        <em><%= @profile.tagline %></em>
+      <em><%= @profile.tagline %></em>
       </p>
-
       <p id="avatar">
-        <strong>Avatar:</strong>
-        <%= @profile.avatar %>
+      <strong>Avatar:</strong>
+      <%= image_tag(@profile.avatar.url(:medium)) %>
       </p>
       <br>
       <div class="small_font">
         <p>
-          <%= @profile.bio %>
+        <%= @profile.bio %>
         </p>
       </div>
       <br>
-       <p>
-        Website:
-        <%= @profile.website1 %>
-      </p>
-
       <p>
-        Facebook:
-        <%= @profile.facebook %>
+      Website:
+      <%= @profile.website1 %>
       </p>
+      <p>
+      Facebook:
+      <%= @profile.facebook %>
+      </p>
+      
+      <p>
+      Twitter:
+      <%= @profile.twitter %>
+      </p>
+      <h5><%= link_to 'Back', profiles_path %></h5>
+    </div>
   </div>
-      <p>
-        Twitter:
-        <%= @profile.twitter %>
-      </p>
-    </div>
-  <h5><%= link_to 'Back', profiles_path %></h5>
-    <div class="pull-left">
-      <p></p><br>
-    </div>
-    </div>
+
+  <div class="container-fluid pro-show">
     <div>
       <%= render 'shared/member_art_photo_slider' %>
     </div>
-  </div
+  </div>

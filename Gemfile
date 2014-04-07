@@ -19,6 +19,8 @@ end
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-components-helpers'
+
 gem 'devise'
 gem "carrierwave"
 gem "mini_magick"

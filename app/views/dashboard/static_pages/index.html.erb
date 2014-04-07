@@ -1,7 +1,12 @@
+
+ 
+
+  <ul id="myTabs" class="nav nav-tabs pull-right nav-stacked" data-tabs="tabs">
+    <li class="active"><a data-toggle ="tab" href="#show_art">Show Art</a></li>
+    <li><a data-toggle="tab" href="#show_art_events">Show Art Events</a></li>
+  </ul>
   
-
-    <div class="swb">
-        <%= render 'shared/all_event_photos_slider' %>
-    </div>
-
-
+  <div class="content">
+    <div class="tab-pane active" id="show_art"><%= render 'shared/all_art_photos_slider' %></div>
+    <div class="tab-pane" id="show_art_events"><%= render 'shared/all_event_photos_slider' %></div>
+  </div>

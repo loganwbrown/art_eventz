@@ -13,7 +13,10 @@ html,body {
 body {
  	background-image: url("png.png");
  	font-size: 16px;
+
  }
+ 
+ /*show views*/
  .table {
   width: 100%;
   background-color: transparent;
@@ -47,20 +50,7 @@ body {
  .small_font{
   font-size: 80%; 
  }
-/*.green_box {
-  background-color: #B2D4C8;
-  width: 300px;
-  height: 180px;
-  margin: 20px;
-}
 
-.bigger_box {
-  background-color: #5A8A7A;
-  width: 350px;
-  height: 200px;
-  margin-top: -50px;
-  margin-bottom: 20px;
-}*/
 
 .address p {
   margin-bottom: -2px;
@@ -93,7 +83,7 @@ body {
 }
 
 .navbar-inner {
-  background-color: #b9b5c4;
+  background-color: #d9d6d6;
 }
 .navbar .nav {
 	margin: 0 auto;
@@ -103,8 +93,8 @@ body {
 .navbar .nav > li > a {
 	margin-left: 50px;
 
-  font-size: 22px;
-  color: white;
+  font-size: 1.4em;
+  color: #fffefa;
 }
 
 /*.nav-header {
@@ -113,7 +103,7 @@ body {
 }*/
 
 .nav-list li a {
-  font-size: 30px;
+  font-size: 1.5em;
   padding: 15px;
 }
 
@@ -131,6 +121,7 @@ body {
   border-width:1px;
 }
 
+/* datepicke*/
 #ui-datepicker-div table {
   border-collapse: collapse;
   width: 50%;
@@ -199,10 +190,14 @@ body {
   padding-left: 30px;
  }
 
-.public-slider {
- margin-left: 160px
-}
 
+/* sliders */
+.public-slider {
+ margin-left: 280px
+}
+.pro-show{
+  margin-left: 300px;
+}
 
 
 .call-box {
@@ -225,20 +220,26 @@ body {
   font-style: italic;
 }
 
+/* footer stuff*/
 footer {
   width: 100%;
   position: relative;
   bottom: 0;
   margin-top: 50px;
-  background-color: black;
+  background-color: #d9d6d6;
   /*/*background-image: url("arteventz-footer.jpg");
   background-size: 100% auto;*/
 }
 .bottom-menu {
-    background-color: #b9b5c4;
+    background-color: #d9d6d6;
+    height: 100%;
 }
-.title {
-  color: white;
+
+.foot-container {
+  margin-left: 160px;
+}
+.col-title {
+  color: #fffefa;
   font-size: 1.3em;
   line-height: 150%;
 }
@@ -246,8 +247,13 @@ footer {
   font-size: 1.1em;
   line-height: 150%;
 
-  color: white;
+  color: #fffefa;
 }
+/*.brand {
+  padding-right: 10%;
+  margin-left: 0; 
+  padding-left: 0;
+}*/
 
 .devise {
   margin-left: 15%;
@@ -298,3 +304,115 @@ footer {
 
 
 
+
+.group1{
+  padding-right:100px;
+}
+
+/*.socialsharing {
+  padding-right: 600px;
+}*/
+
+
+
+
+/* dave's social media follow icons below*/
+
+/*.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }*/
+
+/*.alignleft {
+  float: left;
+  }
+
+.alignright {
+  float: right;
+  }
+  
+
+#socialiconbar div{
+  float:right!important;
+  margin-left:25px!important;
+  margin-top:15px!important;
+}
+
+#twitter {
+  display:relative!important;
+  width:49px!important;
+  height:49px!important;
+  background-image: url(images/twitter.png)!important;
+  background-position:top left!important;
+  -webkit-transition: all 0.5s ease-in-out!important;
+    -moz-transition: all 0.5s ease-in-out!important;
+    -o-transition: all 0.5s ease-in-out!important;
+  
+}
+#facebook {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(./facebook.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#linkedin {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(./linkedin.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#tumblr {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(images/tumblr.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#youtube {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(./youtube.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#pintrest {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(./pintrest.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#email {
+  display:relative;
+  width:49px;
+  height:49px;
+  background-image: url(./email.png);
+  background-position:top left;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+#socialiconbar div:hover {
+  background-position:bottom left!important;
+}
+
+/* end of daves SM icon styles */
