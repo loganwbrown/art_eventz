@@ -1,90 +1,82 @@
-<p id="notice"><%= notice %></p>
-<div class="event_show_page">
-  <div class="col-md-5 pull-left event_show">
-    
-    <!-- this part shows the like button if it hasn't been clicked on yet; it hides the like button after being clicked -->
-    <% if current_member.like!(@event) == nil %>
-      <%= link_to("Like Event", create_like_path(@event), method: :post) %>
-      <%= @likes %>
-    <% else %>
-      <%= @likes %>
-    <% end %>
+  <p id="notice"><%= notice %></p>
 
+      <div class="event_show_page">
+        
+         
+          <div class="col-md-6 pull-left event_show span6">
 
-  <div class="col-md-5 pull-left event_show span5">
-    <h3><%= @event.title %></h3>
-    <p>
-    <em><%= @event.tagline %></em>
-    </p>
-    <p>
-    <strong>Date:</strong>
-    <%= @event.date %>
-    </p>
-    <p>
-    <strong>Time:</strong>
-    <%= @event.time %>
-    </p>
-    <div class="small_font address">
-      <p>
-      <%= @event.address %> <%= @event.address2 %>
-      </p>
-      <p>
-      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-      </p>
-    </div>
-    <br>
-    <p>
-    Contact Name:
-    <strong><%= @event.contact_name %></strong>
-    </p>
-    <p>
-    Contact Email:
-    <strong><%= @event.contact_email %></strong>
-    </p>
-    <br>
-    <div class="small_font">
-      <p>
-      <%= @event.more_info %>
-      </p>
-    </div>
-    <h5><%= link_to 'Back', events_path %></h5>
-  </div>
-  <br>
-  <br>
-  <div class="pull-left">
-    <div class="bigger_box">
-      <div class="green_box">
+            <% if current_member.like!(@event) == nil %>
+              <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+              <%= @likes %>
+            <% else %>
+              <%= @likes %>
+            <% end %>
+
+            </div>
+            <br>
+            <h3><%= @event.title %></h3>
+            <p>
+            <em><%= @event.tagline %></em>
+            </p>
+            <p>
+            <strong>Date:</strong>
+            <%= @event.date %>
+            </p>
+            <p>
+            <strong>Time:</strong>
+            <%= @event.time %>
+            </p>
+            <div class="small_font address">
+              <p>
+              <%= @event.address %> <%= @event.address2 %>
+              </p>
+              <p>
+              <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+              </p>
+            </div>
+            <br>
+            <p>
+            Contact Name:
+            <strong><%= @event.contact_name %></strong>
+            </p>
+            <p>
+            Contact Email:
+            <strong><%= @event.contact_email %></strong>
+            </p>
+            <br>
+            <div class="small_font">
+              <p>
+              <%= @event.more_info %>
+              </p>
+              <p>
+              Website:
+              <%= @event.website %>
+              </p>
+              <p>
+              Facebook:
+              <%= @event.facebook %>
+              </p>
+              <p>
+              Application:
+              <%= @event.application_form %>
+              </p>
+              <br>
+            </div>
+              <h5><%= link_to 'Back', events_path %></h5>
+        
+          </div>
       </div>
-    </div>
-    <p>
-    Website:
-    <%= @event.website %>
-    </p>
-    <p>
-    Facebook:
-    <%= @event.facebook %>
-    </p>
-    <p>
-    Application:
-    <%= @event.application_form %>
-    </p>
-    </div>
-     <%= link_to 'Back', events_path %>
-  </div>
-
-  <div class="container-fluid">
-    
-    <div>
-      <%= render 'shared/single_event_photo_slider' %>
-    </div>
-    
-    <div class="pull-right">
-      <p>Share this event:</p>
-      <div id="socialsharing"></div>
-      <p>
-      </p>  
-    </div>
-  </div>
-  <br>
-  <br>
-</div>
+      <div class="container-fluid">
+        
+        <div>
+          <%= render 'shared/single_event_photo_slider' %>
+        </div>
+        
+          <div class="pull-right">
+            <p>Share this event:</p>
+          <div id="socialsharing"></div>
+          <p>
+          </p>
+        </div>
+      </div>
+ 
