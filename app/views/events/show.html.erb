@@ -2,10 +2,14 @@
 <div class="event_show_page">
   <div class="col-md-5 pull-left event_show">
     
-    <% #if member hasn't like it yet, show line %>
-    <%= link_to("Like Event", create_like_path(@event), method: :post) %>
-    <% # else just show the number of likes %>
-    <%= @likes %>
+    <!-- this part shows the like button if it hasn't been clicked on yet; it hides the like button after being clicked -->
+    <% if current_member.like!(@event) == nil %>
+      <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+      <%= @likes %>
+    <% else %>
+      <%= @likes %>
+    <% end %>
+
 
   <div class="col-md-5 pull-left event_show span5">
     <h3><%= @event.title %></h3>
