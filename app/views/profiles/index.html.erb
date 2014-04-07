@@ -8,7 +8,6 @@
       <th>Website </th>
       <th>Facebook </th>
       <th>Twitter </th>
-      <th>Bio</th>
       <th></th>
     </tr>
   </thead>
@@ -20,8 +19,7 @@
       <td><%= profile.website1 %></td>
       <td><%= profile.facebook %></td>
       <td><%= profile.twitter %></td>
-      <td><%= truncate(profile.bio, length: 100) %></td>
-      <td><%= link_to 'Show', profile_path(profile.id) %></td>
+      <td><%= link_to 'More Info', profile_path(profile.id) %></td>
     </tr>
     <% end %>
   </tbody>

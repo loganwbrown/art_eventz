@@ -13,7 +13,10 @@ html,body {
 body {
  	background-image: url("png.png");
  	font-size: 16px;
+
  }
+ 
+ /*show views*/
  .table {
   width: 100%;
   background-color: transparent;
@@ -47,20 +50,7 @@ body {
  .small_font{
   font-size: 80%; 
  }
-/*.green_box {
-  background-color: #B2D4C8;
-  width: 300px;
-  height: 180px;
-  margin: 20px;
-}
 
-.bigger_box {
-  background-color: #5A8A7A;
-  width: 350px;
-  height: 200px;
-  margin-top: -50px;
-  margin-bottom: 20px;
-}*/
 
 .address p {
   margin-bottom: -2px;
@@ -113,7 +103,7 @@ body {
 }*/
 
 .nav-list li a {
-  font-size: 30px;
+  font-size: 1.5em;
   padding: 15px;
 }
 
@@ -131,6 +121,7 @@ body {
   border-width:1px;
 }
 
+/* datepicke*/
 #ui-datepicker-div table {
   border-collapse: collapse;
   width: 50%;
@@ -199,8 +190,10 @@ body {
   padding-left: 30px;
  }
 
+
+/* sliders */
 .public-slider {
- margin-left: 250px
+ margin-left: 280px
 }
 .pro-show{
   margin-left: 300px;
@@ -241,6 +234,10 @@ footer {
     background-color: #d9d6d6;
     height: 100%;
 }
+
+.foot-container {
+  margin-left: 160px;
+}
 .col-title {
   color: #fffefa;
   font-size: 1.3em;
@@ -267,8 +264,16 @@ footer {
 }
 
 .group1{
-  padding-right:30px;
+  padding-right:100px;
 }
+
+/*.socialsharing {
+  padding-right: 600px;
+}*/
+
+
+
+
 /* dave's social media follow icons below*/
 
 /*.aligncenter {

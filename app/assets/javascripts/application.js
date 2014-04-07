@@ -7,6 +7,7 @@
 //= require jquery-nivo-slider
 //= require_tree .
 // jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();
+
 $(function() {
     $("#event_date").datepicker();
     // make ajax request to a controller
@@ -38,6 +39,17 @@ $(function() {
             pauseTime: 4000
         });
     });
+
+
+
+    $('#myTabs a').click(function(e) {
+        e.preventDefault();
+        $("#show_art").tab("show");
+        $("#show_art_events").tab("show");
+    });
+
+
+
     $('#socialsharing').share({
         networks: ['facebook', 'googleplus', 'twitter'],
         theme: 'square'
