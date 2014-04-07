@@ -1,91 +1,100 @@
 <p id="notice"><%= notice %></p>
 <div class="event_show_page">
   
-  
   <div class="col-md-6 pull-left event_show span6">
+  <br>
+  <h3><%= @event.title %></h3>
+  <p>
+    <em><%= @event.tagline %></em>
+  </p>
+  <p>
+    <strong>Date:</strong>
+    <%= @event.date %>
+  </p>
+  <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+  </p>
+  <div class="small_font address">
+    <p>
+      <%= @event.address %> <%= @event.address2 %>
+    </p>
+    <p>
+      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+    </p>
+  </div>
+  <br>
+  <p>
+    Contact Name:
+    <strong><%= @event.contact_name %></strong>
+  </p>
+  <p>
+    Contact Email:
+    <strong><%= @event.contact_email %></strong>
+  </p>
+  <br>
+  <div class="small_font">
+    <p>
+      <%= @event.more_info %>
+    </p>
+    <p>
+      Website:
+      <%= @event.website %>
+    </p>
+    <p>
+      Facebook:
+      <%= @event.facebook %>
+    </p>
+    <p>
+      Application:
+      <%= @event.application_form %>
+    </p>
+    <br>
+  </div>
+
+  <% if current_member != nil %>
     <div class="like_and_follow">
       <div class="like">
         <% if current_member.like!(@event) == nil %>
-        <%= link_to("Like Event", create_like_path(@event), method: :post) %>
-        <%= @likes %>
+          <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+          <%= @likes %>
         <% else %>
-        Likes <%= @likes %>
+          Likes <%= @likes %>
         <% end %>
       </div>
       <br>
       <div class="follow">
         <% if current_member.follow!(@event) == nil %>
-        <%= link_to("Follow Event", create_like_path(@event), method: :post) %>
-        <%= @follows %>
+          <%= link_to("Follow Event", create_like_path(@event), method: :post) %>
+          <%= @follows %>
         <% else %>
-        Follows <%= @follows %>
+          Follows <%= @follows %>
         <% end %>
       </div>
     </div>
-  </div>
-  <br>
-  <h3><%= @event.title %></h3>
-  <p>
-  <em><%= @event.tagline %></em>
-  </p>
-  <p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-  </p>
-  <p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-  </p>
-  <div class="small_font address">
-    <p>
-    <%= @event.address %> <%= @event.address2 %>
-    </p>
-    <p>
-    <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-    </p>
-  </div>
-  <br>
-  <p>
-  Contact Name:
-  <strong><%= @event.contact_name %></strong>
-  </p>
-  <p>
-  Contact Email:
-  <strong><%= @event.contact_email %></strong>
-  </p>
-  <br>
-  <div class="small_font">
-    <p>
-    <%= @event.more_info %>
-    </p>
-    <p>
-    Website:
-    <%= @event.website %>
-    </p>
-    <p>
-    Facebook:
-    <%= @event.facebook %>
-    </p>
-    <p>
-    Application:
-    <%= @event.application_form %>
-    </p>
+    <% else %>
+      Likes <%= @likes %><br>
+      Follows <%= @follows %>
+    <% end %>
     <br>
+    <h5><%= link_to 'Back', events_path %></h5>
+
   </div>
-  <h5><%= link_to 'Back', events_path %></h5>
-  
-</div>
-</div>
-<div class="container-fluid">
 
-<div>
-  <%= render 'shared/single_event_photo_slider' %>
-</div>
+  <div class="container-fluid">
 
-<div class="pull-right">
-  <p>Share this event:</p>
-  <div id="socialsharing"></div>
-  <p>
-  </p>
-</div>
+    <div>
+      <%= render 'shared/single_event_photo_slider' %>
+    </div>
+
+    <div class="pull-right">
+      <p>Share this event:</p>
+      <div id="socialsharing">
+      </div>
+      <p>
+      </p>
+    </div>
+
+  </div>
+
 </div>
