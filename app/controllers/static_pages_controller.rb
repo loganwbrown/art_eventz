@@ -32,6 +32,9 @@ class StaticPagesController < ApplicationController
     end
   end 
 
+  def tos
+  end
+
   def newsletter_signup
     if request.post?
       MemberMailer.newsletter(params).deliver
@@ -44,3 +47,4 @@ class StaticPagesController < ApplicationController
     params.require(:contact).permit(:name, :email, :question)
   end
 end
+
