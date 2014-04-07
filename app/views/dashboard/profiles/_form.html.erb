@@ -35,24 +35,10 @@
     <%= f.label :bio %>
     <%= f.text_area :bio, :placeholder => "Brief description" %>
   </div>
-
-
-<!--     <%= f.fields_for :art_photo do |ff| %>
-      <%= ff.label :art_photo %> 
-      <%= ff.file_field :art_photo %>
-       <%= ff.label :art_photo %> 
-      <%= ff.file_field :art_photo %>
-       <%= ff.label :art_photo %> 
-      <%= ff.file_field :art_photo %>
-    <% end %> -->
-
-
-
   <div class="field">
     <%= f.label :avatar %>
     <%= f.file_field :avatar %>
   </div>
-  
   <div class="field">
     <%= f.label :facebook %>
     <%= f.text_field :facebook, :placeholder => "Add facebook url" %>
@@ -61,13 +47,12 @@
     <%= f.label :twitter %>
     <%= f.text_field :twitter, :placeholder => "Twitter handle" %>
   </div>
-  
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>
   </div>
-
   <% end %>
-  <h5><%= link_to 'Show', @profile %> |
-<%= link_to 'Back', dashboard_profile_path %></h5>
-
-</div>
+  <% if @profile.id == nil %>
+  <% else %>
+  <h5><%= link_to 'Show', @profile %>
+  <%= link_to 'Back', dashboard_profile_path %></h5>
+  <% end %>

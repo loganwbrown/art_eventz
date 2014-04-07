@@ -36,6 +36,7 @@
     </div>
   </div>
 </div>
+<p>Upload Art Photo:</p>
 <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
 <%= f.file_field :photo %>
 <%= f.submit('Upload Image', class: 'btn btn-primary') %>

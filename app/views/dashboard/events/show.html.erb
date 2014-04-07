@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p> 
-  <div class="event_show_page">
+<p id="notice"><%= notice %></p>
+<div class="event_show_page">
   <div class="col-md-5 pull-left event_show">
     <h3><%= @event.title %></h3>
     <p>
@@ -46,7 +46,7 @@
     </div>
     <p>
     Website:
-    <%= @event.website %>	
+    <%= @event.website %>
     </p>
     <p>
     Facebook:
@@ -56,16 +56,13 @@
     Application:
     <%= @event.application_form %>
     </p>
+    <p>Event Photos:</p>
+    <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
+    <%= f.file_field :photo %>
+    <%= f.hidden_field(:event_id, value: @event.id) %>
+    <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+    <% end %>
+    <h5>
+    <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
+    <%= link_to 'Back', dashboard_events_path %></h5>
   </div>
-  <br>
-  <br>
-</div>
-
-<%= form_for([:dashboard, @event, @event_photo]) do |f| %>
-<%= f.file_field :photo %>
-<%= f.hidden_field(:event_id, value: @event.id) %>
-<%= f.submit('Upload Image', class: 'btn btn-primary') %>
-<% end %>
-<h5>
-<%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
-<%= link_to 'Back', dashboard_events_path %></h5>

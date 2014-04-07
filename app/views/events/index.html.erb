@@ -1,49 +1,32 @@
 <h1>Public Art Events</h1>
 <%= form_tag events_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], :class => "search-box" %>
-    <%= submit_tag "Search This Site", name: nil, :class => "btn btn-search" %>
+<%= text_field_tag :query, params[:query], :class => "search-box" %>
+<%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
 <% end %>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Date </th>
-            <th>Title </th>
-            <!-- <th>Tagline </th> -->
-            <th>Address </th>
-            <th>City </th>
-            <th>State </th>
-            <!-- <th>Zip </th> -->
-            <!-- <th>More Info </th>-->
+<div class="container">
 
-            <th>Website </th>
-            <!-- <th>Facebook </th>
-            <th>Application Form </th>  -->
-            <!-- <th>Contact Name </th>
-            <th>Contact Email </th> -->
-            <th></th>
-            <!-- <th></th>
-            <th></th> -->
-        </tr>
-    </thead>
-    <tbody>
-        <% @events.each do |event| %>
-        <tr>
-            <td><%= event.date %></td>
-            <td><%= event.title %></td>
-            <!-- <td><%= event.tagline %></td> -->
-            <td><%= event.address %></td>
-            <td><%= event.city %></td>
-            <td><%= event.state %></td>
-            <!-- <td><%= event.zip %></td> -->
-            <!-- <td><%= event.more_info %></td> -->
-            <td><%= event.website %></td>
-            <!-- <td><%= event.facebook %></td>
-            <td><%= event.application_form %></td>  -->
-            <!-- <td><%= event.contact_name %></td>
-            <td><%= event.contact_email %></td> -->
-            <td><%= link_to 'More Info', event_path(event.id) %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
-<br>
+    <% @events.each do |event| %>
+        <div class="row-fluid">
+            <ul class="event-list">
+            <li>
+                <div class="event-date">
+                    <%= event.date %>
+                </div>
+                <div class="event-title">
+                    <%= event.title %>
+                </div>
+                <div class="event-  location">
+                    <%= event.address %><br />
+                    <%= event.city %><br />
+                    <%= event.state %><br />
+                    <br>
+                    <br>
+                    <%= link_to 'More Info', event_path(event.id) %><br />
+                    <%= event.website %>
+
+                </div>
+            </li>
+            </ul>
+        </div>
+    <% end %>
+</div>
