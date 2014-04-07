@@ -29,7 +29,7 @@ body {
  }
 
  .table tr:nth-child(even) {
-  font-size: 15px;
+  
   text-align: left;
   background-color: #E8E8E8;
  }
@@ -38,12 +38,13 @@ body {
   background-color: #E8E8E8;
  }
 
- .table a:hover {
-  color: darkgreen;
+ .table a:visited {
+  color: darkgrey;
  }
 
- .table a:visited {
-  color: grey;
+ .table a:hover {
+  color: #93b0a1;
+  font-style: bold;
  }
 
 

@@ -52,6 +52,7 @@
     <br>
   </div>
 
+  <% if current_member != nil %>
     <div class="like_and_follow">
       <div class="like">
         <% if current_member.like!(@event) == nil %>
@@ -71,6 +72,10 @@
         <% end %>
       </div>
     </div>
+    <% else %>
+      Likes <%= @likes %><br>
+      Follows <%= @follows %>
+    <% end %>
     <br>
     <h5><%= link_to 'Back', events_path %></h5>
 
