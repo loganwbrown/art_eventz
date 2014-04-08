@@ -1,17 +1,17 @@
 <div class="col-md-4">
 	<form>
-		<h1 class="page-header">arteventz would LOVE to here from you!</h1>
+		<h3 >arteventz would love to hear from you!</h1><br><br>
 
 		  <%= form_for(@contact, url: contact_path) do |f| %>
 		  <div class="control-group">
 		    <%= f.text_field(:name, placeholder: "Name" ) %>
-		  </div>
+		  </div><br><br>
 		  <div class="control-group">
 		    <%= f.email_field(:email, placeholder: "Email" ) %>
-		  </div>
+		  </div><br><br>
 		  <div class="control-group">
 		   <%= f.text_area(:question,  placeholder: "Question" ) %>  
-		  </div>
+		  </div><br><br>
 		  <div class="control-group">
 		    <%= f.submit("Submit") %>
   		</div>
