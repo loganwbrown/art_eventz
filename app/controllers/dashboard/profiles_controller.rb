@@ -15,7 +15,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
 
   def create
     @profile = current_member.build_profile(profile_params)
-    if @profile.save
+   if @profile.save
         flash[:success] = "Thanks for making a Profile with us!!"
         redirect_to root_path
     else

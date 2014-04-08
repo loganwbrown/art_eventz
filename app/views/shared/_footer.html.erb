@@ -31,22 +31,20 @@
       <div class="span2 group1">
         <p class="col-title">Site Navigation</p>
         <ul class="bottom-links">
-          <li><a href="#fakelink">Sign Up</a></li>
-          <li class="active"><a href="#fakelink">Sign In</a></li>
-          <li><a href="#fakelink">Contact</a></li>
-          <li><a href="#fakelink">About</a></li>
-          <li><a href="#fakelink">Privacy</a></li>
-          <li><a href="#fakelink">Terms of Use</a></li>
+          <li><%= link_to "Sign Up", new_member_registration_path  %></li>
+          <li><%= link_to "Sign In", member_session_path  %></li>
+          <li><%= link_to "Contact Us", contact_path  %></li>
+          <li><%= link_to "About Us", about_path  %></li>
+          <li><%= link_to "Terms of Use", tos_path  %></li>
         </ul>
       </div>
       <div class="span2 group1">
         <p class="col-title">Follow Us</p>
         <ul class="bottom-links">
-          <li><a href="#fakelink">Facebook</a></li>
-          <li><a href="#fakelink">Twitter</a></li>
-          <li><a href="#fakelink">Youtube</a></li>
-          <li><a href="#fakelink">Vimeo</a></li>
-          <li><a href="#fakelink">Instagram</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+          <li><a href="https://www.youtube.com/">Youtube</a></li>
+          <li><a href="https://plus.google.com/">Google+</a></li>
         </ul>
       </div>
     </div>

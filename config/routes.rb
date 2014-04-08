@@ -14,7 +14,8 @@ ArtEventz::Application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
   get '/calendar' => 'static_pages#calendar'
-
+  get '/tos' => 'static_pages#tos'
+  
   namespace :dashboard do
     resources :events do
       resources :event_photos, only: ['create']

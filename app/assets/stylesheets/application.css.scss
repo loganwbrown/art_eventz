@@ -10,12 +10,16 @@
 html,body {
     height: 100%;
  }
+
 body {
  	background-image: url("png.png");
  	font-size: 16px;
-
  }
- 
+
+ a {
+  color: #93b0a1;
+ }
+
  /*show views*/
  .table {
   width: 100%;
@@ -192,12 +196,13 @@ body {
 
 
 /* sliders */
-.public-slider {
- margin-left: 380px
+.public-slider#public-home {
+ margin-left: 340px
 }
 .pro-show{
   margin-left: 300px;
 }
+
 
 .tab-content {
   border: none;
@@ -215,10 +220,12 @@ body {
   width: 100%;
   height: auto;
   max-width: 270px;
+  margin-left: -30px;
 }
 .call-box p {
   padding-top: 30px;
   padding-right: 25px;
+
 }
 
 .call-box p span {
@@ -305,6 +312,9 @@ footer {
   margin-bottom: 5px;
   float: left;
   word-wrap: break-word;
+}
+.btn.btn-success {
+  background-color:#93b0a1;
 }
 
 
