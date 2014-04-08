@@ -5,11 +5,11 @@ class MemberMailer < ActionMailer::Base
   
   def welcome(member)
     @member = member
-    mail(to: @member.email, subject: "Welcome to arteventz")
+    mail(to: @member.email, subject: "Welcome to arteventz!")
   end
 
   def newsletter(params)
     @params = params
-    mail(to: @params[:email], subject: "Newsletter")
+    mail(to: @params[:email], subject: "arteventz Newsletter")
   end
 end
