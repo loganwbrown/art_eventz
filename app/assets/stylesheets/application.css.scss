@@ -10,12 +10,16 @@
 html,body {
     height: 100%;
  }
+
 body {
  	background-image: url("png.png");
  	font-size: 16px;
-
  }
- 
+
+ a {
+  color: #93b0a1;
+ }
+
  /*show views*/
  .table {
   width: 100%;
@@ -29,7 +33,7 @@ body {
  }
 
  .table tr:nth-child(even) {
-  font-size: 15px;
+  
   text-align: left;
   background-color: #E8E8E8;
  }
@@ -38,12 +42,13 @@ body {
   background-color: #E8E8E8;
  }
 
- .table a:hover {
-  color: darkgreen;
+ .table a:visited {
+  color: darkgrey;
  }
 
- .table a:visited {
-  color: grey;
+ .table a:hover {
+  color: #93b0a1;
+  font-style: bold;
  }
 
 
@@ -269,6 +274,9 @@ footer {
 
 .btn-wide{
   background-color: #d9d6d6;
+}
+.btn.btn-success {
+  background-color:#93b0a1;
 }
 
 .group1{

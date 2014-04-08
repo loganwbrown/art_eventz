@@ -1,5 +1,6 @@
 ArtEventz::Application.routes.draw do
 
+  get "follows/create"
   resources :events
   resources :profiles
   devise_for :members, controllers: { registrations: "registrations"}
