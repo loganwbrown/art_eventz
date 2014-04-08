@@ -12,6 +12,7 @@ gem 'rails_12factor', group: :production
 gem 'nested_form'
 gem 'pg_search'
 gem 'socialization'
+gem 'mandrill-api'
 
 group :doc do
   gem 'sdoc', require: false
