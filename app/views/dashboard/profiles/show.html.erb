@@ -31,8 +31,9 @@
     </div>
     
   </div>
-    <div class="photo_in pull-right">
-      <br>
+  <div class="photo_in pull-right">
+    <div id="pic-box">
+    </div>
       <br>
     <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
     <%= f.file_field :photo %>
