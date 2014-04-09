@@ -12,7 +12,6 @@ gem 'rails_12factor', group: :production
 gem 'nested_form'
 gem 'pg_search'
 gem 'socialization'
-gem 'twilio-ruby', '~> 3.11'
 group :doc do
   gem 'sdoc', require: false
 end
