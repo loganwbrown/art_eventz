@@ -10,6 +10,9 @@ class Member < ActiveRecord::Base
 
   after_create :email_new_member
 
+  # something here
+                :email_newsletter
+
   private
 
   def email_new_member
@@ -23,6 +26,6 @@ class Member < ActiveRecord::Base
     pass = Devise.friendly_token
     user = token.member || token.create_member(email: "no-reply#{Time.now.to_i}@fixme.now", password: pass, password_confirmation: pass )
     
-    # member = Member.find_or_create_by_facebook_uid(auth[:uid])
   end
+
 end
