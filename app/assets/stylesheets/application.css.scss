@@ -51,6 +51,10 @@ body {
   font-style: bold;
  }
 
+label.required:after {
+  content: " *";
+  color: red;
+}
 
  .small_font{
   font-size: 80%; 

@@ -11,16 +11,16 @@
     </div>  
   <% end %>
 
-  <div class="field">
-    <%= f.label :title  %>
-    <%= f.text_field :title %>
+  <div class="field"> 
+    <%= f.label :title, class: 'required' %>
+    <%= f.text_field :title %> 
   </div>
   <div class="field">
-    <%= f.label :date %>
+    <%= f.label :date, class: 'required' %>
     <%= f.text_field :date %>
   </div>
   <div class="field">
-    <%= f.label :time %>
+    <%= f.label :time, class: 'required' %>
     <%= f.time_field :time %>
   </div>
   <div class="field">
@@ -28,7 +28,7 @@
     <%= f.text_field :tagline %>
   </div>
   <div class="field">
-    <%= f.label :address %>
+    <%= f.label :address, class: 'required' %>
     <%= f.text_field :address %>
   </div>
   <div class="field">
@@ -36,15 +36,15 @@
     <%= f.text_field :address2 %>
   </div>
   <div class="field">
-    <%= f.label :city %>
+    <%= f.label :city, class: 'required' %>
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :state %>
+    <%= f.label :state, class: 'required' %>
     <%= f.text_field :state %>
   </div>
    <div class="field">
-    <%= f.label :zip %>
+    <%= f.label :zip, class: 'required' %>
     <%= f.text_field :zip %>
   </div>
 
