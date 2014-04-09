@@ -64,14 +64,19 @@ body {
 
 .field {
   padding-right: 15%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .event_show {
   max-width: 40%;
  
 }
-
+.sing_event_show {
+  margin-left: 420px
+}
+.col-md-6{
+  margin-left: -20px;
+}
 .event_show {
   color: #454A48;
 }
@@ -287,8 +292,26 @@ footer {
   padding-right: 600px;
 }*/
 
+.btn-search {
+  margin-left: 20px;
+  margin-top: -10px;
+}
 
+.btn.btn-primary {
+  background-color:#93b0a1;
+}
 
+.active .bottom-menu a, .bottom-menu a:hover, .bottom-menu a:focus {
+  color:#93b0a1;
+}
+
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+  color:#93b0a1;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  color:#93b0a1;
+}
 
 /* dave's social media follow icons below*/
 
