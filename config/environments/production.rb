@@ -14,6 +14,8 @@ ArtEventz::Application.configure do
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
+  FACEBOOK_APP_ID = ENV['FACEBOOK_APP_ID']
+  FACEBOOK_SECRET = ENV['FACEBOOK_SECRET']
   ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
@@ -23,4 +25,5 @@ ArtEventz::Application.configure do
     :authentication => :plain
 }
 ActionMailer::Base.delivery_method = :smtp
+
 end
