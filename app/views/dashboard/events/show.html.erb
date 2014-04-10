@@ -56,14 +56,15 @@
     <br>
   </div>
     <div class="photo_in pull-right">
-    <br>
+    <div id="pic-box">
+    </div>
     <br>
     <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
     <%= f.file_field :photo %>
     <%= f.hidden_field(:event_id, value: @event.id) %>
     <br>
     <br>
-    <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+    <%= f.submit('Upload Event Image', class: 'btn btn-primary') %>
     <% end %>
     <br>
     <br>

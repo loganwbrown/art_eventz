@@ -41,7 +41,7 @@
             <td><%= event.application_form %></td>  -->
             <!-- <td><%= event.contact_name %></td>
             <td><%= event.contact_email %></td> -->
-            <td><%= link_to 'More Info', event_path(event.id) %></td>
+            <td><%= link_to 'More Info', event_path(event.id), class: "more-info" %></td>
         </tr>
         <% end %>
     </tbody>
