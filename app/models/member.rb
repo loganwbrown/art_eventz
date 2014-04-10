@@ -23,9 +23,9 @@ class Member < ActiveRecord::Base
     token = AuthToken.find_or_initialize_by_provider_and_oauth_token(auth[:provider], auth[:token])
     token.uid = auth[:uid]
     token.save
+    email = auth[:email]
     pass = Devise.friendly_token
-    user = token.member || token.create_member(email: "no-reply#{Time.now.to_i}@fixme.now", password: pass, password_confirmation: pass )
-    
+    user = token.member || token.create_member(email: email, password: pass, password_confirmation: pass )
   end
 
 end

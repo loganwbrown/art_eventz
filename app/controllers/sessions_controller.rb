@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
   protected
 	def facebook_hash
 		{}.tap do |auth|
+			auth[:email] = request.env['omniauth.auth']['info']['email']
 			auth[:token] = request.env['omniauth.auth']['credentials']['token']
 			auth[:oauth_expires_at] = request.env['omniauth.auth']['']
 			auth[:provider] = "facebook"
