@@ -13,6 +13,7 @@ ArtEventz::Application.routes.draw do
   get "/newsletter_signup" => "static_pages#newsletter_signup"
   post "/newsletter_signup" => "static_pages#newsletter_signup"
   post "/likes/:id" => 'likes#create', as: :create_like
+  post "/follows/:id" => 'follows#create', as: :create_follow
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
   get '/calendar' => 'static_pages#calendar'

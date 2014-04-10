@@ -7,7 +7,6 @@ class Dashboard::EventsController < Dashboard::DashboardController
 	def show
     @event = Event.find(params[:id])
     @event_photo = @event.event_photos.build
-
 	end
 
 	def new
