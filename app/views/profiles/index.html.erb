@@ -19,7 +19,7 @@
       <td><%= profile.website1 %></td>
       <td><%= profile.facebook %></td>
       <td><%= profile.twitter %></td>
-      <td class="more-info"><strong><%= link_to 'More Info', profile_path(profile.id) %></strong></td>
+      <td class="more-info"><strong><%= link_to 'More Info', profile_path(profile.id), class: "more-info" %></strong></td>
     </tr>
     <% end %>
   </tbody>
