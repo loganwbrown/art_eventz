@@ -52,30 +52,29 @@
     <br>
   </div>
 
-  <% if current_member != nil %>
-    <div class="like_and_follow">
-      <div class="like">
-        <% if current_member.like!(@event) == nil %>
-          <%= link_to("Like Event", create_like_path(@event), method: :post) %>
-          <%= @likes %>
-        <% else %>
-          Likes <%= @likes %>
-        <% end %>
-      </div>
-      <br>
-      <div class="follow">
-        <% if current_member.follow!(@event) == nil %>
-          <%= link_to("Follow Event", create_like_path(@event), method: :post) %>
-          <%= @follows %>
-        <% else %>
-          Follows <%= @follows %>
-        <% end %>
-      </div>
-    </div>
+  <% if current_member %>
+    <% if @likes.include?(current_member) %>
+      Likes <%= @likes.count %>
     <% else %>
-      Likes <%= @likes %><br>
-      Follows <%= @follows %>
+      <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+      <%= @likes.count %>
     <% end %>
+  <% else %>
+    Likes <%= @likes.count %>
+  <% end %>
+  <br>
+<br>
+  
+  <% if current_member %>
+    <% if @follows.include?(current_member) %>
+      Follows <%= @follows.count %>
+    <% else %>
+      <%= link_to("Follow Event", create_follow_path(@event), method: :post) %>
+      <%= @follows.count %>
+    <% end %>
+  <% end %>
+
+
     <br>
     <h5><%= link_to 'Back', events_path %></h5>
 
