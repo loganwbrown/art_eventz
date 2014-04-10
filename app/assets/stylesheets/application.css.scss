@@ -17,37 +17,37 @@ body {
  }
 
 
- a {
+a {
   color: #93b0a1;
  }
 
  /*show views*/
- .table {
+.table {
   width: 100%;
   background-color: transparent;
   margin: auto;
 
  }
 
- .table th {
+.table th {
   height: 50px;
  }
 
- .table tr:nth-child(even) {
+.table tr:nth-child(even) {
   
   text-align: left;
   background-color: #E8E8E8;
  }
 
- .table thead {
+.table thead {
   background-color: #E8E8E8;
  }
 
- .table a:visited {
+.table a:visited {
   color: darkgrey;
  }
 
- .table a:hover {
+.table a:hover {
   color: #93b0a1;
   font-style: bold;
  }
@@ -57,10 +57,15 @@ label.required:after {
   color: red;
 }
 
- .small_font{
+.small_font{
   font-size: 80%; 
  }
 
+#pic-box {
+  width: 125px;
+  height: 125px;
+  background-color: #c0bdcc;
+}
 
 .address p {
   margin-bottom: -2px;
@@ -93,10 +98,12 @@ label.required:after {
 }
 
 .topbar{
-
   width: 100%;
   height: auto;
+}
 
+.container-fluid.shown {
+  margin-top: 30px;
 }
 
 .navbar-inner {
@@ -104,7 +111,6 @@ label.required:after {
 }
 .navbar .nav {
 	margin: 0 auto;
-
 }
 
 .navbar .nav > li > a {
@@ -362,6 +368,10 @@ footer {
   color:#93b0a1;
 }
 
+.more-info {
+  color:#93b0a1;
+  font-style: bold;
+}
 /* dave's social media follow icons below*/
 
 /*.aligncenter {

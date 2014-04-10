@@ -3,6 +3,7 @@
 <%= text_field_tag :query, params[:query], :class => "search-box" %>
 <%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
 <% end %>
+
 <div class="container">
     <% @events.each do |event| %>
         <div class="row-fluid">

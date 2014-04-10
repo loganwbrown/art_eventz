@@ -31,16 +31,17 @@
     </div>
     
   </div>
-</div>
 <p>Upload Art Photo:</p>
-    <div class="photo_in pull-right">
-      <br>
+  <div class="photo_in pull-right">
+    <div id="pic-box">
+    </div>
+
       <br>
     <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
     <%= f.file_field :photo %>
     <br>
     <br>
-    <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+    <%= f.submit('Upload Art Image', class: 'btn btn-primary') %>
     <% end %>
     <br>
     <br>
