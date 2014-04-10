@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403184815) do
+ActiveRecord::Schema.define(version: 20140409170234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20140403184815) do
     t.datetime "updated_at"
     t.string   "photo"
   end
+
+  create_table "auth_tokens", force: true do |t|
+    t.integer  "member_id"
+    t.string   "provider"
+    t.string   "oauth_token"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "auth_tokens", ["member_id"], name: "index_auth_tokens_on_member_id", using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "name"

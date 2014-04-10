@@ -5,7 +5,7 @@
                
             <% @art_photos = ArtPhoto.all %>
             <% @art_photos.each do |img| %>
-            <%= image_tag(img.photo.url, :title => img.profile.name) %>
+            <%= image_tag(img.photo.url, :title => img.profile.name) %> 
             <% end %> 
           </div>
 </div>

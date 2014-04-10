@@ -288,11 +288,52 @@ footer {
 }
 
 .btn-wide{
-  background-color: #d9d6d6;
+  background-color: #b9b5c4;
+}
+
+.event-list{
+  list-style-type: none;
+  margin: 0;  
+  width: 1000px;
+  height:150px;
+  margin: 10px;
+  box-shadow: 3px 3px 3px 3px grey;
+  background-color: #e2e2e2;
+}
+.event-date{
+  width: 200px;
+  height: 80px;
+  font-size: 25px;
+  padding-left: 9px;
+  float:left;
+}
+
+
+.event-title{
+  width: 400px;
+  height: 130px;
+  font-size: 25px;
+  margin-top: -5px;
+  padding-left: 9px;
+  float: left;
+  word-wrap: break-word;
+  padding-right: 10px;
+}
+.event-location{
+  width: 365px;
+  height: 130px;
+  font-size: 20px;
+  margin-top: -8px;
+  margin-bottom: 5px;
+  float: left;
+  word-wrap: break-word;
 }
 .btn.btn-success {
   background-color:#93b0a1;
 }
+
+
+
 
 .group1{
   padding-right:100px;

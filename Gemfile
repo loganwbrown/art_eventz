@@ -12,18 +12,22 @@ gem 'rails_12factor', group: :production
 gem 'nested_form'
 gem 'pg_search'
 gem 'socialization'
+gem 'mandrill-api'
+gem 'omniauth-facebook'
+gem 'omniauth'
 group :doc do
   gem 'sdoc', require: false
 end
+
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-components-helpers'
-
 gem 'devise'
 gem "carrierwave"
 gem "mini_magick"
 gem "fog", github: "fog/fog"
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
