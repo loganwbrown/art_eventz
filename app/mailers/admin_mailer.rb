@@ -1,6 +1,6 @@
 class AdminMailer < ActionMailer::Base
   default from: "contact@arteventz.com"
-  default to: "me@arteventz.com"
+  default to: "djhansen@me.com"
 
 
   def contact_form(contact)
