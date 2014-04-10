@@ -3,7 +3,7 @@
     <h3>Sign Up for Newsletter</h3>
       <%= form_tag(newsletter_signup_path) do %>
     <div class="control-group">
-      <%= text_field_tag(:name, " ", placeholder: "Name" ) %>
+      <%= text_field_tag(:name, nil, placeholder: "Name" ) %>
     </div>
     <div class="control-group">
       <%= email_field_tag(:email, " ", placeholder: "Email" ) %>
