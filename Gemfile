@@ -13,8 +13,9 @@ gem 'nested_form'
 gem 'pg_search'
 gem 'socialization'
 gem 'mandrill-api'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 gem 'omniauth'
+gem "kaminari"
 group :doc do
   gem 'sdoc', require: false
 end

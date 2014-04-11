@@ -5,6 +5,7 @@
 //= require fullcalendar
 //= require jquery.share
 //= require jquery-nivo-slider
+//= require facebook
 //= require_tree .
 // jQuery('input[type="date"]').live('click', function(e) {e.preventDefault();}).datepicker();
 
