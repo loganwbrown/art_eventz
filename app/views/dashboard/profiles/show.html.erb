@@ -1,6 +1,6 @@
-<div class="container-fluid shown">  
-  <div class="event_show_page">
-      <div  class="col-md-5 pull-left event_show">
+<!-- <div class="container-fluid shown"> -->
+    <div class="event_show_page">
+      <div  class="col-md-4 offset2 pull-left event_show">
       <h3><%= @profile.name %></h3>
       <p>
       <em><%= @profile.tagline %></em>
@@ -31,23 +31,21 @@
     </div>
     
   </div>
-<p>Upload Art Photo:</p>
-  <div class="photo_in pull-right">
-    <div id="pic-box">
+    <div class="photo_in pull-right">
+    <p>Upload Art Photo:</p>
+      <div id="pic-box">
     </div>
-
-      <br>
+    <br>
     <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
     <%= f.file_field :photo %>
     <br>
     <br>
-    <%= f.submit('Upload Art Image', class: 'btn btn-primary') %>
+    <%= f.submit('Upload Image', class: 'btn btn-primary') %>
     <% end %>
-    <br>
     <br>
     <br>
     <h5>
     <%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> |
     <%= link_to 'Done', @profile %></h5>
-    </div>
-</div> 
+  </div>
+<!-- </div> -->

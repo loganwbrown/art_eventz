@@ -1,10 +1,10 @@
-<h1>Public Art Events</h1>
+<h1>Art Event Index</h1>
 <%= form_tag events_path, method: :get do %>
 <%= text_field_tag :query, params[:query], :class => "search-box" %>
 <%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
 <% end %>
 
-<div class="container">
+<div class="container" id="scroller">
     <% @events.each do |event| %>
         <div class="row-fluid">
             <ul class="event-list">
@@ -22,14 +22,15 @@
                     <h5>Location:</h5>
                     <%= event.address %><br />
                     <%= event.city %><br />
-                    <%= event.state %><br />
-                   <div class="pull-right">
-                    <%= link_to 'More Info', event_path(event.id) %><br />
-                    <%= event.website %>
-</div>
-                </div>
+                    <%= event.state %>
+                
+                    <div class="pull-right">
+                        <%= link_to 'More Info', event_path(event.id), class: "more-info" %><br />       
+                    </div>
+                 </div
             </li>
             </ul>
         </div>
     <% end %>
 </div>
+

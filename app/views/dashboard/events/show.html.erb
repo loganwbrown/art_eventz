@@ -1,81 +1,65 @@
 <p id="notice"><%= notice %></p>
-    <div class="event_show_page">
-        <div class="col-md-5 pull-left event_show">
-        <h3><%= @event.title %></h3>
+<div class="event_show_page">
+  <div class="col-md-4 offset2 pull-left event_show">
+    <h3><%= @event.title %></h3>
+    <p>
+    <em><%= @event.tagline %></em>
+    </p>
+    <p>
+    <strong>Date:</strong>
+    <%= @event.date %>
+    </p>
+    <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+    </p>
+      <div class="small_font address">
         <p>
         <em><%= @event.tagline %></em>
-        </p>
+        </p><br><br>
         <p>
         <strong>Date:</strong>
         <%= @event.date %>
-        </p>
+        </p><br><br>
         <p>
         <strong>Time:</strong>
         <%= @event.time %>
+        </p><br><br>
+        <p>
+        <%= @event.address %> <%= @event.address2 %>
         </p>
-
-            <div class="small_font address">
-            <p>
-            <em><%= @event.tagline %></em>
-            </p>
-            <p>
-            <strong>Date:</strong>
-            <%= @event.date %>
-            </p>
-            <p>
-            <strong>Time:</strong>
-            <%= @event.time %>
-            </p>
-                <div class="small_font address">
-                <p>
-                <%= @event.address %> <%= @event.address2 %>
-                </p>
-                <p>
-                <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-                </p>
-                
-                <p>
-                Contact Name:
-                <strong><%= @event.contact_name %></strong>
-                </p>
-                <p>
-                Contact Email:
-                <strong><%= @event.contact_email %></strong>
-                </p>
-            </div>
-                <div class="small_font">
-                <p>
-                <%= @event.more_info %>
-                </p>
-                <p>
-                Website:
-                <%= @event.website %>
-                </p>
-                <p>
-                Facebook:
-                <%= @event.facebook %>
-                </p>
-                <p>
-                Application:
-                <%= @event.application_form %>
-                </p>
-            </div>
+        <p>
+        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+        </p><br><br>
+        <p>
+        Contact Name:
+        <strong><%= @event.contact_name %></strong>
+        </p>
+        <p>
+        Contact Email:
+        <strong><%= @event.contact_email %></strong>
+        </p><br><br>
         </div>
-            <div class="photo_in pull-right">
-            <br>
-            <br>
-            <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
-            <%= f.file_field :photo %>
-            <%= f.hidden_field(:event_id, value: @event.id) %>
-            <br>
-            <br>
-            <%= f.submit('Upload Image', class: 'btn btn-primary') %>
-            <% end %>
-            <br>
-            <br>
-            <br>
-            <h5>
-            <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
-            <%= link_to 'Done', dashboard_events_path %></h5>
-        </div>
+      
     </div>
+    <div class="photo_in pull-right">
+      <p>Upload Event Photo:</p>
+        <div id="pic-box">
+      </div>
+      <br>
+      <br>
+      <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
+      <%= f.file_field :photo %>
+      <%= f.hidden_field(:event_id, value: @event.id) %>
+      <br>
+      <br>
+      <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+      <% end %>
+      <br>
+      <br>
+      <br>
+      <h5>
+      <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
+      <%= link_to 'Done', dashboard_events_path %></h5>
+    </div>
+  </div>

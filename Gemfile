@@ -15,6 +15,7 @@ gem 'socialization'
 gem 'mandrill-api'
 gem 'omniauth-facebook'
 gem 'omniauth'
+gem "kaminari"
 group :doc do
   gem 'sdoc', require: false
 end
