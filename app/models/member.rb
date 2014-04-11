@@ -10,8 +10,6 @@ class Member < ActiveRecord::Base
 
   after_create :email_new_member
 
-  # something here
-                :email_newsletter
 
   private
 

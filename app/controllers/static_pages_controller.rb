@@ -9,9 +9,6 @@ class StaticPagesController < ApplicationController
 
   def about 
   end
-
-  def contact
-  end
   
   def calendar
     @events = Event.all

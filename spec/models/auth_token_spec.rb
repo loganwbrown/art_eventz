@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe ArtPhoto do
+describe AuthToken do
 
   describe 'associations' do
-    it { should belong_to :profile }
+    it { should belong_to :member }
   end
 end

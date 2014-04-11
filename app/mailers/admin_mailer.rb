@@ -5,6 +5,6 @@ class AdminMailer < ActionMailer::Base
 
   def contact_form(contact)
     @params = contact
-    mail(subject: "New Contact form Submission")
+    mail(subject: "New Contact Us form Submission")
   end
 end
