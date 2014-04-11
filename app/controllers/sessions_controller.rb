@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    @user = Member.find_or_create_for_facebook(facebook_hash)
+    @user = Member.find_or_create_for_facebook(facebook_hash.email)
     if @user.persisted?
 			sign_in @user, event: :authentication
 			redirect_to root_path, notice: "welcome to the family"
