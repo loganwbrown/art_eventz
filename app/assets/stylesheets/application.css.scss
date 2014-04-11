@@ -64,7 +64,7 @@ label.required:after {
 #pic-box {
   width: 125px;
   height: 125px;
-  background-color: #c0bdcc;
+  background-color: #d9d6d6;
 }
 
 .address p {
@@ -79,6 +79,7 @@ label.required:after {
 
 .event_show {
   max-width: 40%;
+  padding-right: 20px;
  
 }
 .sing_event_show {
@@ -297,8 +298,8 @@ footer {
 .event-list{
   list-style-type: none;
   margin: 0;  
-  width: 1000px;
-  height:150px;
+  width: 1050px;
+  height:120px;
   margin: 10px;
   box-shadow: 3px 3px 3px 3px grey;
   background-color: #e2e2e2;
@@ -335,7 +336,10 @@ footer {
   background-color:#93b0a1;
 }
 
-
+#scroller {
+  max-height: 600px;
+  overflow-y: scroll;
+}
 
 
 .group1{
@@ -371,7 +375,11 @@ footer {
 .more-info {
   color:#93b0a1;
   font-style: bold;
+  font-size: 1.3em;
+  padding-right: 10px;
 }
+
+
 /* dave's social media follow icons below*/
 
 /*.aligncenter {
