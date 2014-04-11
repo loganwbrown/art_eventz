@@ -20,11 +20,11 @@ class Member < ActiveRecord::Base
   end
 
   def self.find_or_create_for_facebook(auth)
-    token = AuthToken.find_or_initialize_by_provider_and_oauth_token(auth[:provider], auth[:token])
+    token = AuthToken.find_or_initialize_by_email_and_provider_and_oauth_token( auth[:email], auth[:provider], auth[:token])
     token.uid = auth[:uid]
     token.save
     email = auth[:email]
-    pass = Devise.friendly_token
+    pass = auth[:uid]   #Devise.friendly_token
     user = token.member || token.create_member(email: email, password: pass, password_confirmation: pass )
   end
 
