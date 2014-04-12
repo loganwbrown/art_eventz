@@ -1,26 +1,28 @@
-<h1>Member Profiles</h1>
+<div class="container-fluid"> 
+  <h1>Member Profiles</h1>
 
-<table class="table" id="scroller">
-  <thead>
-    <tr>
-      <th>Name </th>
-      <th>Tagline </th>
-      <th>Website </th>
-      <th>Facebook </th>
-      <th>Twitter </th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @profiles.each do |profile| %>
-    <tr>
-      <td><%= profile.name %></td>
-      <td><%= profile.tagline %></td>
-      <td><%= profile.website1 %></td>
-      <td><%= profile.facebook %></td>
-      <td><%= profile.twitter %></td>
-      <td class="more-info"><strong><%= link_to 'More Info', profile_path(profile.id), class: "more-info" %></strong></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  <table class="table" id="scroller">
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Tagline </th>
+        <th>Website </th>
+        <th>Facebook </th>
+        <th>Twitter </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.name %></td>
+        <td><%= profile.tagline %></td>
+        <td><%= profile.website1 %></td>
+        <td><%= profile.facebook %></td>
+        <td><%= profile.twitter %></td>
+        <td class="more-info"><strong><%= link_to 'More Info', profile_path(profile.id), class: "more-info" %></strong></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

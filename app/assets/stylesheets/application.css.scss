@@ -35,6 +35,10 @@ a {
 
  }
 
+ table {
+  margin-left: 0px;
+ }
+
 .table th {
   height: 50px;
  }
@@ -85,20 +89,27 @@ label.required:after {
 
 .event_show {
   max-width: 40%;
-  padding-right: 20px;
+  padding-right: 30px;
+  
  
 }
+
+.container-fluid {
+  padding-left: 0px;
+}
+
 .sing_event_show {
   margin-left: 420px
 }
 
 .event_show {
   color: #454A48;
+  margin-left: 0px;
 }
 
-.shown {
+/*.shown {
   margin-left: 30px;
-}
+}*/
 
 #avatar {
   word-wrap: break-word;
@@ -238,14 +249,14 @@ label.required:after {
 }
 .call-box {
   background-color: #93b0a1;
-  padding: 40px 0px 50px 45px;
+  padding: 40px 0px 40px 45px;
   color: #FFF;
   margin: 10px;
   float:left;
   width: 100%;
   height: auto;
-  max-width: 270px;
-  margin-left: -30px;
+  max-width: 275px;
+  margin-left: -5px;
 }
 .call-box p {
   padding-top: 30px;
@@ -273,17 +284,21 @@ footer {
     height: 100%;
 }
 
+.bottom-menu a:hover {
+  text-decoration: underline;
+}
+
 .foot-container {
   margin-left: 160px;
 }
 .col-title {
-  color: #fffefa;
-  font-size: 1.3em;
+  color: #b9b5c4;
+  font-size: 1.5em;
   line-height: 150%;
 }
 .bottom-menu li{
   font-size: 1.1em;
-  line-height: 150%;
+  line-height: 170%;
 
   color: #fffefa;
 }
@@ -342,6 +357,10 @@ footer {
   background-color:#93b0a1;
 }
 
+.btn.btn-huge.btn.btn-wide {
+  margin: 0 10px 10px 0 
+}
+
 #scroller {
   max-height: 600px;
   overflow-y: scroll;
@@ -381,8 +400,13 @@ footer {
 .more-info {
   color:#93b0a1;
   font-style: bold;
-  font-size: 1.3em;
-  padding-right: 10px;
+  font-size: 1.2em;
+ 
+}
+
+.col-md-6 {
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 
