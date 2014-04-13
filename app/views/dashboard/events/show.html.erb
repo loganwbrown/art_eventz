@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="event_show_page">
-  <div class="col-md-4 offset2 pull-left event_show">
+  <div class="col-md-4 pull-left event_show">
     <h3><%= @event.title %></h3>
     <p>
         <em><%= @event.tagline %></em>
@@ -33,6 +33,9 @@
         <p>
           <%= @event.more_info %>
         </p>
+        <br>
+        <br>
+  
         <p>
           Website:
           <a><%= @event.website %></a>

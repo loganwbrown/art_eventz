@@ -104,7 +104,7 @@ label.required:after {
 
 .event_show {
   color: #454A48;
-  margin-left: 0px;
+  margin-left: 35px;
 }
 
 /*.shown {
@@ -236,7 +236,7 @@ label.required:after {
  margin-left: 340px
 }
 .pro-show{
-  margin-left: 300px;
+  margin-left: 280px;
 }
 
 
@@ -366,6 +366,10 @@ footer {
   overflow-y: scroll;
 }
 
+#scroller-small {
+  max-height: 200px;
+  overflow-y: scroll;
+}
 
 .group1{
   padding-right:100px;
