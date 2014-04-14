@@ -1,7 +1,7 @@
 <!-- <div class="container-fluid shown"> -->
 
     <div class="event_show_page2">
-      <div  class="col-md-4 pull-left event_show span3">
+      <div  class="col-md-4 pull-left event_show span5">
         <h3><%= @profile.name %></h3>
         <p>
         <em><%= @profile.tagline %></em>
@@ -11,11 +11,11 @@
         <%= image_tag(@profile.avatar.url(:medium)) %>
         </p>
         <br>
-          <div class="small_font">
-          <p>
-          <%= @profile.bio %>
-          </p>
-        </div>
+          <div class="small_font" id="scroller-small">
+              <p>
+                <%= @profile.bio %>
+              </p>
+          </div>
         <br>
         <p>
         Website:

@@ -1,8 +1,8 @@
 <h1>Art Events</h1>
 <%= form_tag events_path, method: :get do %>
-<div class="input-prepend">
+<div class="input-prepend" id="scroller">
     <span class="add-on"><i class="icon-search"></i></span>
-    <div class="container" id="scroller">
+    <div class="container">
         <%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
     </div>
     <%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
