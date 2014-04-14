@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+	default_scope order('date ASC')
 	include PgSearch
 	multisearchable against: [:state]
   has_many :event_photos

@@ -17,7 +17,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
     @profile = current_member.build_profile(profile_params)
    if @profile.save
         flash[:success] = "Thanks for making a Profile with us!!"
-        redirect_to current_member.profile
+        redirect_to dashboard_profile_path(@profile)
     else
         flash[:error] = "you are a failure and no one loves you"
         render new_dashboard_profile_path
