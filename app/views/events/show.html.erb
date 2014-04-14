@@ -68,16 +68,7 @@
         <% end %>
       </div>
       <br>
-      <div>
-        <% if current_member %>
-        <% if @follows.include?(current_member) %>
-        Follows <%= @follows.count %>
-        <% else %>
-        <%= link_to("Follow Event", create_follow_path(@event), method: :post) %>
-        <%= @follows.count %>
-        <% end %>
-        <% end %>
-      </div
+
       <br>
       <br>
       <p>Share this event:</p>

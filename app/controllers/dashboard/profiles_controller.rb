@@ -46,7 +46,6 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
     @profile = current_member.profile
   end
 
-
   private
 
   def profile_params

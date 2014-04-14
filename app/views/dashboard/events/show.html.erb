@@ -1,10 +1,11 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="event_show_page2">
-  <div class="col-md-4 pull-left event_show span4">
+  <div class="col-md-4 pull-left event_show span5">
     <h3><%= @event.title %></h3>
     <p>
         <em><%= @event.tagline %></em>
     </p>
+    <br>
     <p>
         <strong>Date:</strong>
         <%= @event.date %>
@@ -13,6 +14,7 @@
         <strong>Time:</strong>
         <%= @event.time %>
     </p>
+    <br>
     <div class="small_font address">
         <p>
             <%= @event.address %> <%= @event.address2 %>
@@ -20,6 +22,7 @@
         <p>
             <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
         </p>
+        <br>
         <p>
             Contact Name:
             <strong><%= @event.contact_name %></strong>
@@ -29,10 +32,14 @@
             <strong><%= @event.contact_email %></strong>
         </p>
     </div>
+      <br>
+      <br>
     <div class="small_font">
+      <div id="scroller-small">
         <p>
           <%= @event.more_info %>
         </p>
+      </div>
         <br>
         <br>
 
