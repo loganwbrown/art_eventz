@@ -1,54 +1,65 @@
-                    Prefix Verb   URI Pattern                            Controller#Action
-                    events GET    /events(.:format)                      events#index
-                           POST   /events(.:format)                      events#create
-                 new_event GET    /events/new(.:format)                  events#new
-                edit_event GET    /events/:id/edit(.:format)             events#edit
-                     event GET    /events/:id(.:format)                  events#show
-                           PATCH  /events/:id(.:format)                  events#update
-                           PUT    /events/:id(.:format)                  events#update
-                           DELETE /events/:id(.:format)                  events#destroy
-                  profiles GET    /profiles(.:format)                    profiles#index
-                           POST   /profiles(.:format)                    profiles#create
-               new_profile GET    /profiles/new(.:format)                profiles#new
-              edit_profile GET    /profiles/:id/edit(.:format)           profiles#edit
-                   profile GET    /profiles/:id(.:format)                profiles#show
-                           PATCH  /profiles/:id(.:format)                profiles#update
-                           PUT    /profiles/:id(.:format)                profiles#update
-                           DELETE /profiles/:id(.:format)                profiles#destroy
-        new_member_session GET    /members/sign_in(.:format)             devise/sessions#new
-            member_session POST   /members/sign_in(.:format)             devise/sessions#create
-    destroy_member_session DELETE /members/sign_out(.:format)            devise/sessions#destroy
-           member_password POST   /members/password(.:format)            devise/passwords#create
-       new_member_password GET    /members/password/new(.:format)        devise/passwords#new
-      edit_member_password GET    /members/password/edit(.:format)       devise/passwords#edit
-                           PATCH  /members/password(.:format)            devise/passwords#update
-                           PUT    /members/password(.:format)            devise/passwords#update
-cancel_member_registration GET    /members/cancel(.:format)              registrations#cancel
-       member_registration POST   /members(.:format)                     registrations#create
-   new_member_registration GET    /members/sign_up(.:format)             registrations#new
-  edit_member_registration GET    /members/edit(.:format)                registrations#edit
-                           PATCH  /members(.:format)                     registrations#update
-                           PUT    /members(.:format)                     registrations#update
-                           DELETE /members(.:format)                     registrations#destroy
-                      root GET    /                                      static_pages#index
-                     about GET    /about(.:format)                       static_pages#about
-                   contact GET    /contact(.:format)                     static_pages#contact
-                  calendar GET    /calendar(.:format)                    static_pages#calendar
-          dashboard_events GET    /dashboard/events(.:format)            dashboard/events#index
-                           POST   /dashboard/events(.:format)            dashboard/events#create
-       new_dashboard_event GET    /dashboard/events/new(.:format)        dashboard/events#new
-      edit_dashboard_event GET    /dashboard/events/:id/edit(.:format)   dashboard/events#edit
-           dashboard_event GET    /dashboard/events/:id(.:format)        dashboard/events#show
-                           PATCH  /dashboard/events/:id(.:format)        dashboard/events#update
-                           PUT    /dashboard/events/:id(.:format)        dashboard/events#update
-                           DELETE /dashboard/events/:id(.:format)        dashboard/events#destroy
-    dashboard_event_photos POST   /dashboard/event_photos(.:format)      dashboard/event_photos#create
-        dashboard_profiles GET    /dashboard/profiles(.:format)          dashboard/profiles#index
-                           POST   /dashboard/profiles(.:format)          dashboard/profiles#create
-     new_dashboard_profile GET    /dashboard/profiles/new(.:format)      dashboard/profiles#new
-    edit_dashboard_profile GET    /dashboard/profiles/:id/edit(.:format) dashboard/profiles#edit
-         dashboard_profile GET    /dashboard/profiles/:id(.:format)      dashboard/profiles#show
-                           PATCH  /dashboard/profiles/:id(.:format)      dashboard/profiles#update
-                           PUT    /dashboard/profiles/:id(.:format)      dashboard/profiles#update
-                           DELETE /dashboard/profiles/:id(.:format)      dashboard/profiles#destroy
-           dashboard_index GET    /dashboard/index(.:format)             dashboard/static_pages#index
+                      Prefix Verb     URI Pattern                                          Controller#Action
+                             GET|POST /auth/:provider/callback(.:format)                   sessions#create
+                auth_failure GET|POST /auth/failure(.:format)                              redirect(301, /)
+                     signout GET|POST /signout(.:format)                                   sessions#destroy
+              follows_create GET      /follows/create(.:format)                            follows#create
+                      events GET      /events(.:format)                                    events#index
+                             POST     /events(.:format)                                    events#create
+                   new_event GET      /events/new(.:format)                                events#new
+                  edit_event GET      /events/:id/edit(.:format)                           events#edit
+                       event GET      /events/:id(.:format)                                events#show
+                             PATCH    /events/:id(.:format)                                events#update
+                             PUT      /events/:id(.:format)                                events#update
+                             DELETE   /events/:id(.:format)                                events#destroy
+                    profiles GET      /profiles(.:format)                                  profiles#index
+                             POST     /profiles(.:format)                                  profiles#create
+                 new_profile GET      /profiles/new(.:format)                              profiles#new
+                edit_profile GET      /profiles/:id/edit(.:format)                         profiles#edit
+                     profile GET      /profiles/:id(.:format)                              profiles#show
+                             PATCH    /profiles/:id(.:format)                              profiles#update
+                             PUT      /profiles/:id(.:format)                              profiles#update
+                             DELETE   /profiles/:id(.:format)                              profiles#destroy
+          new_member_session GET      /members/sign_in(.:format)                           devise/sessions#new
+              member_session POST     /members/sign_in(.:format)                           devise/sessions#create
+      destroy_member_session DELETE   /members/sign_out(.:format)                          devise/sessions#destroy
+             member_password POST     /members/password(.:format)                          devise/passwords#create
+         new_member_password GET      /members/password/new(.:format)                      devise/passwords#new
+        edit_member_password GET      /members/password/edit(.:format)                     devise/passwords#edit
+                             PATCH    /members/password(.:format)                          devise/passwords#update
+                             PUT      /members/password(.:format)                          devise/passwords#update
+  cancel_member_registration GET      /members/cancel(.:format)                            registrations#cancel
+         member_registration POST     /members(.:format)                                   registrations#create
+     new_member_registration GET      /members/sign_up(.:format)                           registrations#new
+    edit_member_registration GET      /members/edit(.:format)                              registrations#edit
+                             PATCH    /members(.:format)                                   registrations#update
+                             PUT      /members(.:format)                                   registrations#update
+                             DELETE   /members(.:format)                                   registrations#destroy
+                        root GET      /                                                    static_pages#index
+                     contact GET|POST /contact(.:format)                                   static_pages#contact
+           newsletter_signup GET      /newsletter_signup(.:format)                         static_pages#newsletter_signup
+                             POST     /newsletter_signup(.:format)                         static_pages#newsletter_signup
+                 create_like POST     /likes/:id(.:format)                                 likes#create
+               create_follow POST     /follows/:id(.:format)                               follows#create
+                       about GET      /about(.:format)                                     static_pages#about
+                             GET      /contact(.:format)                                   static_pages#contact
+                    calendar GET      /calendar(.:format)                                  static_pages#calendar
+                         tos GET      /tos(.:format)                                       static_pages#tos
+dashboard_event_event_photos POST     /dashboard/events/:event_id/event_photos(.:format)   dashboard/event_photos#create
+            dashboard_events GET      /dashboard/events(.:format)                          dashboard/events#index
+                             POST     /dashboard/events(.:format)                          dashboard/events#create
+         new_dashboard_event GET      /dashboard/events/new(.:format)                      dashboard/events#new
+        edit_dashboard_event GET      /dashboard/events/:id/edit(.:format)                 dashboard/events#edit
+             dashboard_event GET      /dashboard/events/:id(.:format)                      dashboard/events#show
+                             PATCH    /dashboard/events/:id(.:format)                      dashboard/events#update
+                             PUT      /dashboard/events/:id(.:format)                      dashboard/events#update
+                             DELETE   /dashboard/events/:id(.:format)                      dashboard/events#destroy
+dashboard_profile_art_photos POST     /dashboard/profiles/:profile_id/art_photos(.:format) dashboard/art_photos#create
+          dashboard_profiles GET      /dashboard/profiles(.:format)                        dashboard/profiles#index
+                             POST     /dashboard/profiles(.:format)                        dashboard/profiles#create
+       new_dashboard_profile GET      /dashboard/profiles/new(.:format)                    dashboard/profiles#new
+      edit_dashboard_profile GET      /dashboard/profiles/:id/edit(.:format)               dashboard/profiles#edit
+           dashboard_profile GET      /dashboard/profiles/:id(.:format)                    dashboard/profiles#show
+                             PATCH    /dashboard/profiles/:id(.:format)                    dashboard/profiles#update
+                             PUT      /dashboard/profiles/:id(.:format)                    dashboard/profiles#update
+                             DELETE   /dashboard/profiles/:id(.:format)                    dashboard/profiles#destroy
+             dashboard_index GET      /dashboard/index(.:format)                           dashboard/static_pages#index
