@@ -1,13 +1,15 @@
-<h1>Art Event Index</h1>
+<h1>Art Events</h1>
 <%= form_tag events_path, method: :get do %>
-<%= text_field_tag :query, params[:query], :class => "search-box" %>
-<%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
-<% end %>
-
-<div class="container" id="scroller">
+<div class="input-prepend">
+    <span class="add-on"><i class="icon-search"></i></span>
+    <div class="container" id="scroller">
+        <%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
+    </div>
+    <%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
+    <% end %>
     <% @events.each do |event| %>
-        <div class="row-fluid">
-            <ul class="event-list">
+    <div class="row-fluid">
+        <ul class="event-list">
             <li>
                 <div class="event-date">
                     <h5>Date:</h5>
@@ -23,14 +25,13 @@
                     <%= event.address %><br />
                     <%= event.city %><br />
                     <%= event.state %>
-                
+                    
                     <div class="pull-right">
-                        <%= link_to 'More Info', event_path(event.id), class: "more-info" %><br />       
+                        <%= link_to 'More Info', event_path(event.id), class: "more-info" %><br />
                     </div>
-                 </div
+                </div>
             </li>
-            </ul>
-        </div>
+        </ul>
+    </div>
     <% end %>
 </div>
-

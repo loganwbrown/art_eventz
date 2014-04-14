@@ -7,10 +7,14 @@
  *= require jquery.share.css
  *= require_self.
  */
+
 html,body {
     height: 100%;
  }
-
+.input-prepend .add-on{
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
 body {
  	background-image: url("png.png");
  	font-size: 16px;

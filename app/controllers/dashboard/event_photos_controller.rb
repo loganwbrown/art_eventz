@@ -5,9 +5,8 @@ class Dashboard::EventPhotosController < Dashboard::DashboardController
     @event_photo = @event.event_photos.build(eventphoto_params)
     if @event_photo.save
       redirect_to dashboard_event_path(@event_photo.event_id)
-
     else 
-      raise @event_photo.errors.inspect
+      
     end
   end
 
