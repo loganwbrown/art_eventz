@@ -7,11 +7,11 @@
       <em><%= @profile.tagline %></em>
       </p>
       <p id="avatar">
-      <strong>Avatar:</strong>
+<!--       <strong>Avatar:</strong> -->
       <%= image_tag(@profile.avatar.url(:medium)) %>
       </p>
       <br>
-      <div class="small_font">
+      <div class="small_font" id="scroller-small">
         <p>
         <%= @profile.bio %>
         </p>

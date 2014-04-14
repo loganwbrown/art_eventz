@@ -35,6 +35,10 @@ a {
 
  }
 
+ table {
+  margin-left: 0px;
+ }
+
 .table th {
   height: 50px;
  }
@@ -85,20 +89,35 @@ label.required:after {
 
 .event_show {
   max-width: 40%;
-  padding-right: 20px;
- 
+  padding-right: 30px;
 }
+
+.event_show_page {
+  margin-top: 30px;
+  margin-left: 0px;
+}
+
+.event_show_page2 {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.container-fluid {
+  padding-left: 0px;
+}
+
 .sing_event_show {
   margin-left: 420px
 }
 
 .event_show {
   color: #454A48;
+  margin-left: 45px;
 }
 
-.shown {
+/*.shown {
   margin-left: 30px;
-}
+}*/
 
 #avatar {
   word-wrap: break-word;
@@ -225,7 +244,7 @@ label.required:after {
  margin-left: 340px
 }
 .pro-show{
-  margin-left: 300px;
+  margin-left: 280px;
 }
 
 
@@ -238,14 +257,14 @@ label.required:after {
 }
 .call-box {
   background-color: #93b0a1;
-  padding: 40px 0px 50px 45px;
+  padding: 40px 0px 40px 45px;
   color: #FFF;
   margin: 10px;
   float:left;
   width: 100%;
   height: auto;
-  max-width: 270px;
-  margin-left: -30px;
+  max-width: 275px;
+  margin-left: -5px;
 }
 .call-box p {
   padding-top: 30px;
@@ -263,7 +282,7 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
-  margin-top: 50px;
+  margin-top: 40px;
   background-color: #d9d6d6;
   /*/*background-image: url("arteventz-footer.jpg");
   background-size: 100% auto;*/
@@ -273,17 +292,21 @@ footer {
     height: 100%;
 }
 
+.bottom-menu a:hover {
+  text-decoration: underline;
+}
+
 .foot-container {
   margin-left: 160px;
 }
 .col-title {
-  color: #fffefa;
-  font-size: 1.3em;
+  color: #b9b5c4;
+  font-size: 1.5em;
   line-height: 150%;
 }
 .bottom-menu li{
   font-size: 1.1em;
-  line-height: 150%;
+  line-height: 170%;
 
   color: #fffefa;
 }
@@ -342,11 +365,19 @@ footer {
   background-color:#93b0a1;
 }
 
+.btn.btn-huge.btn.btn-wide {
+  margin: 0 10px 10px 0 
+}
+
 #scroller {
   max-height: 600px;
   overflow-y: scroll;
 }
 
+#scroller-small {
+  max-height: 200px;
+  overflow-y: scroll;
+}
 
 .group1{
   padding-right:100px;
@@ -381,8 +412,13 @@ footer {
 .more-info {
   color:#93b0a1;
   font-style: bold;
-  font-size: 1.3em;
-  padding-right: 10px;
+  font-size: 1.2em;
+ 
+}
+
+.col-md-6 {
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 
