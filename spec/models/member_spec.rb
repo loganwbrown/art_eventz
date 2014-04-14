@@ -13,12 +13,14 @@ describe Member do
   end
 
 
+
+  it 'sends out an NewMemberMailer' do
+    contact = build(:member)
+    expect { contact.save }.to change(Sidekiq::Extensions::DelayedMailer.jobs, :size).by(1) 
+  end
+
 end
 
 
 
-# class MemberTest < ActiveSupport::TestCase
-#   # test "the truth" do
-#   #   assert true
-#   # end
-# end
+#test the mailer

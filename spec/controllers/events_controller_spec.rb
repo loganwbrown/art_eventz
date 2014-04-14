@@ -14,6 +14,16 @@ describe Dashboard::EventsController do
     end
   end
 
+
+#  this test needs to be improved
+#
+#  assigns(@event)
+#  assigns(@likes)
+#  
+#  
+#  
+#  
+ 
   describe '#show' do
     example do
       event = create(:event, title: 'A to Z', date: '04/11/2014', time: '22:00', address: '337 6th street upstairs', city: 'Las Vegas', state: 'NV', zip: '89120'  )

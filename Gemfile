@@ -16,6 +16,8 @@ gem 'mandrill-api'
 gem 'omniauth-facebook', '1.4.0'
 gem 'omniauth'
 gem "kaminari"
+gem "sidekiq"
+
 group :doc do
   gem 'sdoc', require: false
 end
