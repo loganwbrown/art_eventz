@@ -1,37 +1,38 @@
 <!-- <div class="container-fluid shown"> -->
-    <div class="event_show_page">
-      <div  class="col-md-4 pull-left event_show">
-      <h3><%= @profile.name %></h3>
-      <p>
-      <em><%= @profile.tagline %></em>
-      </p>
-      <p id="avatar">
-      <strong>Avatar:</strong>
-      <%= image_tag(@profile.avatar.url(:medium)) %>
-      </p>
-      <br>
-        <div class="small_font">
+
+    <div class="event_show_page2">
+      <div  class="col-md-4 pull-left event_show span3">
+        <h3><%= @profile.name %></h3>
         <p>
-        <%= @profile.bio %>
+        <em><%= @profile.tagline %></em>
+        </p>
+        <p id="avatar">
+        <strong>Avatar:</strong>
+        <%= image_tag(@profile.avatar.url(:medium)) %>
+        </p>
+        <br>
+          <div class="small_font">
+          <p>
+          <%= @profile.bio %>
+          </p>
+        </div>
+        <br>
+        <p>
+        Website:
+        <%= @profile.website1 %>
+        </p>
+        <p>
+        Facebook:
+        <%= @profile.facebook %>
+        </p>
+        <p>
+        Twitter:
+        <%= @profile.twitter %>
         </p>
       </div>
-      <br>
-      <p>
-      Website:
-      <%= @profile.website1 %>
-      </p>
-      <p>
-      Facebook:
-      <%= @profile.facebook %>
-      </p>
-      <p>
-      Twitter:
-      <%= @profile.twitter %>
-      </p>
+      
     </div>
-    
-  </div>
-    <div class="photo_in pull-right">
+  <div class="photo_in pull-right">
     <p>Upload Art Photo:</p>
       <div id="pic-box">
     </div>
@@ -48,4 +49,3 @@
     <%= link_to 'Edit', edit_dashboard_profile_path(@profile) %> |
     <%= link_to 'Done', @profile %></h5>
   </div>
-<!-- </div> -->
