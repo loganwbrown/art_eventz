@@ -7,12 +7,5 @@ class Event < ActiveRecord::Base
   acts_as_followable
   acts_as_likeable
   
-  def self.search(query)
-	  if query.present?
-	    search(query)
-	  else
-	    scoped
-	  end
-	end
-	
+
 end

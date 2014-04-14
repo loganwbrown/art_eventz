@@ -9,4 +9,6 @@ describe StaticPagesController do
       expect((:profiles)).to_not be_empty
     end
   end
+
+end
   
