@@ -1,35 +1,38 @@
-<h1>Public Art Events</h1>
+<h1>Art Events</h1>
 <%= form_tag events_path, method: :get do %>
-<%= text_field_tag :query, params[:query], :class => "search-box" %>
-<%= submit_tag "Search By State", name: nil, :class => "btn btn-search" %>
-<% end %>
+<div class="input-prepend">
+<span class="add-on"><i class="icon-search"></i></span>
 
-<div class="container">
+<%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
+</div>
+<%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
+<% end %>
+    <div class="container">
     <% @events.each do |event| %>
         <div class="row-fluid">
             <ul class="event-list">
-            <li>
-                <div class="event-date">
+                <li>
+                    <div class="event-date">
                     <h5>Date:</h5>
                     <%= event.date %>
                 </div>
-                <div class="event-title">
+                    <div class="event-title">
                     <h5> Event Title:</h5>
                     <%= event.title %>
                     
                 </div>
-                <div class="event-location">
+                    <div class="event-location">
                     <h5>Location:</h5>
                     <%= event.address %><br />
                     <%= event.city %><br />
                     <%= event.state %><br />
-                   <div class="pull-right">
-                    <%= link_to 'More Info', event_path(event.id) %><br />
-                    <%= event.website %>
-</div>
+                        <div class="pull-right">
+                        <%= link_to 'More Info', event_path(event.id) %><br />
+                        <%= event.website %>
+                    </div>
                 </div>
             </li>
-            </ul>
-        </div>
+        </ul>
+    </div>
     <% end %>
 </div>
