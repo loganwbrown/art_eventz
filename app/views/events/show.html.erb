@@ -1,89 +1,87 @@
 <p id="notice"><%= notice %></p>
-  <div class="event_show_page">
-  
-    <div class="col-md-6 pull-left event_show span6">
-      <br>
-      <h3><%= @event.title %></h3>
-      <p>
+<div class="event_show_page">
+  <div class="col-md-6 pull-left event_show span6">
+    <br>
+    <h3><%= @event.title %></h3>
+    <p>
       <em><%= @event.tagline %></em>
-      </p>
-      <p>
+    </p>
+    <p>
       <strong>Date:</strong>
       <%= @event.date %>
-      </p>
-      <p>
+    </p>
+    <p>
       <strong>Time:</strong>
       <%= @event.time %>
-      </p>
-        <div class="small_font address">
-        <p>
-        <%= @event.address %> <%= @event.address2 %>
-        </p>
-        <p>
-        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-        </p>
-      </div>
-      <br>
+    </p>
+    <div class="small_font address">
       <p>
+        <%= @event.address %> <%= @event.address2 %>
+      </p>
+      <p>
+        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      </p>
+    </div>
+    <br>
+    <p>
       Contact Name:
       <strong><%= @event.contact_name %></strong>
-      </p>
-      <p>
+    </p>
+    <p>
       Contact Email:
       <strong><%= @event.contact_email %></strong>
+    </p>
+    <br>
+    <div class="small_font" id="scroller-small">
+      <p>
+        <%= @event.more_info %>
       </p>
-      <br>
-        <div class="small_font" id="scroller-small">
-          <p>
-          <%= @event.more_info %>
-          </p>
-        </div>
-        <br>
-        <br>
-        <div>
-        <p>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p>
         Website:
         <%= @event.website %></a>
-        </p>
-        <p>
+      </p>
+      <p>
         Facebook:
         <%= @event.facebook %>
-        </p>
-        <p>
+      </p>
+      <p>
         Application:
         <%= @event.application_form %>
-        </p>
-        <br>
-      </div>
-      <div>
-        <% if current_member %>
-        <% if @likes.include?(current_member) %>
+      </p>
+      <br>
+    </div>
+    <div>
+      <% if current_member %>
+      <% if @likes.include?(current_member) %>
         Likes <%= @likes.count %>
-        <% else %>
+      <% else %>
         <%= link_to("Like Event", create_like_path(@event), method: :post) %>
         <%= @likes.count %>
-        <% end %>
-        <% else %>
+      <% end %>
+      <% else %>
         Likes <%= @likes.count %>
-        <% end %>
-      </div>
-      <br>
-
-      <br>
-      <br>
-      <p>Share this event:</p>
-        <div id="socialsharing">
-        <p>
-        </p>
-      </div>
-      <br>
-      <br>
-        <div>
-        <button><%= link_to 'Back', events_path%></button>
-      </div>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p>Share this event:</p>
+    <div id="socialsharing">
+      <p>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div>
+      <button><%= link_to 'Back', events_path%></button>
+    </div>
   </div>
-    <div class="container-fluid">
-      <div class="sing_event_show">
+  <div class="container-fluid">
+    <div class="sing_event_show">
       <%= render 'shared/single_event_photo_slider' %>
     </div>
   </div>
