@@ -40,7 +40,8 @@ a {
  }
 
  table {
-  margin-left: 0px;
+  margin-left: 0px !important;
+  max-width: 1100px;
  }
 
 .table th {
@@ -301,7 +302,6 @@ footer {
 .bottom-menu li{
   font-size: 1.1em;
   line-height: 170%;
-
   color: #fffefa;
 }
 /*.brand {
@@ -318,10 +318,11 @@ footer {
   background-color: #b9b5c4;
 }
 
+
 .event-list{
   list-style-type: none;
   margin: 0;  
-  width: 1050px;
+  max-width: 1050px;
   height:120px;
   margin: 10px;
   box-shadow: 3px 3px 3px 3px grey;
@@ -410,3 +411,10 @@ footer {
   margin-left: 0px;
   padding-left: 0px;
 }
+
+#member-index {
+  width: 1000px;
+}
+
+
+
