@@ -10,5 +10,7 @@ describe StaticPagesController do
     end
   end
 
+#need to test more static stuff
+
 end
   

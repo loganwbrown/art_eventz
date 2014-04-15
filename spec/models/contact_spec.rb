@@ -1,7 +1,6 @@
 require 'spec_helper'
+require 'sidekiq/testing'
 
-
-#test failing
 
 describe Contact do
   it 'sends out an AdminMailer' do
