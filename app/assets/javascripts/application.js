@@ -11,10 +11,6 @@
 
 $(function() {
     $("#event_date").datepicker();
-    // make ajax request to a controller
-    // get back an array of events in json format (format.json)
-    // store in a variable
-    // use that variable for the value of the events key
     if ($('#calendar').length > 0) {
         $.getJSON('/calendar', function(data) {
 
@@ -38,14 +34,6 @@ $(function() {
             pauseTime: 4000
         });
     });
-
-
-
-    //$('#myTabs a').click(function(e) {
-    //    e.preventDefault();
-    //    $("#show_art").tab("show");
-    //    $("#show_art_events").tab("show");
-    //});
 
 
 

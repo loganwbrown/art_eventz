@@ -21,13 +21,13 @@ describe Dashboard::ProfilesController do
   describe '#create' do
     context 'when the record is valid' do
       it 'works if the member is signed in' do
-        member = create(:member)
-        sign_in member
+        @member = create(:member)
+        sign_in @member
         expect(subject.current_member).to_not be_nil
         expect {
-          post :create, {profile: {name: 'Vlad', tagline: 'groceries'}}
+          post :create, {profile: {name: 'Vlad', tagline: 'groceries' }}
         }.to change(Profile, :count).by 1
-        assert_response :redirect
+        assert_response redirect_to  dashboard_profile_path(@member.profile.id)
       end
       it 'redirects the member if they are not signed in' do
         post :create, {profile: {name: 'Vlad', description: 'groceries'}}

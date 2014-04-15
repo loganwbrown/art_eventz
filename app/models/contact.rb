@@ -7,7 +7,7 @@ class Contact < ActiveRecord::Base
   private
 
   def email_contact_info
-    AdminMailer.contact_form(self).deliver
+    AdminMailer.delay.contact_form(self)
   end
 
 end
