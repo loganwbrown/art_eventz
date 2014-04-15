@@ -1,17 +1,17 @@
 <div class="container-fluid"
   <p id="notice"><%= notice %></p>
-  <div class="event_show_page">
-    <div  class="col-md-6 event_show span5">
+    <div class="event_show_page">
+      <div  class="col-md-6 event_show span5">
       <h3><%= @profile.name %></h3>
       <p>
       <em><%= @profile.tagline %></em>
       </p>
       <p id="avatar">
-<!--       <strong>Avatar:</strong> -->
+      <!--       <strong>Avatar:</strong> -->
       <%= image_tag(@profile.avatar.url(:medium)) %>
       </p>
       <br>
-      <div class="small_font" id="scroller-small">
+        <div class="small_font" id="scroller-small">
         <p>
         <%= @profile.bio %>
         </p>
@@ -19,21 +19,12 @@
       <br>
       <p>
       Website:
-      <%= @profile.website1 %>
-      </p>
-      <p>
-      Website:
-      <%= @profile.website2 %>
-      </p>
-      <p>
-      Website:
-      <%= @profile.website3 %>
+      <%= link_to("Member Website", @profile.website1) %>
       </p>
       <p>
       Facebook:
-      <%= @profile.facebook %>
+      <%= link_to("Link to Facebook", @profile.facebook) %>
       </p>
-      
       <p>
       Twitter:
       <%= @profile.twitter %>
@@ -41,9 +32,8 @@
       <h5><%= link_to 'Back', profiles_path %></h5>
     </div>
   </div>
-
-  <div class="container-fluid sing_event_show">
-    <div>
+    <div class="container-fluid sing_event_show">
+      <div>
       <%= render 'shared/member_art_photo_slider' %>
     </div>
   </div>
