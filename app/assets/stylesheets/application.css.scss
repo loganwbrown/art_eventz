@@ -302,7 +302,6 @@ footer {
 .bottom-menu li{
   font-size: 1.1em;
   line-height: 170%;
-
   color: #fffefa;
 }
 /*.brand {
@@ -419,105 +418,5 @@ footer {
 .calendar {
   margin-left: 0px !important;
 }
-/* dave's social media follow icons below*/
 
-/*.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }*/
 
-/*.alignleft {
-  float: left;
-  }
-
-.alignright {
-  float: right;
-  }
-  
-
-#socialiconbar div{
-  float:right!important;
-  margin-left:25px!important;
-  margin-top:15px!important;
-}
-
-#twitter {
-  display:relative!important;
-  width:49px!important;
-  height:49px!important;
-  background-image: url(images/twitter.png)!important;
-  background-position:top left!important;
-  -webkit-transition: all 0.5s ease-in-out!important;
-    -moz-transition: all 0.5s ease-in-out!important;
-    -o-transition: all 0.5s ease-in-out!important;
-  
-}
-#facebook {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(./facebook.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-#linkedin {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(./linkedin.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-#tumblr {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(images/tumblr.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-#youtube {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(./youtube.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-#pintrest {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(./pintrest.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-#email {
-  display:relative;
-  width:49px;
-  height:49px;
-  background-image: url(./email.png);
-  background-position:top left;
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-
-#socialiconbar div:hover {
-  background-position:bottom left!important;
-}
-
-/* end of daves SM icon styles */
-=======
->>>>>>> upstream/master
