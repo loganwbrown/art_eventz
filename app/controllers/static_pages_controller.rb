@@ -18,14 +18,9 @@ class StaticPagesController < ApplicationController
   def contact
     @contact = Contact.new
     if request.post?
-    @contact.assign_attributes(contact_params)
-      if @contact.save
+      @contact.assign_attributes(contact_params)
+      @contact.save
       redirect_to contact_path, notice: "we will get back to you soon"
-    else
-      flash[:alert] = "oops"
-      render :contact
-
-      end
     end
   end 
 
