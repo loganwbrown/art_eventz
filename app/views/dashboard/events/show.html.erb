@@ -61,13 +61,14 @@
         </div>
       </div>
       <div class="photo_in pull-right">
-        <p>Upload Event Photos</p>
-        <div id="pic-box">
         </div>
         <br>
         <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
-          <%= f.file_field :photo %>
-          <%= f.hidden_field(:event_id, value: @event.id) %>
+                <p>Upload Event Photos</p>
+
+          <img id="blah" src="#" alt="your image" width="250px" />
+        <br>
+        <input type='file' id="imgInp" />
           <br>
           <br>
           <%= f.submit('Upload Image', class: 'btn btn-primary') %>
