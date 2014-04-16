@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def page_title
+    @page_title || "ArtEventz"
+  end
+
 	def user_logged_in?
  	  member_signed_in?
   end
