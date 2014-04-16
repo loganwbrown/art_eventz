@@ -1,20 +1,28 @@
-<div class="col-md-4">
-	<form>
-		<h3 >arteventz would love to hear from you!</h1><br><br>
+<html>
+	<head>
+		<title>Contact Us - Arteventz</title>
+	</head>
+	<body>
+		<div class="col-md-4">
+			<form>
+				<h3>arteventz would love to hear from you!</h3><br><br>
+				<%= form_for(@contact, url: contact_path) do |f| %>
+					<div class="control-group">
+				  	<%= f.text_field(:name, placeholder: "Name" ) %>
+				  </div><br><br>
+				  <div class="control-group">
+				  	<%= f.email_field(:email, placeholder: "Email" ) %>
+				  </div><br><br>
+				  <div class="control-group">
+				  	<%= f.text_area(:question,  placeholder: "Question" ) %>  
+				  </div><br><br>
+				  <div class="control-group">
+				   	<%= f.submit("Submit") %>
+	  			</div>
+		    <% end %>
+			</form>
+		</div>
+	</body>
+</html>
 
-		  <%= form_for(@contact, url: contact_path) do |f| %>
-		  <div class="control-group">
-		    <%= f.text_field(:name, placeholder: "Name" ) %>
-		  </div><br><br>
-		  <div class="control-group">
-		    <%= f.email_field(:email, placeholder: "Email" ) %>
-		  </div><br><br>
-		  <div class="control-group">
-		   <%= f.text_area(:question,  placeholder: "Question" ) %>  
-		  </div><br><br>
-		  <div class="control-group">
-		    <%= f.submit("Submit") %>
-  		</div>
-    <% end %>
-	</form>
-</div>
+

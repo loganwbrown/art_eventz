@@ -1,17 +1,21 @@
-<!-- <div class="slider-wrapper">
-  <%#= render 'shared/all_art_photos_slider' %></div>
-<div> -->
-  <div class="slider-wrapper">
-    <ul class="nav nav-tabs pull-right nav-stacked">
-      <li class="active"><a href="#tab1" data-toggle="tab">Show Art Events</a></li>
-      <li class=""><a href="#tab2" data-toggle="tab">Show Member Art</a></li>
-    </ul>
-    <div class="tab-content"> 
-      <div class="tab-pane active" id="tab1">
-        <%= render 'shared/all_event_photos_slider' %>
-      </div>
-      <div class="tab-pane" id="tab2"> 
-        <%= render 'shared/all_art_photos_slider' %>
+<html>
+  <head>
+    <title>Events - Arteventz</title>
+  </head>
+  <body>
+    <div class="slider-wrapper">
+      <ul class="nav nav-tabs pull-right nav-stacked">
+        <li class="active"><a href="#tab1" data-toggle="tab">Show Art Events</a></li>
+        <li class=""><a href="#tab2" data-toggle="tab">Show Member Art</a></li>
+      </ul>
+      <div class="tab-content"> 
+        <div class="tab-pane active" id="tab1">
+          <%= render 'shared/all_event_photos_slider' %>
+        </div>
+        <div class="tab-pane" id="tab2"> 
+          <%= render 'shared/all_art_photos_slider' %>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
+</html>
