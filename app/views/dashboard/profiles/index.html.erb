@@ -1,32 +1,38 @@
-<% if @profiles %>
-  <h1>List of Profiles</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name </th>
-        <th>Avatar </th>
-        <th>Tagline </th>
-        <th>Website </th>
-        <th>Facebook </th>
-        <th>Bio </th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.avatar %></td>
-        <td><%= profile.tagline %></td>
-        <td><%= profile.website %></td>
-        <td><%= profile.facebook %></td>
-        <td><%= profile.bio %></td>
-        <td><%= link_to 'Edit', edit_dashboard_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-<% end %>
-
+<html>
+  <head>
+    <title>Profiles - Arteventz</title>
+  </head>
+  <body>
+    <% if @profiles %>
+      <h1>List of Profiles</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name </th>
+            <th>Avatar </th>
+            <th>Tagline </th>
+            <th>Website </th>
+            <th>Facebook </th>
+            <th>Bio </th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= profile.name %></td>
+            <td><%= profile.avatar %></td>
+            <td><%= profile.tagline %></td>
+            <td><%= profile.website %></td>
+            <td><%= profile.facebook %></td>
+            <td><%= profile.bio %></td>
+            <td><%= link_to 'Edit', edit_dashboard_profile_path(profile) %></td>
+            <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    <% end %>
+  </body>
+</html>

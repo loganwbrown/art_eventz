@@ -1,35 +1,46 @@
-<h1>Art Events</h1>
-<%= form_tag events_path, method: :get do %>
-  <div class="input-prepend" id="scroller">
-    <span class="add-on"><i class="icon-search"></i></span>
-    <%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
-  </div>
-  <%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
-<% end %>
-<div class="container" id="scroller">
-  <% @events.each do |event| %>
-    <div class="row-fluid" >
-      <ul class="event-list">
-        <li>
-          <div class="event-date">
-            <h5>Date:</h5>
-            <%= event.date %>
-          </div>
-          <div class="event-title">
-            <h5> Event Title:</h5>
-            <%= event.title %>
-          </div>
-          <div class="event-location">
-            <h5>Location:</h5>
-            <%= event.address %><br />
-            <%= event.city %><br />
-            <%= event.state %>
-            <div class="pull-right">
-              <%= link_to 'More Info', event_path(event.id), class: "more-info" %><br />
-            </div>
-          </div>
-        </li>
-      </ul>
+<html>
+  <head>
+    <title>Events - Arteventz</title>
+  </head>
+  <body>
+    <h1>Art Events</h1>
+    <%= form_tag events_path, method: :get do %>
+      <div class="input-prepend" id="scroller">
+        <span class="add-on"><i class="icon-search"></i></span>
+        <%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
+      </div>
+      <%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
+    <% end %>
+    <div class="container" id="scroller">
+      <% @events.each do |event| %>
+        <div class="row-fluid" >
+          <ul class="event-list">
+            <li>
+              <div class="event-date">
+                <h5>Date:</h5>
+                <%= event.date %>
+              </div>
+              <div class="event-title">
+                <h5> Event Title:</h5>
+                <%= event.title %>
+              </div>
+              <div class="event-location">
+                <h5>Location:</h5>
+                <%= event.address %><br />
+                <%= event.city %><br />
+                <%= event.state %>
+                <div class="pull-right">
+                  <%= link_to 'More Info', event_path(event.id), class: "more-info" %><br />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </body>
+</html>
+
+
+
+
