@@ -1,57 +1,57 @@
 <%= form_for([:dashboard, @profile], multipart: true ) do |f| %>
-<% if @profile.errors.any? %>
-  <div id="error_explanation">
-  <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
-    <ul>
-    <% @profile.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
-
-<div class="col-md-5 pull-left">
-  <div class="field">
-    <%= f.label :name, class: 'required' %>
-    <%= f.text_field :name, :placeholder => "Use full name" %>
-  </div>
-  
-    <div class="field">
-    <%= f.label :tagline %>
-    <%= f.text_field :tagline, :placeholder => "Headline for yourself" %>
-  </div>
-    <div class="field">
-    <%= f.label :website1 %>
-    <%= f.text_field :website1, placeholder: "Include http://" %>
-  </div>
-    <div class="field">
-    <%= f.label :website2 %>
-    <%= f.text_field :website2, placeholder: "Include http://" %>
-  </div>
-    <div class="field">
-    <%= f.label :website3 %>
-    <%= f.text_field :website3, placeholder: "Include http://" %>
-  </div>
-    <div class="field">
-    <%= f.label :bio %>
-    <%= f.text_area :bio, :placeholder => "Brief description" %>
-  </div>
-    <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
-    <div class="field">
-    <%= f.label :facebook %>
-    <%= f.text_field :facebook, placeholder: "Include http://" %>
-  </div>
-    <div class="field">
-    <%= f.label :twitter %>
-    <%= f.text_field :twitter, :placeholder => "Twitter handle" %>
-  </div>
-    <div class="actions">
-    <%= f.submit class: "btn btn-success" %>
-  </div>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <ul>
+        <% @profile.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
+
+  <div class="col-md-5 pull-left">
+    <div class="field">
+      <%= f.label :name, class: 'required' %>
+      <%= f.text_field :name, :placeholder => "Use full name" %>
+    </div>
+    <div class="field">
+      <%= f.label :tagline %>
+      <%= f.text_field :tagline, :placeholder => "Headline for yourself" %>
+    </div>
+    <div class="field">
+      <%= f.label :website1 %>
+      <%= f.text_field :website1, placeholder: "Include http://" %>
+    </div>
+    <div class="field">
+      <%= f.label :website2 %>
+      <%= f.text_field :website2, placeholder: "Include http://" %>
+    </div>
+    <div class="field">
+      <%= f.label :website3 %>
+      <%= f.text_field :website3, placeholder: "Include http://" %>
+    </div>
+    <div class="field">
+      <%= f.label :bio %>
+      <%= f.text_area :bio, :placeholder => "Brief description" %>
+    </div>
+    <div class="field">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+    </div>
+    <div class="field">
+      <%= f.label :facebook %>
+      <%= f.text_field :facebook, placeholder: "Include http://" %>
+    </div>
+    <div class="field">
+      <%= f.label :twitter %>
+      <%= f.text_field :twitter, :placeholder => "Twitter handle" %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
 
   
 

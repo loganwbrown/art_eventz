@@ -1,33 +1,32 @@
 <% if @profiles %>
-<h1>profiles#index</h1>
-<p>Find me in app/views/profiles/index.html.erb</p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name </th>
-      <th>Avatar </th>
-      <th>Tagline </th>
-      <th>Website </th>
-      <th>Facebook </th>
-      <th>Bio </th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= profile.name %></td>
-      <td><%= profile.avatar %></td>
-      <td><%= profile.tagline %></td>
-      <td><%= profile.website %></td>
-      <td><%= profile.facebook %></td>
-      <td><%= profile.bio %></td>
-      <td><%= link_to 'Edit', edit_dashboard_profile_path(profile) %></td>
-      <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  </tbody>
-</table>
-<br>
+  <h1>List of Profiles</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Avatar </th>
+        <th>Tagline </th>
+        <th>Website </th>
+        <th>Facebook </th>
+        <th>Bio </th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= profile.name %></td>
+        <td><%= profile.avatar %></td>
+        <td><%= profile.tagline %></td>
+        <td><%= profile.website %></td>
+        <td><%= profile.facebook %></td>
+        <td><%= profile.bio %></td>
+        <td><%= link_to 'Edit', edit_dashboard_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
 <% end %>
 
