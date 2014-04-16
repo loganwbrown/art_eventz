@@ -312,10 +312,11 @@ footer {
   list-style-type: none;
   max-width: 1050px;
   height:120px;
+  margin: 10px;
   background-color: #e2e2e2;
+  border-radius: 6px;
   margin-left: -10px;
   padding-left: 10px;
-
 }
 .event-date{
   width: 200px;
@@ -370,6 +371,7 @@ footer {
 .btn-search {
   margin-left: 20px;
   margin-top: -10px;
+  background-color: #93b0a1;
 }
 
 .btn.btn-primary {
@@ -404,5 +406,6 @@ footer {
   width: 1000px;
 }
 
-
-
+.name {
+  text-align: center;
+}
