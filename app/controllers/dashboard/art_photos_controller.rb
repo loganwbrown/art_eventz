@@ -4,8 +4,10 @@ class Dashboard::ArtPhotosController < Dashboard::DashboardController
   def create
     @art_photo = @profile.art_photos.build(artphoto_params)
     if @art_photo.save
+      flash[:notice] = "Image has been uploaded." 
       redirect_to dashboard_profile_path(@art_photo.profile_id)
     else 
+
     end
   end
 
