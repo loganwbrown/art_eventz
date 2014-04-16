@@ -16,44 +16,43 @@
     </p>
     <br>
     <div class="small_font address">
-        <p>
-            <%= @event.address %> <%= @event.address2 %>
-        </p>
-        <p>
-            <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-        </p>
-        <br>
-        <p>
-            Contact Name:
-            <strong><%= @event.contact_name %></strong>
-        </p>
-        <p>
-            Contact Email:
-            <strong><%= @event.contact_email %></strong>
-        </p>
+      <p>
+        <%= @event.address %> <%= @event.address2 %>
+      </p>
+      <p>
+        <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      </p>
+      <br>
+      <p>
+        Contact Name:
+        <strong><%= @event.contact_name %></strong>
+      </p>
+      <p>
+        Contact Email:
+        <strong><%= @event.contact_email %></strong>
+      </p>
     </div>
-      <br>
-      <br>
+    <br>
+    <br>
     <div class="small_font">
       <div id="scroller-small">
         <p>
           <%= @event.more_info %>
         </p>
       </div>
-        <br>
-        <br>
-
-        <p>
-          Website:
-          <%= link_to("test", @event.website) %> </p>
-          <p>
-          Facebook:
-          <%= link_to("Link to Facebook", @event.facebook) %>
-        </p>
-        <p>
-          Application:
-          <%= @event.application_form %>
-        </p>
+      <br>
+      <br>
+      <p>
+        Website:
+        <%= link_to("test", @event.website) %> </p>
+      <p>
+        Facebook:
+        <%= link_to("Link to Facebook", @event.facebook) %>
+      </p>
+      <p>
+        Application:
+        <%= @event.application_form %>
+      </p>
     </div>
   </div>
   <div class="photo_in pull-right">
