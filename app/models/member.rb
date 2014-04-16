@@ -10,18 +10,11 @@ class Member < ActiveRecord::Base
 
   after_create :email_new_member
 
-
   private
 
   def email_new_member
     MemberMailer.delay.welcome(self)
   end
-
-
-
-
-
-
 
   def self.find_or_create_for_facebook(auth)
     token = AuthToken.find_or_initialize_by_email_and_provider_and_oauth_token( auth[:email], auth[:provider], auth[:token])
