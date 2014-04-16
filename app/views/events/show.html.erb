@@ -42,26 +42,26 @@
     <div>
       <p>
         Website:
-        <%= @event.website %></a>
+        <%= link_to("Event Website", @event.website) %>
       </p>
       <p>
         Facebook:
-        <%= @event.facebook %>
+        <%= link_to("Link to Facebook", @event.facebook) %>
       </p>
       <p>
-        Application:
-        <%= @event.application_form %>
+      Application:
+      <%= @event.application_form %>
       </p>
       <br>
     </div>
     <div>
       <% if current_member %>
-      <% if @likes.include?(current_member) %>
-        Likes <%= @likes.count %>
-      <% else %>
-        <%= link_to("Like Event", create_like_path(@event), method: :post) %>
-        <%= @likes.count %>
-      <% end %>
+        <% if @likes.include?(current_member) %>
+          Likes <%= @likes.count %>
+        <% else %>
+          <%= link_to("Like Event", create_like_path(@event), method: :post) %>
+          <%= @likes.count %>
+        <% end %>
       <% else %>
         Likes <%= @likes.count %>
       <% end %>
