@@ -1,5 +1,5 @@
 class Contact < ActiveRecord::Base
-
+	validates :name, :email, :question, presence: true
   after_create :email_contact_info
 
   
@@ -7,7 +7,7 @@ class Contact < ActiveRecord::Base
   private
 
   def email_contact_info
-    AdminMailer.delay.contact_form(self)
+    AdminMailer.contact_form(self).deliver
   end
 
 end
