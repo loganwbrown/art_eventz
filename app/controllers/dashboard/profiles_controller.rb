@@ -37,7 +37,7 @@ class Dashboard::ProfilesController < Dashboard::DashboardController
         flash[:success] = "changes have been made"
         redirect_to dashboard_profile_path(@profile.id)
        else
-        flash[:error] = "you are a failure and no one loves you"
+        flash[:error] = "Whoops!"
         render :edit
        end
   end

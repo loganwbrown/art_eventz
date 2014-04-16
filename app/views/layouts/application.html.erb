@@ -35,6 +35,7 @@
                     <li><%= link_to "Edit Account", edit_member_registration_path %></li>
                     <li><%= link_to "Logout", destroy_member_session_path, method: :delete  %></li>
                   <% else %>
+                    <li><%= link_to "Sign Up or Sign In with Facebook", "/auth/facebook", id: "sign_in" %></li>
                     <li><%= link_to "Login", new_member_session_path %></li>
                     <li><%= link_to "Sign Up", new_member_registration_path  %></li>
                   <% end %>
@@ -47,14 +48,7 @@
     </div>
     <div class="container-fluid">
       <div class="span12 offset1">
-        <div id="user-widget">
-          <% if current_user %>
-            Welcome <strong><%= current_user.name %></strong>!
-            <%= link_to "Sign out", signout_path, id: "sign_out" %>
-          <% else %>
-            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-          <% end %>
-        </div>
+
         <%= bootstrap_flash %>
         <%= yield %>
       </div>
