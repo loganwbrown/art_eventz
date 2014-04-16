@@ -4,11 +4,11 @@
     <span class="add-on"><i class="icon-search"></i></span>
     <%= text_field_tag :query, params[:query], :class => "search-box", placeholder: "Type in the state" %>
   </div>
-  <%= submit_tag "Search", name: nil, :class => "btn btn-search" %>
+  <%= submit_tag "Search", name: nil, :class => "btn btn-search", id: "searchbtn" %>
 <% end %>
 <div class="container" id="scroller">
   <% @events.each do |event| %>
-    <div class="row-fluid" >
+    <div class="row-events">
       <ul class="event-list">
         <li>
           <div class="event-date">

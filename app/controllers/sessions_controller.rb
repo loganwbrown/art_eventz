@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def create
   	@user = Member.find_or_create_by_email(facebook_hash)
-    #@user = Member.find_or_create_for_facebook(facebook_hash)
     if @user.persisted?
 			sign_in @user, event: :authentication
 			redirect_to root_path, notice: "Welcome!"
@@ -10,7 +9,7 @@ class SessionsController < ApplicationController
 			redirect_to root_path
 		end
   end
-
+  
   protected
 	def facebook_hash
 		{}.tap do |auth|
