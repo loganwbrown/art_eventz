@@ -90,6 +90,7 @@ label.required:after {
 
 .field {
   padding-right: 15%;
+  max-width: 62%;
   margin-bottom: 15px;
 }
 
@@ -228,6 +229,10 @@ label.required:after {
   text-align: center;
 }
 
+.memb-slider .nav-tabs {
+  margin-right: 200px;
+}
+
 .slider-wrapper {
   padding-left: 30px;
  }
@@ -291,7 +296,7 @@ footer {
 }
 .col-title {
   color: #b9b5c4;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 140%;
 }
 .bottom-menu li{
