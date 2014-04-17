@@ -4,9 +4,11 @@ class Dashboard::EventPhotosController < Dashboard::DashboardController
   def create
     @event_photo = @event.event_photos.build(eventphoto_params)
     if @event_photo.save
+      flash[:notice] = "Event Photo has been uploaded." 
       redirect_to dashboard_event_path(@event_photo.event_id)
     else 
-      
+      flash[:notice] = "Whoops, something went wrong." 
+
     end
   end
 
