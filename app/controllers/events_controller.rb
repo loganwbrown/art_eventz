@@ -12,6 +12,7 @@ class EventsController < ApplicationController
     @likes = @event.likers(Member)
     @follows = @event.followers(Member)
     @event_photos = @event.event_photos
+    
   end
 
 end
