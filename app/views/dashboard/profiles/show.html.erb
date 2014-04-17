@@ -34,9 +34,9 @@
     </div>
     <br>
     <%= form_for([:dashboard, @profile, @art_photo]) do |f| %>
-      <img id="blah" src="#" alt="your image" width="250px" />
+       <%= image_tag("#", id: "blah", width: '250px', alt: "image") %>
       <br>
-      <input type='file' id="imgInp" />
+      <%= f.file_field(:file, id: "imgInp") %>
       <br>
       <br>
       <br>

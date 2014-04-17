@@ -1,80 +1,78 @@
-  
-    <!-- <p id="notice"><%= notice %></p> -->
-    <div class="event_show_page2">
-      <div class="col-md-4 pull-left event_show span5">
-        <h3><%= @event.title %></h3>
-        <p>
-          <em><%= @event.tagline %></em>
-        </p>
-        <br>
-        <p>
-          <strong>Date:</strong>
-          <%= @event.date %>
-        </p>
-        <p>
-          <strong>Time:</strong>
-          <%= @event.time %>
-        </p>
-        <br>
-        <div class="small_font address">
-          <p>
-            <%= @event.address %> <%= @event.address2 %>
-          </p>
-          <p>
-            <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
-          </p>
-          <br>
-          <p>
-            Contact Name:
-            <strong><%= @event.contact_name %></strong>
-          </p>
-          <p>
-            Contact Email:
-            <strong><%= @event.contact_email %></strong>
-          </p>
-        </div>
-        <br>
-        <br>
-        <div class="small_font">
-          <div id="scroller-small">
-            <p>
-              <%= @event.more_info %>
-            </p>
-          </div>
-          <br>
-          <br>
-          <p>
-            Website:
-            <%= link_to("test", @event.website) %> </p>
-          <p>
-            Facebook:
-            <%= link_to("Link to Facebook", @event.facebook) %>
-          </p>
-          <p>
-            Application:
-            <%= @event.application_form %>
-          </p>
-        </div>
-      </div>
-      <div class="photo_in pull-right">
-        <p>Upload Event Photos</p>
-        <div id="pic-box">
-        </div>
-        <br>
-        <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
-          <%= f.file_field :photo %>
-          <%= f.hidden_field(:event_id, value: @event.id) %>
-          <br>
-          <br>
-          <%= f.submit('Upload Image', class: 'btn btn-primary') %>
-        <% end %>
-        <br>
-        <br>
-        <br>
-        <h5>
-          <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
-          <%= link_to 'Done', dashboard_events_path %>
-        </h5>
-      </div>
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="event_show_page2">
+  <div class="col-md-4 pull-left event_show span5">
+    <h3><%= @event.title %></h3>
+    <p>
+    <em><%= @event.tagline %></em>
+    </p>
+    <br>
+    <p>
+    <strong>Date:</strong>
+    <%= @event.date %>
+    </p>
+    <p>
+    <strong>Time:</strong>
+    <%= @event.time %>
+    </p>
+    <br>
+    <div class="small_font address">
+      <p>
+      <%= @event.address %> <%= @event.address2 %>
+      </p>
+      <p>
+      <%= @event.city %>, <%= @event.state %> <%= @event.zip %>
+      </p>
+      <br>
+      <p>
+      Contact Name:
+      <strong><%= @event.contact_name %></strong>
+      </p>
+      <p>
+      Contact Email:
+      <strong><%= @event.contact_email %></strong>
+      </p>
     </div>
-
+    <br>
+    <br>
+    <div class="small_font">
+      <div id="scroller-small">
+        <p>
+        <%= @event.more_info %>
+        </p>
+      </div>
+      <br>
+      <br>
+      <p>
+      Website:
+      <%= link_to("test", @event.website) %> </p>
+      <p>
+      Facebook:
+      <%= link_to("Link to Facebook", @event.facebook) %>
+      </p>
+      <p>
+      Application:
+      <%= @event.application_form %>
+      </p>
+    </div>
+  </div>
+  <div class="photo_in pull-right">
+  </div>
+  <br>
+  <%= form_for([:dashboard, @event, @event_photo]) do |f| %>
+  <p>Upload Event Photos</p>
+  <%= image_tag("#", id: "blah", width: '250px', alt: "image") %>
+  <br>
+  <%= f.file_field(:file, id: "imgInp") %>
+  <br>
+  <br>
+  <%= f.submit('Upload Image', class: 'btn btn-primary') %>
+  <% end %>
+  <br>
+  <br>
+  <br>
+  <h5>
+  <%= link_to 'Edit', edit_dashboard_event_path(@event) %> |
+  <%= link_to 'Done', dashboard_events_path %>
+  </h5>
+</div>
+</div>
